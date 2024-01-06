@@ -1,6 +1,7 @@
 {
   "branch": "EN",
   "generation": "Council",
+  "generations": ["Council", "Promise"],
   "id": "3h5FLKIAPF9O96Sdz2j4Jb",
   "name": "Hakos Baelz",
   "stats": {

@@ -1,6 +1,7 @@
 {
   "branch": "JP",
-  "generation": "1/Gamers",
+  "generation": "Gamers",
+  "generations": ["1", "Gamers"],
   "id": "2GR0oaCTOgws9PfuheMw0k",
   "name": "Shirakami Fubuki",
   "stats": {

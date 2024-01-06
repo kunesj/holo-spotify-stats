@@ -1,6 +1,7 @@
 {
   "branch": "EN",
   "generation": "Council",
+  "generations": ["Council", "Promise"],
   "id": "14Ug9p3MMOsXgaB47igqD9",
   "name": "Tsukumo Sana [R]",
   "stats": {

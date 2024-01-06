@@ -1,6 +1,7 @@
 {
   "branch": "EN",
   "generation": "Council",
+  "generations": ["Council", "Promise"],
   "id": "1LLRRrE5gZ3964ThLvo2nu",
   "name": "Ouro Kronii",
   "stats": {

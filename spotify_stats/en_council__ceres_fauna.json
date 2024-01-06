@@ -1,6 +1,7 @@
 {
   "branch": "EN",
   "generation": "Council",
+  "generations": ["Council", "Promise"],
   "id": "76xXQq2nPiexRDstB9MY70",
   "name": "Ceres Fauna",
   "stats": {
