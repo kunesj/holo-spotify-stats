@@ -1,0 +1,59 @@
+{
+  "id": "2ANytjXP6otAgDNUwWeym5",
+  "name": "Aki Rosenthal",
+  "branch": "JP",
+  "generation": "1",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 24176
+    },
+    "2023-10-04": {
+      "monthlyListeners": 23667
+    },
+    "2023-11-05": {
+      "monthlyListeners": 23150
+    },
+    "2023-12-04": {
+      "monthlyListeners": 22754
+    },
+    "2024-01-06": {
+      "followers": 30747,
+      "monthlyListeners": 22199,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 2150,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 578,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 574,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 559,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 451,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          }
+        ]
+      }
+    }
+  }
+}

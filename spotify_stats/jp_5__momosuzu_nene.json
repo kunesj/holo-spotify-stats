@@ -1,0 +1,59 @@
+{
+  "id": "3KixQ8ZB7p1AXDaRA62SpX",
+  "name": "Momosuzu Nene",
+  "branch": "JP",
+  "generation": "5",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 33172
+    },
+    "2023-10-04": {
+      "monthlyListeners": 33056
+    },
+    "2023-11-05": {
+      "monthlyListeners": 32217
+    },
+    "2023-12-04": {
+      "monthlyListeners": 33757
+    },
+    "2024-01-06": {
+      "followers": 44478,
+      "monthlyListeners": 31749,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 3817,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1180,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1060,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 1039,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 686,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

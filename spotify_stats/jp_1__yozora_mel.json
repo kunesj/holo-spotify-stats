@@ -1,0 +1,59 @@
+{
+  "id": "4Hv8fxKG4YGfv5ezI6o4Xx",
+  "name": "Yozora Mel",
+  "branch": "JP",
+  "generation": "1",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 28418
+    },
+    "2023-10-04": {
+      "monthlyListeners": 27898
+    },
+    "2023-11-05": {
+      "monthlyListeners": 27760
+    },
+    "2023-12-04": {
+      "monthlyListeners": 30302
+    },
+    "2024-01-06": {
+      "followers": 32315,
+      "monthlyListeners": 26682,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 3024,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 925,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 828,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 608,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 558,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

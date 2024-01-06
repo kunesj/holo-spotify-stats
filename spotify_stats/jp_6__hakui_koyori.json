@@ -1,0 +1,59 @@
+{
+  "id": "6wzg6ZJ9dBUoOuk0hs2Ert",
+  "name": "Hakui Koyori",
+  "branch": "JP",
+  "generation": "6",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 35320
+    },
+    "2023-10-04": {
+      "monthlyListeners": 37375
+    },
+    "2023-11-05": {
+      "monthlyListeners": 33095
+    },
+    "2023-12-04": {
+      "monthlyListeners": 33721
+    },
+    "2024-01-06": {
+      "followers": 25026,
+      "monthlyListeners": 40789,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 6021,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1937,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1692,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1136,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 768,
+            "city": "Osaka",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

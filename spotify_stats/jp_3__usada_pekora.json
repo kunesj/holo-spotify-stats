@@ -1,0 +1,59 @@
+{
+  "id": "4JlcSp9i5LcilRSMqaVimt",
+  "name": "Usada Pekora",
+  "branch": "JP",
+  "generation": "3",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 59934
+    },
+    "2023-10-04": {
+      "monthlyListeners": 63276
+    },
+    "2023-11-05": {
+      "monthlyListeners": 65532
+    },
+    "2023-12-04": {
+      "monthlyListeners": 66826
+    },
+    "2024-01-06": {
+      "followers": 72043,
+      "monthlyListeners": 83886,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 10947,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 3592,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 3042,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1945,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1714,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          }
+        ]
+      }
+    }
+  }
+}

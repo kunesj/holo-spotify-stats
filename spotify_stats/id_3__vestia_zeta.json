@@ -1,0 +1,53 @@
+{
+  "id": "6EnbBHbsZU4sIYz7HHvBHl",
+  "name": "Vestia Zeta",
+  "branch": "ID",
+  "generation": "3",
+  "stats": {
+    "2023-11-05": {
+      "monthlyListeners": 12211
+    },
+    "2023-12-04": {
+      "monthlyListeners": 12085
+    },
+    "2024-01-06": {
+      "followers": 3366,
+      "monthlyListeners": 11851,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 1983,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 808,
+            "city": "Bandung",
+            "country": "ID",
+            "region": "JB"
+          },
+          {
+            "numberOfListeners": 622,
+            "city": "Surabaya",
+            "country": "ID",
+            "region": "JI"
+          },
+          {
+            "numberOfListeners": 448,
+            "city": "Semarang",
+            "country": "ID",
+            "region": "JT"
+          },
+          {
+            "numberOfListeners": 349,
+            "city": "Bekasi",
+            "country": "ID",
+            "region": "JB"
+          }
+        ]
+      }
+    }
+  }
+}

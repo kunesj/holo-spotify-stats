@@ -1,0 +1,59 @@
+{
+  "id": "6bqjeuZSue05I1koJvEl0d",
+  "name": "La+ Darknesss",
+  "branch": "JP",
+  "generation": "6",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 42322
+    },
+    "2023-10-04": {
+      "monthlyListeners": 44328
+    },
+    "2023-11-05": {
+      "monthlyListeners": 40810
+    },
+    "2023-12-04": {
+      "monthlyListeners": 39990
+    },
+    "2024-01-06": {
+      "followers": 31081,
+      "monthlyListeners": 42248,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 5800,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1868,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1642,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1091,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 759,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          }
+        ]
+      }
+    }
+  }
+}

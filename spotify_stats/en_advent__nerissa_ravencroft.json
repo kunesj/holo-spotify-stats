@@ -1,0 +1,59 @@
+{
+  "id": "4uzAnzFMXarRPOBAG2lIIa",
+  "name": "Nerissa Ravencroft",
+  "branch": "EN",
+  "generation": "Advent",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 35965
+    },
+    "2023-10-04": {
+      "monthlyListeners": 24029
+    },
+    "2023-11-05": {
+      "monthlyListeners": 22254
+    },
+    "2023-12-04": {
+      "monthlyListeners": 20039
+    },
+    "2024-01-06": {
+      "followers": 3729,
+      "monthlyListeners": 18715,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 542,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 400,
+            "city": "Singapore",
+            "country": "SG",
+            "region": ""
+          },
+          {
+            "numberOfListeners": 377,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 333,
+            "city": "Kuala Lumpur",
+            "country": "MY",
+            "region": "14"
+          },
+          {
+            "numberOfListeners": 268,
+            "city": "Bangkok",
+            "country": "TH",
+            "region": "10"
+          }
+        ]
+      }
+    }
+  }
+}

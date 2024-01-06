@@ -1,0 +1,59 @@
+{
+  "id": "5XaBNKQo65yYcjNA8wQPOk",
+  "name": "Houshou Marine",
+  "branch": "JP",
+  "generation": "3",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 311308
+    },
+    "2023-10-04": {
+      "monthlyListeners": 363883
+    },
+    "2023-11-05": {
+      "monthlyListeners": 408127
+    },
+    "2023-12-04": {
+      "monthlyListeners": 407295
+    },
+    "2024-01-06": {
+      "followers": 133674,
+      "monthlyListeners": 375521,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 43931,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 13509,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 13268,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 8360,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 5256,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "1dMlek4eXZns9FyjBcvrF8",
+  "name": "Nakiri Ayame",
+  "branch": "JP",
+  "generation": "2",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 46852
+    },
+    "2023-10-04": {
+      "monthlyListeners": 47539
+    },
+    "2023-11-05": {
+      "monthlyListeners": 45899
+    },
+    "2023-12-04": {
+      "monthlyListeners": 43726
+    },
+    "2024-01-06": {
+      "followers": 51669,
+      "monthlyListeners": 44600,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 5717,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1802,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1594,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1322,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 1101,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

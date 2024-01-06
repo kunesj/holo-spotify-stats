@@ -1,0 +1,59 @@
+{
+  "id": "1LLRRrE5gZ3964ThLvo2nu",
+  "name": "Ouro Kronii",
+  "branch": "EN",
+  "generation": "Council",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 22805
+    },
+    "2023-10-04": {
+      "monthlyListeners": 22259
+    },
+    "2023-11-05": {
+      "monthlyListeners": 22014
+    },
+    "2023-12-04": {
+      "monthlyListeners": 21301
+    },
+    "2024-01-06": {
+      "followers": 33890,
+      "monthlyListeners": 19648,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 555,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 450,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 360,
+            "city": "Singapore",
+            "country": "SG",
+            "region": ""
+          },
+          {
+            "numberOfListeners": 358,
+            "city": "Kuala Lumpur",
+            "country": "MY",
+            "region": "14"
+          },
+          {
+            "numberOfListeners": 301,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          }
+        ]
+      }
+    }
+  }
+}

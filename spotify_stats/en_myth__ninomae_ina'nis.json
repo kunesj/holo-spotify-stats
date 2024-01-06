@@ -1,0 +1,59 @@
+{
+  "id": "3iPvwu8p75fYRa0V4wi8gN",
+  "name": "Ninomae Ina'nis",
+  "branch": "EN",
+  "generation": "Myth",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 90125
+    },
+    "2023-10-04": {
+      "monthlyListeners": 89367
+    },
+    "2023-11-05": {
+      "monthlyListeners": 80527
+    },
+    "2023-12-04": {
+      "monthlyListeners": 79541
+    },
+    "2024-01-06": {
+      "followers": 35603,
+      "monthlyListeners": 76798,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 3583,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1898,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 1430,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 1332,
+            "city": "Singapore",
+            "country": "SG",
+            "region": ""
+          },
+          {
+            "numberOfListeners": 1232,
+            "city": "Kuala Lumpur",
+            "country": "MY",
+            "region": "14"
+          }
+        ]
+      }
+    }
+  }
+}

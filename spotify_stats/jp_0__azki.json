@@ -1,0 +1,59 @@
+{
+  "id": "0HX3yJ7THlqC9drRqhOkgo",
+  "name": "AZKi",
+  "branch": "JP",
+  "generation": "0",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 73015
+    },
+    "2023-10-04": {
+      "monthlyListeners": 76322
+    },
+    "2023-11-05": {
+      "monthlyListeners": 77336
+    },
+    "2023-12-04": {
+      "monthlyListeners": 73725
+    },
+    "2024-01-06": {
+      "followers": 66725,
+      "monthlyListeners": 71722,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 7834,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 2433,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 2095,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1897,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 1865,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          }
+        ]
+      }
+    }
+  }
+}

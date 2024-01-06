@@ -1,0 +1,59 @@
+{
+  "id": "6UVwgcSAKl0SZ9plRC59VQ",
+  "name": "Kiryu Coco [R]",
+  "branch": "JP",
+  "generation": "4",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 20870
+    },
+    "2023-10-04": {
+      "monthlyListeners": 20520
+    },
+    "2023-11-05": {
+      "monthlyListeners": 19794
+    },
+    "2023-12-04": {
+      "monthlyListeners": 19491
+    },
+    "2024-01-06": {
+      "followers": 2183,
+      "monthlyListeners": 19410,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 1809,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 500,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 484,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 447,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 434,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

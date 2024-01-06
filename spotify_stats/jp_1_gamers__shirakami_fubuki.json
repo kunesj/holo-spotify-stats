@@ -1,0 +1,59 @@
+{
+  "id": "2GR0oaCTOgws9PfuheMw0k",
+  "name": "Shirakami Fubuki",
+  "branch": "JP",
+  "generation": "1/Gamers",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 72135
+    },
+    "2023-10-04": {
+      "monthlyListeners": 73578
+    },
+    "2023-11-05": {
+      "monthlyListeners": 78515
+    },
+    "2023-12-04": {
+      "monthlyListeners": 71672
+    },
+    "2024-01-06": {
+      "followers": 73481,
+      "monthlyListeners": 70301,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 8589,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 2817,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 2475,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1692,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1584,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          }
+        ]
+      }
+    }
+  }
+}

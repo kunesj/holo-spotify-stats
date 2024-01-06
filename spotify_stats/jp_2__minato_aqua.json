@@ -1,0 +1,59 @@
+{
+  "id": "6GHr4rGFHGRUuzuCuxJA0f",
+  "name": "Minato Aqua",
+  "branch": "JP",
+  "generation": "2",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 115602
+    },
+    "2023-10-04": {
+      "monthlyListeners": 117837
+    },
+    "2023-11-05": {
+      "monthlyListeners": 120449
+    },
+    "2023-12-04": {
+      "monthlyListeners": 117358
+    },
+    "2024-01-06": {
+      "followers": 100651,
+      "monthlyListeners": 123164,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 16849,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 5345,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 4728,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 3128,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 2742,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          }
+        ]
+      }
+    }
+  }
+}

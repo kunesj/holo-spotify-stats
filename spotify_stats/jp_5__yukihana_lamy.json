@@ -1,0 +1,59 @@
+{
+  "id": "0qysjJL9vlQUriZJRQmcVE",
+  "name": "Yukihana Lamy",
+  "branch": "JP",
+  "generation": "5",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 21281
+    },
+    "2023-10-04": {
+      "monthlyListeners": 21557
+    },
+    "2023-11-05": {
+      "monthlyListeners": 23551
+    },
+    "2023-12-04": {
+      "monthlyListeners": 19670
+    },
+    "2024-01-06": {
+      "followers": 27752,
+      "monthlyListeners": 19243,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 2728,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 807,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 755,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 505,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 392,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          }
+        ]
+      }
+    }
+  }
+}

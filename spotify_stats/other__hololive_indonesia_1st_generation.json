@@ -1,0 +1,59 @@
+{
+  "id": "5NkXryxdtHg2t0ZcXfzeyq",
+  "name": "hololive Indonesia 1st Generation",
+  "branch": null,
+  "generation": null,
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 12382
+    },
+    "2023-10-04": {
+      "monthlyListeners": 11908
+    },
+    "2023-11-05": {
+      "monthlyListeners": 11051
+    },
+    "2023-12-04": {
+      "monthlyListeners": 11264
+    },
+    "2024-01-06": {
+      "followers": 4794,
+      "monthlyListeners": 12177,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 2097,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 829,
+            "city": "Bandung",
+            "country": "ID",
+            "region": "JB"
+          },
+          {
+            "numberOfListeners": 718,
+            "city": "Surabaya",
+            "country": "ID",
+            "region": "JI"
+          },
+          {
+            "numberOfListeners": 543,
+            "city": "Semarang",
+            "country": "ID",
+            "region": "JT"
+          },
+          {
+            "numberOfListeners": 401,
+            "city": "Bekasi",
+            "country": "ID",
+            "region": "JB"
+          }
+        ]
+      }
+    }
+  }
+}

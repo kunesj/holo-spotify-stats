@@ -1,0 +1,59 @@
+{
+  "id": "3sTxby2WaF9fXznsLp42IS",
+  "name": "Takane Lui",
+  "branch": "JP",
+  "generation": "6",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 67156
+    },
+    "2023-10-04": {
+      "monthlyListeners": 81177
+    },
+    "2023-11-05": {
+      "monthlyListeners": 71045
+    },
+    "2023-12-04": {
+      "monthlyListeners": 68562
+    },
+    "2024-01-06": {
+      "followers": 22319,
+      "monthlyListeners": 80044,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 7697,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 2529,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 2196,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1634,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 1471,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "2i1mag1k6qyZmTXpeZ34l0",
+  "name": "Otonose Kanade",
+  "branch": "DEV_IS",
+  "generation": "ReGLOSS",
+  "stats": {
+    "2024-01-06": {
+      "followers": 375,
+      "monthlyListeners": 18931,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 2275,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 671,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 582,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 441,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 437,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          }
+        ]
+      }
+    }
+  }
+}

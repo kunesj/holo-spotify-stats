@@ -1,0 +1,59 @@
+{
+  "id": "3abKMima1GlskOQjTXqUNs",
+  "name": "Hololive English",
+  "branch": null,
+  "generation": null,
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 8615
+    },
+    "2023-10-04": {
+      "monthlyListeners": 7558
+    },
+    "2023-11-05": {
+      "monthlyListeners": 7385
+    },
+    "2023-12-04": {
+      "monthlyListeners": 6720
+    },
+    "2024-01-06": {
+      "followers": 5087,
+      "monthlyListeners": 6669,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 339,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 193,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 126,
+            "city": "Kuala Lumpur",
+            "country": "MY",
+            "region": "14"
+          },
+          {
+            "numberOfListeners": 118,
+            "city": "Singapore",
+            "country": "SG",
+            "region": ""
+          },
+          {
+            "numberOfListeners": 98,
+            "city": "Central",
+            "country": "HK",
+            "region": "HCW"
+          }
+        ]
+      }
+    }
+  }
+}

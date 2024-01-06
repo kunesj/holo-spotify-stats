@@ -1,0 +1,59 @@
+{
+  "id": "28lO8lCOqFvDB5la90xKUW",
+  "name": "Nekomata Okayu",
+  "branch": "JP",
+  "generation": "Gamers",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 89708
+    },
+    "2023-10-04": {
+      "monthlyListeners": 90681
+    },
+    "2023-11-05": {
+      "monthlyListeners": 93123
+    },
+    "2023-12-04": {
+      "monthlyListeners": 86851
+    },
+    "2024-01-06": {
+      "followers": 69525,
+      "monthlyListeners": 85697,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 8729,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 2632,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 2494,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1908,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 1699,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "72IRL72d19sAVCL4GJ6jHz",
+  "name": "HOLOTORI",
+  "branch": null,
+  "generation": null,
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 25219
+    },
+    "2023-10-04": {
+      "monthlyListeners": 44476
+    },
+    "2023-11-05": {
+      "monthlyListeners": 37965
+    },
+    "2023-12-04": {
+      "monthlyListeners": 34019
+    },
+    "2024-01-06": {
+      "followers": 2362,
+      "monthlyListeners": 32936,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 1691,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 998,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 478,
+            "city": "Kuala Lumpur",
+            "country": "MY",
+            "region": "14"
+          },
+          {
+            "numberOfListeners": 471,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 462,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

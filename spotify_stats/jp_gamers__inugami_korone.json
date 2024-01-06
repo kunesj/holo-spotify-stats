@@ -1,0 +1,59 @@
+{
+  "id": "6EFbQU0BE4wGLdqBjey64b",
+  "name": "Inugami Korone",
+  "branch": "JP",
+  "generation": "Gamers",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 55121
+    },
+    "2023-10-04": {
+      "monthlyListeners": 56580
+    },
+    "2023-11-05": {
+      "monthlyListeners": 60003
+    },
+    "2023-12-04": {
+      "monthlyListeners": 61384
+    },
+    "2024-01-06": {
+      "followers": 46121,
+      "monthlyListeners": 59124,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 4411,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1277,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1183,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 859,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 755,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

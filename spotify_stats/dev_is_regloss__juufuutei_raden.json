@@ -1,0 +1,47 @@
+{
+  "id": "0HWMbRLZ4EZ7zPXSJOeWzY",
+  "name": "Juufuutei Raden",
+  "branch": "DEV_IS",
+  "generation": "ReGLOSS",
+  "stats": {
+    "2024-01-06": {
+      "followers": 251,
+      "monthlyListeners": 18808,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 2280,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 665,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 580,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 443,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 434,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          }
+        ]
+      }
+    }
+  }
+}

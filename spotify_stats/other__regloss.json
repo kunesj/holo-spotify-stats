@@ -1,0 +1,56 @@
+{
+  "id": "1mHZT1y9KKMq3YsGFLR9xH",
+  "name": "ReGLOSS",
+  "branch": null,
+  "generation": null,
+  "stats": {
+    "2023-10-04": {
+      "monthlyListeners": 33914
+    },
+    "2023-11-05": {
+      "monthlyListeners": 21035
+    },
+    "2023-12-04": {
+      "monthlyListeners": 18616
+    },
+    "2024-01-06": {
+      "followers": 6925,
+      "monthlyListeners": 21894,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 2665,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 774,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 688,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 530,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 507,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          }
+        ]
+      }
+    }
+  }
+}

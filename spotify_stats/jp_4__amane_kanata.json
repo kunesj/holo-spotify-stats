@@ -1,0 +1,59 @@
+{
+  "id": "3xYcccivSuAU13ZHypWoNW",
+  "name": "Amane Kanata",
+  "branch": "JP",
+  "generation": "4",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 53105
+    },
+    "2023-10-04": {
+      "monthlyListeners": 52812
+    },
+    "2023-11-05": {
+      "monthlyListeners": 51705
+    },
+    "2023-12-04": {
+      "monthlyListeners": 50053
+    },
+    "2024-01-06": {
+      "followers": 54359,
+      "monthlyListeners": 49719,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 5862,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1794,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1637,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1147,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 1137,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "3PLJjPD8KDRzaEdznJT16j",
+  "name": "Ayunda Risu",
+  "branch": "ID",
+  "generation": "1",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 36221
+    },
+    "2023-10-04": {
+      "monthlyListeners": 34489
+    },
+    "2023-11-05": {
+      "monthlyListeners": 35657
+    },
+    "2023-12-04": {
+      "monthlyListeners": 42180
+    },
+    "2024-01-06": {
+      "followers": 29030,
+      "monthlyListeners": 50155,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 9515,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 3806,
+            "city": "Bandung",
+            "country": "ID",
+            "region": "JB"
+          },
+          {
+            "numberOfListeners": 3191,
+            "city": "Surabaya",
+            "country": "ID",
+            "region": "JI"
+          },
+          {
+            "numberOfListeners": 2388,
+            "city": "Semarang",
+            "country": "ID",
+            "region": "JT"
+          },
+          {
+            "numberOfListeners": 1778,
+            "city": "Bekasi",
+            "country": "ID",
+            "region": "JB"
+          }
+        ]
+      }
+    }
+  }
+}

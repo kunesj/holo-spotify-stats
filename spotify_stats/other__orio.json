@@ -1,0 +1,59 @@
+{
+  "id": "3xsiv3OekVUqyDlM3oQLFo",
+  "name": "ORIO",
+  "branch": null,
+  "generation": null,
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 13683
+    },
+    "2023-10-04": {
+      "monthlyListeners": 13410
+    },
+    "2023-11-05": {
+      "monthlyListeners": 12463
+    },
+    "2023-12-04": {
+      "monthlyListeners": 12024
+    },
+    "2024-01-06": {
+      "followers": 11739,
+      "monthlyListeners": 11626,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 1278,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 334,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 326,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 263,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 219,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

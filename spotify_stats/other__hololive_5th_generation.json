@@ -1,0 +1,59 @@
+{
+  "id": "2Yifj1OZBwgUXlTJCqK3FV",
+  "name": "hololive 5th Generation",
+  "branch": null,
+  "generation": null,
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 11386
+    },
+    "2023-10-04": {
+      "monthlyListeners": 11252
+    },
+    "2023-11-05": {
+      "monthlyListeners": 9634
+    },
+    "2023-12-04": {
+      "monthlyListeners": 9505
+    },
+    "2024-01-06": {
+      "followers": 2843,
+      "monthlyListeners": 9287,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 1351,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 375,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 365,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 237,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 185,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          }
+        ]
+      }
+    }
+  }
+}

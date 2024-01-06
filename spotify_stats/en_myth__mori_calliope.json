@@ -1,0 +1,59 @@
+{
+  "id": "1PhE6rv0146ZTQosoPDjk8",
+  "name": "Mori Calliope",
+  "branch": "EN",
+  "generation": "Myth",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 522531
+    },
+    "2023-10-04": {
+      "monthlyListeners": 481140
+    },
+    "2023-11-05": {
+      "monthlyListeners": 440127
+    },
+    "2023-12-04": {
+      "monthlyListeners": 463111
+    },
+    "2024-01-06": {
+      "followers": 316812,
+      "monthlyListeners": 430616,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 20717,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 7591,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 6817,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 6147,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 5593,
+            "city": "Singapore",
+            "country": "SG",
+            "region": ""
+          }
+        ]
+      }
+    }
+  }
+}

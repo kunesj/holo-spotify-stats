@@ -1,0 +1,59 @@
+{
+  "id": "3ajRK89RamsBsdbbLH2ufQ",
+  "name": "Anya Melfissa",
+  "branch": "ID",
+  "generation": "2",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 9400
+    },
+    "2023-10-04": {
+      "monthlyListeners": 7968
+    },
+    "2023-11-05": {
+      "monthlyListeners": 6987
+    },
+    "2023-12-04": {
+      "monthlyListeners": 6924
+    },
+    "2024-01-06": {
+      "followers": 1943,
+      "monthlyListeners": 6333,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 570,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 461,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 231,
+            "city": "Bandung",
+            "country": "ID",
+            "region": "JB"
+          },
+          {
+            "numberOfListeners": 177,
+            "city": "Surabaya",
+            "country": "ID",
+            "region": "JI"
+          },
+          {
+            "numberOfListeners": 149,
+            "city": "Semarang",
+            "country": "ID",
+            "region": "JT"
+          }
+        ]
+      }
+    }
+  }
+}

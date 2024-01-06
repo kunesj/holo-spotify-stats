@@ -1,0 +1,59 @@
+{
+  "id": "58dqdL1HubAnJ1QYj5CQCs",
+  "name": "Shirogane Noel",
+  "branch": "JP",
+  "generation": "3",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 46515
+    },
+    "2023-10-04": {
+      "monthlyListeners": 50952
+    },
+    "2023-11-05": {
+      "monthlyListeners": 45716
+    },
+    "2023-12-04": {
+      "monthlyListeners": 48671
+    },
+    "2024-01-06": {
+      "followers": 31997,
+      "monthlyListeners": 53210,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 7801,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 2474,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 2113,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1403,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 926,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          }
+        ]
+      }
+    }
+  }
+}

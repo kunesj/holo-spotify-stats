@@ -1,0 +1,59 @@
+{
+  "id": "4R8Qf3gbqd9bhiQoUToAAU",
+  "name": "HOLOLIVE FANTASY",
+  "branch": null,
+  "generation": null,
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 26390
+    },
+    "2023-10-04": {
+      "monthlyListeners": 27743
+    },
+    "2023-11-05": {
+      "monthlyListeners": 25160
+    },
+    "2023-12-04": {
+      "monthlyListeners": 25071
+    },
+    "2024-01-06": {
+      "followers": 4247,
+      "monthlyListeners": 23991,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 2984,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 831,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 715,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 469,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 463,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

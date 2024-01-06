@@ -1,0 +1,59 @@
+{
+  "id": "70qI9Ih5VXZMuCsEVhy22C",
+  "name": "Uruha Rushia [R]",
+  "branch": "JP",
+  "generation": "3",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 36735
+    },
+    "2023-10-04": {
+      "monthlyListeners": 38495
+    },
+    "2023-11-05": {
+      "monthlyListeners": 35864
+    },
+    "2023-12-04": {
+      "monthlyListeners": 35518
+    },
+    "2024-01-06": {
+      "followers": 44170,
+      "monthlyListeners": 33795,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 3707,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1032,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 935,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 913,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 697,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          }
+        ]
+      }
+    }
+  }
+}

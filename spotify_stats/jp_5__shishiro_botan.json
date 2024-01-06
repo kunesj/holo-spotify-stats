@@ -1,0 +1,59 @@
+{
+  "id": "6SJuFGUxkapaefayFdBwWz",
+  "name": "Shishiro Botan",
+  "branch": "JP",
+  "generation": "5",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 23389
+    },
+    "2023-10-04": {
+      "monthlyListeners": 23469
+    },
+    "2023-11-05": {
+      "monthlyListeners": 21335
+    },
+    "2023-12-04": {
+      "monthlyListeners": 24227
+    },
+    "2024-01-06": {
+      "followers": 18926,
+      "monthlyListeners": 24219,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 2543,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 691,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 656,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 469,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 465,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

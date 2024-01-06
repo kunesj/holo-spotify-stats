@@ -1,0 +1,59 @@
+{
+  "id": "3h5FLKIAPF9O96Sdz2j4Jb",
+  "name": "Hakos Baelz",
+  "branch": "EN",
+  "generation": "Council",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 106835
+    },
+    "2023-10-04": {
+      "monthlyListeners": 104112
+    },
+    "2023-11-05": {
+      "monthlyListeners": 95288
+    },
+    "2023-12-04": {
+      "monthlyListeners": 95010
+    },
+    "2024-01-06": {
+      "followers": 40673,
+      "monthlyListeners": 96909,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 3295,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1618,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 1449,
+            "city": "Singapore",
+            "country": "SG",
+            "region": ""
+          },
+          {
+            "numberOfListeners": 1171,
+            "city": "Kuala Lumpur",
+            "country": "MY",
+            "region": "14"
+          },
+          {
+            "numberOfListeners": 1164,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          }
+        ]
+      }
+    }
+  }
+}

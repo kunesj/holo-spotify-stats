@@ -1,0 +1,59 @@
+{
+  "id": "43FPwU0RdUqvTa3VaOAHnF",
+  "name": "Kazama Iroha",
+  "branch": "JP",
+  "generation": "6",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 28311
+    },
+    "2023-10-04": {
+      "monthlyListeners": 31132
+    },
+    "2023-11-05": {
+      "monthlyListeners": 27900
+    },
+    "2023-12-04": {
+      "monthlyListeners": 28886
+    },
+    "2024-01-06": {
+      "followers": 13064,
+      "monthlyListeners": 36626,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 5629,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1829,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 1599,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1028,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 680,
+            "city": "Osaka",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

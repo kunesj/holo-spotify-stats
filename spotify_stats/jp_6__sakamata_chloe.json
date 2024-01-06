@@ -1,0 +1,59 @@
+{
+  "id": "2YLI1Exc3ujaC7w7oWAqqy",
+  "name": "Sakamata Chloe",
+  "branch": "JP",
+  "generation": "6",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 64813
+    },
+    "2023-10-04": {
+      "monthlyListeners": 68597
+    },
+    "2023-11-05": {
+      "monthlyListeners": 64324
+    },
+    "2023-12-04": {
+      "monthlyListeners": 63720
+    },
+    "2024-01-06": {
+      "followers": 28743,
+      "monthlyListeners": 66961,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 9823,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 3144,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 2859,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1897,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 1194,
+            "city": "Osaka",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}

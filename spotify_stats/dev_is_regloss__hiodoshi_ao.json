@@ -1,0 +1,47 @@
+{
+  "id": "61CPRQBnU83J9FIcdPincG",
+  "name": "Hiodoshi Ao",
+  "branch": "DEV_IS",
+  "generation": "ReGLOSS",
+  "stats": {
+    "2024-01-06": {
+      "followers": 370,
+      "monthlyListeners": 18935,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 2265,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 668,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 574,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 443,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 443,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          }
+        ]
+      }
+    }
+  }
+}

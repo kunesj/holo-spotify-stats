@@ -1,0 +1,59 @@
+{
+  "id": "6UCFRdg4ySMWj6O4QRKyZs",
+  "name": "Takanashi Kiara",
+  "branch": "EN",
+  "generation": "Myth",
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 128335
+    },
+    "2023-10-04": {
+      "monthlyListeners": 143495
+    },
+    "2023-11-05": {
+      "monthlyListeners": 116810
+    },
+    "2023-12-04": {
+      "monthlyListeners": 112842
+    },
+    "2024-01-06": {
+      "followers": 80986,
+      "monthlyListeners": 121248,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 4232,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 2619,
+            "city": "Jakarta",
+            "country": "ID",
+            "region": "JK"
+          },
+          {
+            "numberOfListeners": 1829,
+            "city": "Singapore",
+            "country": "SG",
+            "region": ""
+          },
+          {
+            "numberOfListeners": 1643,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 1633,
+            "city": "Kuala Lumpur",
+            "country": "MY",
+            "region": "14"
+          }
+        ]
+      }
+    }
+  }
+}

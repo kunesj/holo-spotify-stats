@@ -1,0 +1,59 @@
+{
+  "id": "4yNmDmIRZptH90MevoYvQs",
+  "name": "AyaFubuMi",
+  "branch": null,
+  "generation": null,
+  "stats": {
+    "2023-09-04": {
+      "monthlyListeners": 22849
+    },
+    "2023-10-04": {
+      "monthlyListeners": 22930
+    },
+    "2023-11-05": {
+      "monthlyListeners": 21928
+    },
+    "2023-12-04": {
+      "monthlyListeners": 21589
+    },
+    "2024-01-06": {
+      "followers": 22521,
+      "monthlyListeners": 21216,
+      "worldRank": 0,
+      "topCities": {
+        "items": [
+          {
+            "numberOfListeners": 2622,
+            "city": "Tokyo",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 779,
+            "city": "Chiyoda-ku",
+            "country": "JP",
+            "region": "13"
+          },
+          {
+            "numberOfListeners": 757,
+            "city": "Umeda",
+            "country": "JP",
+            "region": "27"
+          },
+          {
+            "numberOfListeners": 565,
+            "city": "Taipei",
+            "country": "TW",
+            "region": "TPE"
+          },
+          {
+            "numberOfListeners": 514,
+            "city": "\u014ctemae",
+            "country": "JP",
+            "region": "27"
+          }
+        ]
+      }
+    }
+  }
+}
