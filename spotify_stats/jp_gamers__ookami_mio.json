@@ -4,56 +4,10 @@
   "id": "539Z6h1XU1IripGR4rTtbz",
   "name": "Ookami Mio",
   "stats": {
-    "2023-09-04": {
-      "monthlyListeners": 41782
-    },
-    "2023-10-04": {
-      "monthlyListeners": 43751
-    },
-    "2023-11-05": {
-      "monthlyListeners": 39772
-    },
-    "2023-12-04": {
-      "monthlyListeners": 42890
-    },
-    "2024-01-06": {
-      "followers": 43097,
-      "monthlyListeners": 50366,
-      "topCities": {
-        "items": [
-          {
-            "city": "Tokyo",
-            "country": "JP",
-            "numberOfListeners": 6566,
-            "region": "13"
-          },
-          {
-            "city": "Chiyoda-ku",
-            "country": "JP",
-            "numberOfListeners": 2088,
-            "region": "13"
-          },
-          {
-            "city": "Umeda",
-            "country": "JP",
-            "numberOfListeners": 1881,
-            "region": "27"
-          },
-          {
-            "city": "Taipei",
-            "country": "TW",
-            "numberOfListeners": 1285,
-            "region": "TPE"
-          },
-          {
-            "city": "\u014ctemae",
-            "country": "JP",
-            "numberOfListeners": 1216,
-            "region": "27"
-          }
-        ]
-      },
-      "worldRank": 0
-    }
+    "2023-09-04": {"monthlyListeners": 41782},
+    "2023-10-04": {"monthlyListeners": 43751},
+    "2023-11-05": {"monthlyListeners": 39772},
+    "2023-12-04": {"monthlyListeners": 42890},
+    "2024-01-06": {"followers": 43097, "monthlyListeners": 50366, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 6566, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 2088, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 1881, "region": "27"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 1285, "region": "TPE"}, {"city": "\u014ctemae", "country": "JP", "numberOfListeners": 1216, "region": "27"}]}, "worldRank": 0}
   }
 }

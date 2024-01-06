@@ -4,56 +4,10 @@
   "id": "68609MOnEU86kVyMf26JnM",
   "name": "Tsunomaki Watame",
   "stats": {
-    "2023-09-04": {
-      "monthlyListeners": 98164
-    },
-    "2023-10-04": {
-      "monthlyListeners": 95727
-    },
-    "2023-11-05": {
-      "monthlyListeners": 89099
-    },
-    "2023-12-04": {
-      "monthlyListeners": 106318
-    },
-    "2024-01-06": {
-      "followers": 72359,
-      "monthlyListeners": 96294,
-      "topCities": {
-        "items": [
-          {
-            "city": "Tokyo",
-            "country": "JP",
-            "numberOfListeners": 8031,
-            "region": "13"
-          },
-          {
-            "city": "Chiyoda-ku",
-            "country": "JP",
-            "numberOfListeners": 2621,
-            "region": "13"
-          },
-          {
-            "city": "Umeda",
-            "country": "JP",
-            "numberOfListeners": 2246,
-            "region": "27"
-          },
-          {
-            "city": "Taipei",
-            "country": "TW",
-            "numberOfListeners": 2066,
-            "region": "TPE"
-          },
-          {
-            "city": "Jakarta",
-            "country": "ID",
-            "numberOfListeners": 1753,
-            "region": "JK"
-          }
-        ]
-      },
-      "worldRank": 0
-    }
+    "2023-09-04": {"monthlyListeners": 98164},
+    "2023-10-04": {"monthlyListeners": 95727},
+    "2023-11-05": {"monthlyListeners": 89099},
+    "2023-12-04": {"monthlyListeners": 106318},
+    "2024-01-06": {"followers": 72359, "monthlyListeners": 96294, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 8031, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 2621, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 2246, "region": "27"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 2066, "region": "TPE"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 1753, "region": "JK"}]}, "worldRank": 0}
   }
 }

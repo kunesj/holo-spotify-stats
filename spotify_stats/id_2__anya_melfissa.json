@@ -4,56 +4,10 @@
   "id": "3ajRK89RamsBsdbbLH2ufQ",
   "name": "Anya Melfissa",
   "stats": {
-    "2023-09-04": {
-      "monthlyListeners": 9400
-    },
-    "2023-10-04": {
-      "monthlyListeners": 7968
-    },
-    "2023-11-05": {
-      "monthlyListeners": 6987
-    },
-    "2023-12-04": {
-      "monthlyListeners": 6924
-    },
-    "2024-01-06": {
-      "followers": 1960,
-      "monthlyListeners": 6333,
-      "topCities": {
-        "items": [
-          {
-            "city": "Jakarta",
-            "country": "ID",
-            "numberOfListeners": 570,
-            "region": "JK"
-          },
-          {
-            "city": "Tokyo",
-            "country": "JP",
-            "numberOfListeners": 461,
-            "region": "13"
-          },
-          {
-            "city": "Bandung",
-            "country": "ID",
-            "numberOfListeners": 231,
-            "region": "JB"
-          },
-          {
-            "city": "Surabaya",
-            "country": "ID",
-            "numberOfListeners": 177,
-            "region": "JI"
-          },
-          {
-            "city": "Semarang",
-            "country": "ID",
-            "numberOfListeners": 149,
-            "region": "JT"
-          }
-        ]
-      },
-      "worldRank": 0
-    }
+    "2023-09-04": {"monthlyListeners": 9400},
+    "2023-10-04": {"monthlyListeners": 7968},
+    "2023-11-05": {"monthlyListeners": 6987},
+    "2023-12-04": {"monthlyListeners": 6924},
+    "2024-01-06": {"followers": 1960, "monthlyListeners": 6333, "topCities": {"items": [{"city": "Jakarta", "country": "ID", "numberOfListeners": 570, "region": "JK"}, {"city": "Tokyo", "country": "JP", "numberOfListeners": 461, "region": "13"}, {"city": "Bandung", "country": "ID", "numberOfListeners": 231, "region": "JB"}, {"city": "Surabaya", "country": "ID", "numberOfListeners": 177, "region": "JI"}, {"city": "Semarang", "country": "ID", "numberOfListeners": 149, "region": "JT"}]}, "worldRank": 0}
   }
 }

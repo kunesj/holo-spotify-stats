@@ -4,44 +4,6 @@
   "id": "61CPRQBnU83J9FIcdPincG",
   "name": "Hiodoshi Ao",
   "stats": {
-    "2024-01-06": {
-      "followers": 386,
-      "monthlyListeners": 18935,
-      "topCities": {
-        "items": [
-          {
-            "city": "Tokyo",
-            "country": "JP",
-            "numberOfListeners": 2265,
-            "region": "13"
-          },
-          {
-            "city": "Chiyoda-ku",
-            "country": "JP",
-            "numberOfListeners": 668,
-            "region": "13"
-          },
-          {
-            "city": "Umeda",
-            "country": "JP",
-            "numberOfListeners": 574,
-            "region": "27"
-          },
-          {
-            "city": "Taipei",
-            "country": "TW",
-            "numberOfListeners": 443,
-            "region": "TPE"
-          },
-          {
-            "city": "Jakarta",
-            "country": "ID",
-            "numberOfListeners": 443,
-            "region": "JK"
-          }
-        ]
-      },
-      "worldRank": 0
-    }
+    "2024-01-06": {"followers": 386, "monthlyListeners": 18935, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 2265, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 668, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 574, "region": "27"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 443, "region": "TPE"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 443, "region": "JK"}]}, "worldRank": 0}
   }
 }

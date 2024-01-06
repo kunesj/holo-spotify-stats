@@ -4,44 +4,6 @@
   "id": "0HWMbRLZ4EZ7zPXSJOeWzY",
   "name": "Juufuutei Raden",
   "stats": {
-    "2024-01-06": {
-      "followers": 263,
-      "monthlyListeners": 18808,
-      "topCities": {
-        "items": [
-          {
-            "city": "Tokyo",
-            "country": "JP",
-            "numberOfListeners": 2280,
-            "region": "13"
-          },
-          {
-            "city": "Chiyoda-ku",
-            "country": "JP",
-            "numberOfListeners": 665,
-            "region": "13"
-          },
-          {
-            "city": "Umeda",
-            "country": "JP",
-            "numberOfListeners": 580,
-            "region": "27"
-          },
-          {
-            "city": "Jakarta",
-            "country": "ID",
-            "numberOfListeners": 443,
-            "region": "JK"
-          },
-          {
-            "city": "Taipei",
-            "country": "TW",
-            "numberOfListeners": 434,
-            "region": "TPE"
-          }
-        ]
-      },
-      "worldRank": 0
-    }
+    "2024-01-06": {"followers": 263, "monthlyListeners": 18808, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 2280, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 665, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 580, "region": "27"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 443, "region": "JK"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 434, "region": "TPE"}]}, "worldRank": 0}
   }
 }

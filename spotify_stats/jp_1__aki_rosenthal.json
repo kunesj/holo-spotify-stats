@@ -4,56 +4,10 @@
   "id": "2ANytjXP6otAgDNUwWeym5",
   "name": "Aki Rosenthal",
   "stats": {
-    "2023-09-04": {
-      "monthlyListeners": 24176
-    },
-    "2023-10-04": {
-      "monthlyListeners": 23667
-    },
-    "2023-11-05": {
-      "monthlyListeners": 23150
-    },
-    "2023-12-04": {
-      "monthlyListeners": 22754
-    },
-    "2024-01-06": {
-      "followers": 30777,
-      "monthlyListeners": 22199,
-      "topCities": {
-        "items": [
-          {
-            "city": "Tokyo",
-            "country": "JP",
-            "numberOfListeners": 2150,
-            "region": "13"
-          },
-          {
-            "city": "Chiyoda-ku",
-            "country": "JP",
-            "numberOfListeners": 578,
-            "region": "13"
-          },
-          {
-            "city": "Jakarta",
-            "country": "ID",
-            "numberOfListeners": 574,
-            "region": "JK"
-          },
-          {
-            "city": "Umeda",
-            "country": "JP",
-            "numberOfListeners": 559,
-            "region": "27"
-          },
-          {
-            "city": "Taipei",
-            "country": "TW",
-            "numberOfListeners": 451,
-            "region": "TPE"
-          }
-        ]
-      },
-      "worldRank": 0
-    }
+    "2023-09-04": {"monthlyListeners": 24176},
+    "2023-10-04": {"monthlyListeners": 23667},
+    "2023-11-05": {"monthlyListeners": 23150},
+    "2023-12-04": {"monthlyListeners": 22754},
+    "2024-01-06": {"followers": 30777, "monthlyListeners": 22199, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 2150, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 578, "region": "13"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 574, "region": "JK"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 559, "region": "27"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 451, "region": "TPE"}]}, "worldRank": 0}
   }
 }

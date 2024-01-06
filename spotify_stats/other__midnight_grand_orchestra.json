@@ -4,56 +4,10 @@
   "id": "60lgIOOISxGcxyjX4GJeii",
   "name": "Midnight Grand Orchestra",
   "stats": {
-    "2023-09-04": {
-      "monthlyListeners": 34164
-    },
-    "2023-10-04": {
-      "monthlyListeners": 62213
-    },
-    "2023-11-05": {
-      "monthlyListeners": 69263
-    },
-    "2023-12-04": {
-      "monthlyListeners": 76493
-    },
-    "2024-01-06": {
-      "followers": 26266,
-      "monthlyListeners": 88134,
-      "topCities": {
-        "items": [
-          {
-            "city": "Tokyo",
-            "country": "JP",
-            "numberOfListeners": 11015,
-            "region": "13"
-          },
-          {
-            "city": "Chiyoda-ku",
-            "country": "JP",
-            "numberOfListeners": 3649,
-            "region": "13"
-          },
-          {
-            "city": "Umeda",
-            "country": "JP",
-            "numberOfListeners": 2897,
-            "region": "27"
-          },
-          {
-            "city": "Taipei",
-            "country": "TW",
-            "numberOfListeners": 2177,
-            "region": "TPE"
-          },
-          {
-            "city": "\u014ctemae",
-            "country": "JP",
-            "numberOfListeners": 1820,
-            "region": "27"
-          }
-        ]
-      },
-      "worldRank": 0
-    }
+    "2023-09-04": {"monthlyListeners": 34164},
+    "2023-10-04": {"monthlyListeners": 62213},
+    "2023-11-05": {"monthlyListeners": 69263},
+    "2023-12-04": {"monthlyListeners": 76493},
+    "2024-01-06": {"followers": 26266, "monthlyListeners": 88134, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 11015, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 3649, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 2897, "region": "27"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 2177, "region": "TPE"}, {"city": "\u014ctemae", "country": "JP", "numberOfListeners": 1820, "region": "27"}]}, "worldRank": 0}
   }
 }

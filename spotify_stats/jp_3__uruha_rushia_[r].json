@@ -4,56 +4,10 @@
   "id": "70qI9Ih5VXZMuCsEVhy22C",
   "name": "Uruha Rushia [R]",
   "stats": {
-    "2023-09-04": {
-      "monthlyListeners": 36735
-    },
-    "2023-10-04": {
-      "monthlyListeners": 38495
-    },
-    "2023-11-05": {
-      "monthlyListeners": 35864
-    },
-    "2023-12-04": {
-      "monthlyListeners": 35518
-    },
-    "2024-01-06": {
-      "followers": 44191,
-      "monthlyListeners": 33795,
-      "topCities": {
-        "items": [
-          {
-            "city": "Tokyo",
-            "country": "JP",
-            "numberOfListeners": 3707,
-            "region": "13"
-          },
-          {
-            "city": "Chiyoda-ku",
-            "country": "JP",
-            "numberOfListeners": 1032,
-            "region": "13"
-          },
-          {
-            "city": "Taipei",
-            "country": "TW",
-            "numberOfListeners": 935,
-            "region": "TPE"
-          },
-          {
-            "city": "Umeda",
-            "country": "JP",
-            "numberOfListeners": 913,
-            "region": "27"
-          },
-          {
-            "city": "Jakarta",
-            "country": "ID",
-            "numberOfListeners": 697,
-            "region": "JK"
-          }
-        ]
-      },
-      "worldRank": 0
-    }
+    "2023-09-04": {"monthlyListeners": 36735},
+    "2023-10-04": {"monthlyListeners": 38495},
+    "2023-11-05": {"monthlyListeners": 35864},
+    "2023-12-04": {"monthlyListeners": 35518},
+    "2024-01-06": {"followers": 44191, "monthlyListeners": 33795, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 3707, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 1032, "region": "13"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 935, "region": "TPE"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 913, "region": "27"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 697, "region": "JK"}]}, "worldRank": 0}
   }
 }

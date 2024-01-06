@@ -4,56 +4,10 @@
   "id": "43FPwU0RdUqvTa3VaOAHnF",
   "name": "Kazama Iroha",
   "stats": {
-    "2023-09-04": {
-      "monthlyListeners": 28311
-    },
-    "2023-10-04": {
-      "monthlyListeners": 31132
-    },
-    "2023-11-05": {
-      "monthlyListeners": 27900
-    },
-    "2023-12-04": {
-      "monthlyListeners": 28886
-    },
-    "2024-01-06": {
-      "followers": 13118,
-      "monthlyListeners": 36626,
-      "topCities": {
-        "items": [
-          {
-            "city": "Tokyo",
-            "country": "JP",
-            "numberOfListeners": 5629,
-            "region": "13"
-          },
-          {
-            "city": "Chiyoda-ku",
-            "country": "JP",
-            "numberOfListeners": 1829,
-            "region": "13"
-          },
-          {
-            "city": "Umeda",
-            "country": "JP",
-            "numberOfListeners": 1599,
-            "region": "27"
-          },
-          {
-            "city": "\u014ctemae",
-            "country": "JP",
-            "numberOfListeners": 1028,
-            "region": "27"
-          },
-          {
-            "city": "Osaka",
-            "country": "JP",
-            "numberOfListeners": 680,
-            "region": "27"
-          }
-        ]
-      },
-      "worldRank": 0
-    }
+    "2023-09-04": {"monthlyListeners": 28311},
+    "2023-10-04": {"monthlyListeners": 31132},
+    "2023-11-05": {"monthlyListeners": 27900},
+    "2023-12-04": {"monthlyListeners": 28886},
+    "2024-01-06": {"followers": 13118, "monthlyListeners": 36626, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 5629, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 1829, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 1599, "region": "27"}, {"city": "\u014ctemae", "country": "JP", "numberOfListeners": 1028, "region": "27"}, {"city": "Osaka", "country": "JP", "numberOfListeners": 680, "region": "27"}]}, "worldRank": 0}
   }
 }

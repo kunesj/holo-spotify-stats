@@ -8,6 +8,7 @@ import os
 import logging
 from bs4 import BeautifulSoup
 import time
+import uuid
 
 _logger = logging.getLogger(__name__)
 DIR_PATH = os.path.abspath(os.path.dirname(__file__))
@@ -16,6 +17,33 @@ STATS_DIR_PATH = os.path.abspath(os.path.join(DIR_PATH, STATS_DIR_REL_PATH))
 INDEX_PATH = os.path.abspath(os.path.join(DIR_PATH, "./index.json"))
 AUTH_TOKEN: str | None = None
 AUTH_TOKEN_EXPIRY: float = 0
+
+
+class NoIndent(object):
+    def __init__(self, value):
+        self.value = value
+
+
+class NoIndentEncoder(json.JSONEncoder):
+    def __init__(self, *args, **kwargs):
+        super(NoIndentEncoder, self).__init__(*args, **kwargs)
+        self.kwargs = dict(kwargs)
+        del self.kwargs['indent']
+        self._replacement_map = {}
+
+    def default(self, o):
+        if isinstance(o, NoIndent):
+            key = uuid.uuid4().hex
+            self._replacement_map[key] = json.dumps(o.value, **self.kwargs)
+            return "@@%s@@" % (key,)
+        else:
+            return super(NoIndentEncoder, self).default(o)
+
+    def encode(self, o):
+        result = super(NoIndentEncoder, self).encode(o)
+        for k, v in iter(self._replacement_map.items()):
+            result = result.replace('"@@%s@@"' % (k,), v)
+        return result
 
 
 def get_auth_token() -> str:
@@ -99,9 +127,16 @@ def update_stats_file(*, file_path: str, force: bool = False) -> None:
     data["stats"][date_key] = fetch_stats(artist_id=data["id"])
 
     # write new data
+    
+    data_str = json.dumps(
+        {**data, "stats": {k: NoIndent(v) for k, v in data["stats"].items()}}, 
+        indent=2, 
+        sort_keys=True, 
+        cls=NoIndentEncoder,
+    )
 
-    with open(file_path, "w") as f:
-        f.write(json.dumps(data, indent=2, sort_keys=True))
+    with open(file_path, "w") as f:       
+        f.write(data_str)
 
 
 def main() -> None:

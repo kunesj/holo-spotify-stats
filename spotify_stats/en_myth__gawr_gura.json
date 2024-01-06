@@ -4,56 +4,10 @@
   "id": "1Spm887PTszc2AoNYpoCld",
   "name": "Gawr Gura",
   "stats": {
-    "2023-09-04": {
-      "monthlyListeners": 242139
-    },
-    "2023-10-04": {
-      "monthlyListeners": 230948
-    },
-    "2023-11-05": {
-      "monthlyListeners": 208567
-    },
-    "2023-12-04": {
-      "monthlyListeners": 251014
-    },
-    "2024-01-06": {
-      "followers": 135604,
-      "monthlyListeners": 236742,
-      "topCities": {
-        "items": [
-          {
-            "city": "Tokyo",
-            "country": "JP",
-            "numberOfListeners": 10572,
-            "region": "13"
-          },
-          {
-            "city": "Jakarta",
-            "country": "ID",
-            "numberOfListeners": 4907,
-            "region": "JK"
-          },
-          {
-            "city": "Taipei",
-            "country": "TW",
-            "numberOfListeners": 3846,
-            "region": "TPE"
-          },
-          {
-            "city": "Singapore",
-            "country": "SG",
-            "numberOfListeners": 3268,
-            "region": ""
-          },
-          {
-            "city": "Kuala Lumpur",
-            "country": "MY",
-            "numberOfListeners": 3187,
-            "region": "14"
-          }
-        ]
-      },
-      "worldRank": 0
-    }
+    "2023-09-04": {"monthlyListeners": 242139},
+    "2023-10-04": {"monthlyListeners": 230948},
+    "2023-11-05": {"monthlyListeners": 208567},
+    "2023-12-04": {"monthlyListeners": 251014},
+    "2024-01-06": {"followers": 135604, "monthlyListeners": 236742, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 10572, "region": "13"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 4907, "region": "JK"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 3846, "region": "TPE"}, {"city": "Singapore", "country": "SG", "numberOfListeners": 3268, "region": ""}, {"city": "Kuala Lumpur", "country": "MY", "numberOfListeners": 3187, "region": "14"}]}, "worldRank": 0}
   }
 }

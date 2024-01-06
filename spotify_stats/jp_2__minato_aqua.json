@@ -4,56 +4,10 @@
   "id": "6GHr4rGFHGRUuzuCuxJA0f",
   "name": "Minato Aqua",
   "stats": {
-    "2023-09-04": {
-      "monthlyListeners": 115602
-    },
-    "2023-10-04": {
-      "monthlyListeners": 117837
-    },
-    "2023-11-05": {
-      "monthlyListeners": 120449
-    },
-    "2023-12-04": {
-      "monthlyListeners": 117358
-    },
-    "2024-01-06": {
-      "followers": 100727,
-      "monthlyListeners": 123164,
-      "topCities": {
-        "items": [
-          {
-            "city": "Tokyo",
-            "country": "JP",
-            "numberOfListeners": 16849,
-            "region": "13"
-          },
-          {
-            "city": "Chiyoda-ku",
-            "country": "JP",
-            "numberOfListeners": 5345,
-            "region": "13"
-          },
-          {
-            "city": "Umeda",
-            "country": "JP",
-            "numberOfListeners": 4728,
-            "region": "27"
-          },
-          {
-            "city": "\u014ctemae",
-            "country": "JP",
-            "numberOfListeners": 3128,
-            "region": "27"
-          },
-          {
-            "city": "Taipei",
-            "country": "TW",
-            "numberOfListeners": 2742,
-            "region": "TPE"
-          }
-        ]
-      },
-      "worldRank": 0
-    }
+    "2023-09-04": {"monthlyListeners": 115602},
+    "2023-10-04": {"monthlyListeners": 117837},
+    "2023-11-05": {"monthlyListeners": 120449},
+    "2023-12-04": {"monthlyListeners": 117358},
+    "2024-01-06": {"followers": 100727, "monthlyListeners": 123164, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 16849, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 5345, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 4728, "region": "27"}, {"city": "\u014ctemae", "country": "JP", "numberOfListeners": 3128, "region": "27"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 2742, "region": "TPE"}]}, "worldRank": 0}
   }
 }

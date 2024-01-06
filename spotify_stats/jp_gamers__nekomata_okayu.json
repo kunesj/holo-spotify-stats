@@ -4,56 +4,10 @@
   "id": "28lO8lCOqFvDB5la90xKUW",
   "name": "Nekomata Okayu",
   "stats": {
-    "2023-09-04": {
-      "monthlyListeners": 89708
-    },
-    "2023-10-04": {
-      "monthlyListeners": 90681
-    },
-    "2023-11-05": {
-      "monthlyListeners": 93123
-    },
-    "2023-12-04": {
-      "monthlyListeners": 86851
-    },
-    "2024-01-06": {
-      "followers": 69571,
-      "monthlyListeners": 85697,
-      "topCities": {
-        "items": [
-          {
-            "city": "Tokyo",
-            "country": "JP",
-            "numberOfListeners": 8729,
-            "region": "13"
-          },
-          {
-            "city": "Chiyoda-ku",
-            "country": "JP",
-            "numberOfListeners": 2632,
-            "region": "13"
-          },
-          {
-            "city": "Umeda",
-            "country": "JP",
-            "numberOfListeners": 2494,
-            "region": "27"
-          },
-          {
-            "city": "Jakarta",
-            "country": "ID",
-            "numberOfListeners": 1908,
-            "region": "JK"
-          },
-          {
-            "city": "\u014ctemae",
-            "country": "JP",
-            "numberOfListeners": 1699,
-            "region": "27"
-          }
-        ]
-      },
-      "worldRank": 0
-    }
+    "2023-09-04": {"monthlyListeners": 89708},
+    "2023-10-04": {"monthlyListeners": 90681},
+    "2023-11-05": {"monthlyListeners": 93123},
+    "2023-12-04": {"monthlyListeners": 86851},
+    "2024-01-06": {"followers": 69571, "monthlyListeners": 85697, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 8729, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 2632, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 2494, "region": "27"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 1908, "region": "JK"}, {"city": "\u014ctemae", "country": "JP", "numberOfListeners": 1699, "region": "27"}]}, "worldRank": 0}
   }
 }
