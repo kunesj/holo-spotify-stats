@@ -1,8 +1,8 @@
 {
-  "id": "4Hv8fxKG4YGfv5ezI6o4Xx",
-  "name": "Yozora Mel",
   "branch": "JP",
   "generation": "1",
+  "id": "4Hv8fxKG4YGfv5ezI6o4Xx",
+  "name": "Yozora Mel",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 28418
@@ -17,43 +17,43 @@
       "monthlyListeners": 30302
     },
     "2024-01-06": {
-      "followers": 32315,
+      "followers": 32342,
       "monthlyListeners": 26682,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 3024,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 3024,
             "region": "13"
           },
           {
-            "numberOfListeners": 925,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 925,
             "region": "13"
           },
           {
-            "numberOfListeners": 828,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 828,
             "region": "27"
           },
           {
-            "numberOfListeners": 608,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 608,
             "region": "JK"
           },
           {
-            "numberOfListeners": 558,
             "city": "\u014ctemae",
             "country": "JP",
+            "numberOfListeners": 558,
             "region": "27"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

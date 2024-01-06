@@ -1,8 +1,8 @@
 {
-  "id": "6YFKPqnL4YtX9jJmj5zkzv",
-  "name": "Sakura Miko",
   "branch": "JP",
   "generation": "0",
+  "id": "6YFKPqnL4YtX9jJmj5zkzv",
+  "name": "Sakura Miko",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 54814
@@ -17,43 +17,43 @@
       "monthlyListeners": 93525
     },
     "2024-01-06": {
-      "followers": 66335,
+      "followers": 66393,
       "monthlyListeners": 79076,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 11715,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 11715,
             "region": "13"
           },
           {
-            "numberOfListeners": 3883,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 3883,
             "region": "13"
           },
           {
-            "numberOfListeners": 3333,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 3333,
             "region": "27"
           },
           {
-            "numberOfListeners": 2197,
             "city": "\u014ctemae",
             "country": "JP",
+            "numberOfListeners": 2197,
             "region": "27"
           },
           {
-            "numberOfListeners": 1862,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 1862,
             "region": "TPE"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

@@ -1,8 +1,8 @@
 {
-  "id": "60lgIOOISxGcxyjX4GJeii",
-  "name": "Midnight Grand Orchestra",
   "branch": null,
   "generation": null,
+  "id": "60lgIOOISxGcxyjX4GJeii",
+  "name": "Midnight Grand Orchestra",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 34164
@@ -17,43 +17,43 @@
       "monthlyListeners": 76493
     },
     "2024-01-06": {
-      "followers": 26215,
+      "followers": 26266,
       "monthlyListeners": 88134,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 11015,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 11015,
             "region": "13"
           },
           {
-            "numberOfListeners": 3649,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 3649,
             "region": "13"
           },
           {
-            "numberOfListeners": 2897,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 2897,
             "region": "27"
           },
           {
-            "numberOfListeners": 2177,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 2177,
             "region": "TPE"
           },
           {
-            "numberOfListeners": 1820,
             "city": "\u014ctemae",
             "country": "JP",
+            "numberOfListeners": 1820,
             "region": "27"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

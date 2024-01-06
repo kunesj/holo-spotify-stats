@@ -1,8 +1,8 @@
 {
-  "id": "2g9gjJayRURjomDGRLNaZR",
-  "name": "Tokino Sora",
   "branch": "JP",
   "generation": "0",
+  "id": "2g9gjJayRURjomDGRLNaZR",
+  "name": "Tokino Sora",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 34732
@@ -17,43 +17,43 @@
       "monthlyListeners": 31749
     },
     "2024-01-06": {
-      "followers": 67942,
+      "followers": 67955,
       "monthlyListeners": 30550,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 3272,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 3272,
             "region": "13"
           },
           {
-            "numberOfListeners": 935,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 935,
             "region": "27"
           },
           {
-            "numberOfListeners": 931,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 931,
             "region": "13"
           },
           {
-            "numberOfListeners": 680,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 680,
             "region": "TPE"
           },
           {
-            "numberOfListeners": 677,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 677,
             "region": "JK"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

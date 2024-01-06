@@ -1,8 +1,8 @@
 {
-  "id": "68609MOnEU86kVyMf26JnM",
-  "name": "Tsunomaki Watame",
   "branch": "JP",
   "generation": "4",
+  "id": "68609MOnEU86kVyMf26JnM",
+  "name": "Tsunomaki Watame",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 98164
@@ -17,43 +17,43 @@
       "monthlyListeners": 106318
     },
     "2024-01-06": {
-      "followers": 72297,
+      "followers": 72359,
       "monthlyListeners": 96294,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 8031,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 8031,
             "region": "13"
           },
           {
-            "numberOfListeners": 2621,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 2621,
             "region": "13"
           },
           {
-            "numberOfListeners": 2246,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 2246,
             "region": "27"
           },
           {
-            "numberOfListeners": 2066,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 2066,
             "region": "TPE"
           },
           {
-            "numberOfListeners": 1753,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 1753,
             "region": "JK"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

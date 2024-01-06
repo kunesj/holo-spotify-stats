@@ -10,7 +10,10 @@ from bs4 import BeautifulSoup
 import time
 
 _logger = logging.getLogger(__name__)
-STATS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "./spotify_stats"))
+DIR_PATH = os.path.abspath(os.path.dirname(__file__))
+STATS_DIR_REL_PATH = "./spotify_stats"
+STATS_DIR_PATH = os.path.abspath(os.path.join(DIR_PATH, STATS_DIR_REL_PATH))
+INDEX_PATH = os.path.abspath(os.path.join(DIR_PATH, "./index.json"))
 AUTH_TOKEN: str | None = None
 AUTH_TOKEN_EXPIRY: float = 0
 
@@ -98,7 +101,7 @@ def update_stats_file(*, file_path: str, force: bool = False) -> None:
     # write new data
 
     with open(file_path, "w") as f:
-        f.write(json.dumps(data, indent=2))
+        f.write(json.dumps(data, indent=2, sort_keys=True))
 
 
 def main() -> None:
@@ -109,14 +112,19 @@ def main() -> None:
     logging.basicConfig()
     _logger.setLevel(logging.INFO)
 
-    for file_name in os.listdir(STATS_DIR):
+    stats_files = []
+    for file_name in os.listdir(STATS_DIR_PATH):
         if not file_name.endswith(".json"):
             continue
 
         update_stats_file(
-            file_path=os.path.join(STATS_DIR, file_name),
+            file_path=os.path.join(STATS_DIR_PATH, file_name),
             force=args.force,
         )
+        stats_files.append(os.path.join(STATS_DIR_REL_PATH, file_name))
+        
+    with open(INDEX_PATH, "w") as f:
+        f.write(json.dumps(sorted(stats_files), indent=2))
 
     _logger.info("Done")
 

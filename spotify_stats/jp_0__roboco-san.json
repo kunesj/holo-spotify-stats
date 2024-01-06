@@ -1,8 +1,8 @@
 {
-  "id": "1JSf6ODLyqPpYQAHN7S1Th",
-  "name": "Roboco-san",
   "branch": "JP",
   "generation": "0",
+  "id": "1JSf6ODLyqPpYQAHN7S1Th",
+  "name": "Roboco-san",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 21200
@@ -17,43 +17,43 @@
       "monthlyListeners": 19722
     },
     "2024-01-06": {
-      "followers": 22350,
+      "followers": 22377,
       "monthlyListeners": 18908,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 2054,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 2054,
             "region": "13"
           },
           {
-            "numberOfListeners": 562,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 562,
             "region": "27"
           },
           {
-            "numberOfListeners": 559,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 559,
             "region": "13"
           },
           {
-            "numberOfListeners": 377,
             "city": "\u014ctemae",
             "country": "JP",
+            "numberOfListeners": 377,
             "region": "27"
           },
           {
-            "numberOfListeners": 316,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 316,
             "region": "JK"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

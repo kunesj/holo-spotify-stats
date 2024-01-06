@@ -1,8 +1,8 @@
 {
-  "id": "6AjW1aE0OlIoRGdnwbHgP2",
-  "name": "Kobo Kanaeru",
   "branch": "ID",
   "generation": "3",
+  "id": "6AjW1aE0OlIoRGdnwbHgP2",
+  "name": "Kobo Kanaeru",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 515098
@@ -17,43 +17,43 @@
       "monthlyListeners": 203054
     },
     "2024-01-06": {
-      "followers": 191355,
+      "followers": 192311,
       "monthlyListeners": 243642,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 57299,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 57299,
             "region": "JK"
           },
           {
-            "numberOfListeners": 23570,
             "city": "Bandung",
             "country": "ID",
+            "numberOfListeners": 23570,
             "region": "JB"
           },
           {
-            "numberOfListeners": 18803,
             "city": "Surabaya",
             "country": "ID",
+            "numberOfListeners": 18803,
             "region": "JI"
           },
           {
-            "numberOfListeners": 14912,
             "city": "Semarang",
             "country": "ID",
+            "numberOfListeners": 14912,
             "region": "JT"
           },
           {
-            "numberOfListeners": 10732,
             "city": "Bekasi",
             "country": "ID",
+            "numberOfListeners": 10732,
             "region": "JB"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

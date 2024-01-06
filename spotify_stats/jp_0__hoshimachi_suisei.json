@@ -1,8 +1,8 @@
 {
-  "id": "726WiFmWkohzodUxK3XjHX",
-  "name": "Hoshimachi Suisei",
   "branch": "JP",
   "generation": "0",
+  "id": "726WiFmWkohzodUxK3XjHX",
+  "name": "Hoshimachi Suisei",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 385763
@@ -17,43 +17,43 @@
       "monthlyListeners": 390783
     },
     "2024-01-06": {
-      "followers": 271834,
+      "followers": 272060,
       "monthlyListeners": 361345,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 43538,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 43538,
             "region": "13"
           },
           {
-            "numberOfListeners": 14870,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 14870,
             "region": "13"
           },
           {
-            "numberOfListeners": 12541,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 12541,
             "region": "27"
           },
           {
-            "numberOfListeners": 9762,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 9762,
             "region": "JK"
           },
           {
-            "numberOfListeners": 9502,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 9502,
             "region": "TPE"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

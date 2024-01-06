@@ -1,8 +1,8 @@
 {
-  "id": "4R8Qf3gbqd9bhiQoUToAAU",
-  "name": "HOLOLIVE FANTASY",
   "branch": null,
   "generation": null,
+  "id": "4R8Qf3gbqd9bhiQoUToAAU",
+  "name": "HOLOLIVE FANTASY",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 26390
@@ -17,43 +17,43 @@
       "monthlyListeners": 25071
     },
     "2024-01-06": {
-      "followers": 4247,
+      "followers": 4271,
       "monthlyListeners": 23991,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 2984,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 2984,
             "region": "13"
           },
           {
-            "numberOfListeners": 831,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 831,
             "region": "13"
           },
           {
-            "numberOfListeners": 715,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 715,
             "region": "27"
           },
           {
-            "numberOfListeners": 469,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 469,
             "region": "TPE"
           },
           {
-            "numberOfListeners": 463,
             "city": "\u014ctemae",
             "country": "JP",
+            "numberOfListeners": 463,
             "region": "27"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

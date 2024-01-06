@@ -1,47 +1,47 @@
 {
-  "id": "19S7gPOuThglBNwslfkVIm",
-  "name": "Todoroki Hajime",
   "branch": "DEV_IS",
   "generation": "ReGLOSS",
+  "id": "19S7gPOuThglBNwslfkVIm",
+  "name": "Todoroki Hajime",
   "stats": {
     "2024-01-06": {
-      "followers": 285,
+      "followers": 304,
       "monthlyListeners": 18851,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 2284,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 2284,
             "region": "13"
           },
           {
-            "numberOfListeners": 675,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 675,
             "region": "13"
           },
           {
-            "numberOfListeners": 580,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 580,
             "region": "27"
           },
           {
-            "numberOfListeners": 443,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 443,
             "region": "TPE"
           },
           {
-            "numberOfListeners": 442,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 442,
             "region": "JK"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

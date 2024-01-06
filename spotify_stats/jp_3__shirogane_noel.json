@@ -1,8 +1,8 @@
 {
-  "id": "58dqdL1HubAnJ1QYj5CQCs",
-  "name": "Shirogane Noel",
   "branch": "JP",
   "generation": "3",
+  "id": "58dqdL1HubAnJ1QYj5CQCs",
+  "name": "Shirogane Noel",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 46515
@@ -17,43 +17,43 @@
       "monthlyListeners": 48671
     },
     "2024-01-06": {
-      "followers": 31997,
+      "followers": 32050,
       "monthlyListeners": 53210,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 7801,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 7801,
             "region": "13"
           },
           {
-            "numberOfListeners": 2474,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 2474,
             "region": "13"
           },
           {
-            "numberOfListeners": 2113,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 2113,
             "region": "27"
           },
           {
-            "numberOfListeners": 1403,
             "city": "\u014ctemae",
             "country": "JP",
+            "numberOfListeners": 1403,
             "region": "27"
           },
           {
-            "numberOfListeners": 926,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 926,
             "region": "TPE"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

@@ -1,47 +1,47 @@
 {
-  "id": "2JevDdymuQqbHKsPJTWyv3",
-  "name": "Ichijou Ririka",
   "branch": "DEV_IS",
   "generation": "ReGLOSS",
+  "id": "2JevDdymuQqbHKsPJTWyv3",
+  "name": "Ichijou Ririka",
   "stats": {
     "2024-01-06": {
-      "followers": 273,
+      "followers": 286,
       "monthlyListeners": 18691,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 2253,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 2253,
             "region": "13"
           },
           {
-            "numberOfListeners": 653,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 653,
             "region": "13"
           },
           {
-            "numberOfListeners": 571,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 571,
             "region": "27"
           },
           {
-            "numberOfListeners": 435,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 435,
             "region": "JK"
           },
           {
-            "numberOfListeners": 431,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 431,
             "region": "TPE"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

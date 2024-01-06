@@ -1,8 +1,8 @@
 {
-  "id": "28lO8lCOqFvDB5la90xKUW",
-  "name": "Nekomata Okayu",
   "branch": "JP",
   "generation": "Gamers",
+  "id": "28lO8lCOqFvDB5la90xKUW",
+  "name": "Nekomata Okayu",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 89708
@@ -17,43 +17,43 @@
       "monthlyListeners": 86851
     },
     "2024-01-06": {
-      "followers": 69525,
+      "followers": 69571,
       "monthlyListeners": 85697,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 8729,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 8729,
             "region": "13"
           },
           {
-            "numberOfListeners": 2632,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 2632,
             "region": "13"
           },
           {
-            "numberOfListeners": 2494,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 2494,
             "region": "27"
           },
           {
-            "numberOfListeners": 1908,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 1908,
             "region": "JK"
           },
           {
-            "numberOfListeners": 1699,
             "city": "\u014ctemae",
             "country": "JP",
+            "numberOfListeners": 1699,
             "region": "27"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

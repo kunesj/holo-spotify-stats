@@ -1,8 +1,8 @@
 {
-  "id": "44udMKGBm7IJxh63aPv0cj",
-  "name": "Pavolia Reine",
   "branch": "ID",
   "generation": "2",
+  "id": "44udMKGBm7IJxh63aPv0cj",
+  "name": "Pavolia Reine",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 42809
@@ -17,43 +17,43 @@
       "monthlyListeners": 59199
     },
     "2024-01-06": {
-      "followers": 32072,
+      "followers": 32103,
       "monthlyListeners": 71096,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 7523,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 7523,
             "region": "JK"
           },
           {
-            "numberOfListeners": 3001,
             "city": "Bandung",
             "country": "ID",
+            "numberOfListeners": 3001,
             "region": "JB"
           },
           {
-            "numberOfListeners": 2630,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 2630,
             "region": "13"
           },
           {
-            "numberOfListeners": 2461,
             "city": "Surabaya",
             "country": "ID",
+            "numberOfListeners": 2461,
             "region": "JI"
           },
           {
-            "numberOfListeners": 1903,
             "city": "Semarang",
             "country": "ID",
+            "numberOfListeners": 1903,
             "region": "JT"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

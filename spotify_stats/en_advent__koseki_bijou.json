@@ -1,8 +1,8 @@
 {
-  "id": "5E8gJd9z6pNljMI6v78e3F",
-  "name": "Koseki Bijou",
   "branch": "EN",
   "generation": "Advent",
+  "id": "5E8gJd9z6pNljMI6v78e3F",
+  "name": "Koseki Bijou",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 35965
@@ -17,43 +17,43 @@
       "monthlyListeners": 20039
     },
     "2024-01-06": {
-      "followers": 1263,
+      "followers": 1269,
       "monthlyListeners": 18715,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 542,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 542,
             "region": "13"
           },
           {
-            "numberOfListeners": 400,
             "city": "Singapore",
             "country": "SG",
+            "numberOfListeners": 400,
             "region": ""
           },
           {
-            "numberOfListeners": 377,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 377,
             "region": "JK"
           },
           {
-            "numberOfListeners": 333,
             "city": "Kuala Lumpur",
             "country": "MY",
+            "numberOfListeners": 333,
             "region": "14"
           },
           {
-            "numberOfListeners": 268,
             "city": "Bangkok",
             "country": "TH",
+            "numberOfListeners": 268,
             "region": "10"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

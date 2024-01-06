@@ -1,8 +1,8 @@
 {
-  "id": "0JHnoazUTZHoJMqRwsCDNT",
-  "name": "Shiranui Flare",
   "branch": "JP",
   "generation": "3",
+  "id": "0JHnoazUTZHoJMqRwsCDNT",
+  "name": "Shiranui Flare",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 50175
@@ -17,43 +17,43 @@
       "monthlyListeners": 45883
     },
     "2024-01-06": {
-      "followers": 29899,
+      "followers": 29944,
       "monthlyListeners": 49961,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 6961,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 6961,
             "region": "13"
           },
           {
-            "numberOfListeners": 2197,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 2197,
             "region": "13"
           },
           {
-            "numberOfListeners": 1895,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 1895,
             "region": "27"
           },
           {
-            "numberOfListeners": 1250,
             "city": "\u014ctemae",
             "country": "JP",
+            "numberOfListeners": 1250,
             "region": "27"
           },
           {
-            "numberOfListeners": 1103,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 1103,
             "region": "TPE"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

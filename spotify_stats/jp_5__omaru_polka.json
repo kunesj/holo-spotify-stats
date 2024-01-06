@@ -1,8 +1,8 @@
 {
-  "id": "4lnAamuhZv4tmgOMryoB73",
-  "name": "Omaru Polka",
   "branch": "JP",
   "generation": "5",
+  "id": "4lnAamuhZv4tmgOMryoB73",
+  "name": "Omaru Polka",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 34235
@@ -17,43 +17,43 @@
       "monthlyListeners": 32072
     },
     "2024-01-06": {
-      "followers": 32965,
+      "followers": 33007,
       "monthlyListeners": 37825,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 5348,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 5348,
             "region": "13"
           },
           {
-            "numberOfListeners": 1693,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 1693,
             "region": "13"
           },
           {
-            "numberOfListeners": 1520,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 1520,
             "region": "27"
           },
           {
-            "numberOfListeners": 977,
             "city": "\u014ctemae",
             "country": "JP",
+            "numberOfListeners": 977,
             "region": "27"
           },
           {
-            "numberOfListeners": 622,
             "city": "Osaka",
             "country": "JP",
+            "numberOfListeners": 622,
             "region": "27"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

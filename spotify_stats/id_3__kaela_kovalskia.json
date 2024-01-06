@@ -1,8 +1,8 @@
 {
-  "id": "4tja6ktAg16YWJphxmw2bV",
-  "name": "Kaela Kovalskia",
   "branch": "ID",
   "generation": "3",
+  "id": "4tja6ktAg16YWJphxmw2bV",
+  "name": "Kaela Kovalskia",
   "stats": {
     "2023-11-05": {
       "monthlyListeners": 6901
@@ -11,43 +11,43 @@
       "monthlyListeners": 8287
     },
     "2024-01-06": {
-      "followers": 1892,
+      "followers": 1913,
       "monthlyListeners": 5916,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 669,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 669,
             "region": "JK"
           },
           {
-            "numberOfListeners": 253,
             "city": "Bandung",
             "country": "ID",
+            "numberOfListeners": 253,
             "region": "JB"
           },
           {
-            "numberOfListeners": 243,
             "city": "Surabaya",
             "country": "ID",
+            "numberOfListeners": 243,
             "region": "JI"
           },
           {
-            "numberOfListeners": 236,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 236,
             "region": "13"
           },
           {
-            "numberOfListeners": 172,
             "city": "Semarang",
             "country": "ID",
+            "numberOfListeners": 172,
             "region": "JT"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

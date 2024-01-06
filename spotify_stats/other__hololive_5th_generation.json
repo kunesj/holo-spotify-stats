@@ -1,8 +1,8 @@
 {
-  "id": "2Yifj1OZBwgUXlTJCqK3FV",
-  "name": "hololive 5th Generation",
   "branch": null,
   "generation": null,
+  "id": "2Yifj1OZBwgUXlTJCqK3FV",
+  "name": "hololive 5th Generation",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 11386
@@ -17,43 +17,43 @@
       "monthlyListeners": 9505
     },
     "2024-01-06": {
-      "followers": 2843,
+      "followers": 2861,
       "monthlyListeners": 9287,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 1351,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 1351,
             "region": "13"
           },
           {
-            "numberOfListeners": 375,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 375,
             "region": "13"
           },
           {
-            "numberOfListeners": 365,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 365,
             "region": "27"
           },
           {
-            "numberOfListeners": 237,
             "city": "\u014ctemae",
             "country": "JP",
+            "numberOfListeners": 237,
             "region": "27"
           },
           {
-            "numberOfListeners": 185,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 185,
             "region": "TPE"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

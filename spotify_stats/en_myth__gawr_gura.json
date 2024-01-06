@@ -1,8 +1,8 @@
 {
-  "id": "1Spm887PTszc2AoNYpoCld",
-  "name": "Gawr Gura",
   "branch": "EN",
   "generation": "Myth",
+  "id": "1Spm887PTszc2AoNYpoCld",
+  "name": "Gawr Gura",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 242139
@@ -17,43 +17,43 @@
       "monthlyListeners": 251014
     },
     "2024-01-06": {
-      "followers": 135546,
+      "followers": 135604,
       "monthlyListeners": 236742,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 10572,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 10572,
             "region": "13"
           },
           {
-            "numberOfListeners": 4907,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 4907,
             "region": "JK"
           },
           {
-            "numberOfListeners": 3846,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 3846,
             "region": "TPE"
           },
           {
-            "numberOfListeners": 3268,
             "city": "Singapore",
             "country": "SG",
+            "numberOfListeners": 3268,
             "region": ""
           },
           {
-            "numberOfListeners": 3187,
             "city": "Kuala Lumpur",
             "country": "MY",
+            "numberOfListeners": 3187,
             "region": "14"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

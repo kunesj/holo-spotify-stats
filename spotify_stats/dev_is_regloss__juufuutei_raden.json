@@ -1,47 +1,47 @@
 {
-  "id": "0HWMbRLZ4EZ7zPXSJOeWzY",
-  "name": "Juufuutei Raden",
   "branch": "DEV_IS",
   "generation": "ReGLOSS",
+  "id": "0HWMbRLZ4EZ7zPXSJOeWzY",
+  "name": "Juufuutei Raden",
   "stats": {
     "2024-01-06": {
-      "followers": 251,
+      "followers": 263,
       "monthlyListeners": 18808,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 2280,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 2280,
             "region": "13"
           },
           {
-            "numberOfListeners": 665,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 665,
             "region": "13"
           },
           {
-            "numberOfListeners": 580,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 580,
             "region": "27"
           },
           {
-            "numberOfListeners": 443,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 443,
             "region": "JK"
           },
           {
-            "numberOfListeners": 434,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 434,
             "region": "TPE"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }

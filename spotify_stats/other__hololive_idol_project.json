@@ -1,8 +1,8 @@
 {
-  "id": "18Zr9CaElvS40S0AtizMWZ",
-  "name": "hololive IDOL PROJECT",
   "branch": null,
   "generation": null,
+  "id": "18Zr9CaElvS40S0AtizMWZ",
+  "name": "hololive IDOL PROJECT",
   "stats": {
     "2023-09-04": {
       "monthlyListeners": 108043
@@ -17,43 +17,43 @@
       "monthlyListeners": 96513
     },
     "2024-01-06": {
-      "followers": 134933,
+      "followers": 134977,
       "monthlyListeners": 97118,
-      "worldRank": 0,
       "topCities": {
         "items": [
           {
-            "numberOfListeners": 9140,
             "city": "Tokyo",
             "country": "JP",
+            "numberOfListeners": 9140,
             "region": "13"
           },
           {
-            "numberOfListeners": 2984,
             "city": "Chiyoda-ku",
             "country": "JP",
+            "numberOfListeners": 2984,
             "region": "13"
           },
           {
-            "numberOfListeners": 2878,
             "city": "Jakarta",
             "country": "ID",
+            "numberOfListeners": 2878,
             "region": "JK"
           },
           {
-            "numberOfListeners": 2545,
             "city": "Umeda",
             "country": "JP",
+            "numberOfListeners": 2545,
             "region": "27"
           },
           {
-            "numberOfListeners": 2245,
             "city": "Taipei",
             "country": "TW",
+            "numberOfListeners": 2245,
             "region": "TPE"
           }
         ]
-      }
+      },
+      "worldRank": 0
     }
   }
 }
