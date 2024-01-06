@@ -34,6 +34,7 @@ class ArtistData {
 
     constructor (path) {
         this.path = path;
+        this.error = false;
         this._data = null;
         this._chartData = null;
         this._chartColor = null
@@ -44,6 +45,7 @@ class ArtistData {
             const response = await fetch(this.path);
 
             this._data = await response.json();
+            this.error = false;
         }
         return this._data;
     }
@@ -51,6 +53,9 @@ class ArtistData {
     get chartName() {
         if (this._data) {
             return this._data['name'];
+        }
+        else if (this.error) {
+            return '<error>';
         }
         else {
             return '???';
@@ -213,7 +218,7 @@ function initChart() {
         }
         catch (e) {
             console.error('Could not fetch:', artistData.path);
-            continue;
+            artistData.error = true;
         }
         chart.update();
     }
