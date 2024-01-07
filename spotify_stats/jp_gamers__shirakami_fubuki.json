@@ -1,7 +1,10 @@
 {
   "branch": "JP",
   "generation": "Gamers",
-  "generations": ["1", "Gamers"],
+  "generations": [
+    "1",
+    "Gamers"
+  ],
   "id": "2GR0oaCTOgws9PfuheMw0k",
   "name": "Shirakami Fubuki",
   "stats": {
@@ -9,6 +12,7 @@
     "2023-10-04": {"monthlyListeners": 73578},
     "2023-11-05": {"monthlyListeners": 78515},
     "2023-12-04": {"monthlyListeners": 71672},
-    "2024-01-06": {"followers": 73547, "monthlyListeners": 70301, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 8589, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 2817, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 2475, "region": "27"}, {"city": "\u014ctemae", "country": "JP", "numberOfListeners": 1692, "region": "27"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 1584, "region": "JK"}]}, "worldRank": 0}
+    "2024-01-06": {"followers": 73547, "monthlyListeners": 70301, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 8589, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 2817, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 2475, "region": "27"}, {"city": "\u014ctemae", "country": "JP", "numberOfListeners": 1692, "region": "27"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 1584, "region": "JK"}]}, "worldRank": 0},
+    "2024-01-07": {"followers": 73612, "monthlyListeners": 70806, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 8600, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 2776, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 2479, "region": "27"}, {"city": "\u014ctemae", "country": "JP", "numberOfListeners": 1715, "region": "27"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 1609, "region": "JK"}]}, "worldRank": 0}
   }
 }
