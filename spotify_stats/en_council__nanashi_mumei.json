@@ -1,7 +1,10 @@
 {
   "branch": "EN",
   "generation": "Council",
-  "generations": ["Council", "Promise"],
+  "generations": [
+    "Council",
+    "Promise"
+  ],
   "id": "3LWmimMpybGBGCjuvFqhAT",
   "name": "Nanashi Mumei",
   "stats": {
@@ -9,6 +12,7 @@
     "2023-10-04": {"monthlyListeners": 67594},
     "2023-11-05": {"monthlyListeners": 88132},
     "2023-12-04": {"monthlyListeners": 73634},
-    "2024-01-06": {"followers": 33672, "monthlyListeners": 70714, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 2917, "region": "13"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 2169, "region": "JK"}, {"city": "Singapore", "country": "SG", "numberOfListeners": 1311, "region": ""}, {"city": "Taipei", "country": "TW", "numberOfListeners": 1253, "region": "TPE"}, {"city": "Kuala Lumpur", "country": "MY", "numberOfListeners": 1215, "region": "14"}]}, "worldRank": 0}
+    "2024-01-06": {"followers": 33672, "monthlyListeners": 70714, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 2917, "region": "13"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 2169, "region": "JK"}, {"city": "Singapore", "country": "SG", "numberOfListeners": 1311, "region": ""}, {"city": "Taipei", "country": "TW", "numberOfListeners": 1253, "region": "TPE"}, {"city": "Kuala Lumpur", "country": "MY", "numberOfListeners": 1215, "region": "14"}]}, "worldRank": 0},
+    "2024-01-07": {"followers": 33705, "monthlyListeners": 70817, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 2912, "region": "13"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 2205, "region": "JK"}, {"city": "Singapore", "country": "SG", "numberOfListeners": 1314, "region": ""}, {"city": "Taipei", "country": "TW", "numberOfListeners": 1255, "region": "TPE"}, {"city": "Kuala Lumpur", "country": "MY", "numberOfListeners": 1238, "region": "14"}]}, "worldRank": 0}
   }
 }

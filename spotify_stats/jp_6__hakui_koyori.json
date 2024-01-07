@@ -8,6 +8,7 @@
     "2023-10-04": {"monthlyListeners": 37375},
     "2023-11-05": {"monthlyListeners": 33095},
     "2023-12-04": {"monthlyListeners": 33721},
-    "2024-01-06": {"followers": 25062, "monthlyListeners": 40789, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 6021, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 1937, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 1692, "region": "27"}, {"city": "\u014ctemae", "country": "JP", "numberOfListeners": 1136, "region": "27"}, {"city": "Osaka", "country": "JP", "numberOfListeners": 768, "region": "27"}]}, "worldRank": 0}
+    "2024-01-06": {"followers": 25062, "monthlyListeners": 40789, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 6021, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 1937, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 1692, "region": "27"}, {"city": "\u014ctemae", "country": "JP", "numberOfListeners": 1136, "region": "27"}, {"city": "Osaka", "country": "JP", "numberOfListeners": 768, "region": "27"}]}, "worldRank": 0},
+    "2024-01-07": {"followers": 25105, "monthlyListeners": 40115, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 5937, "region": "13"}, {"city": "Chiyoda-ku", "country": "JP", "numberOfListeners": 1884, "region": "13"}, {"city": "Umeda", "country": "JP", "numberOfListeners": 1678, "region": "27"}, {"city": "\u014ctemae", "country": "JP", "numberOfListeners": 1125, "region": "27"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 732, "region": "TPE"}]}, "worldRank": 0}
   }
 }

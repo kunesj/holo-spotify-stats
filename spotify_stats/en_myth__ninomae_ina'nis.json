@@ -8,6 +8,7 @@
     "2023-10-04": {"monthlyListeners": 89367},
     "2023-11-05": {"monthlyListeners": 80527},
     "2023-12-04": {"monthlyListeners": 79541},
-    "2024-01-06": {"followers": 35622, "monthlyListeners": 76798, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 3583, "region": "13"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 1898, "region": "JK"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 1430, "region": "TPE"}, {"city": "Singapore", "country": "SG", "numberOfListeners": 1332, "region": ""}, {"city": "Kuala Lumpur", "country": "MY", "numberOfListeners": 1232, "region": "14"}]}, "worldRank": 0}
+    "2024-01-06": {"followers": 35622, "monthlyListeners": 76798, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 3583, "region": "13"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 1898, "region": "JK"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 1430, "region": "TPE"}, {"city": "Singapore", "country": "SG", "numberOfListeners": 1332, "region": ""}, {"city": "Kuala Lumpur", "country": "MY", "numberOfListeners": 1232, "region": "14"}]}, "worldRank": 0},
+    "2024-01-07": {"followers": 35647, "monthlyListeners": 76872, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 3566, "region": "13"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 1906, "region": "JK"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 1429, "region": "TPE"}, {"city": "Singapore", "country": "SG", "numberOfListeners": 1340, "region": ""}, {"city": "Kuala Lumpur", "country": "MY", "numberOfListeners": 1219, "region": "14"}]}, "worldRank": 0}
   }
 }
