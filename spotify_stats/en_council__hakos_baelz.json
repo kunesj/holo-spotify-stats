@@ -1,10 +1,7 @@
 {
   "branch": "EN",
   "generation": "Council",
-  "generations": [
-    "Council",
-    "Promise"
-  ],
+  "generations": ["Council", "Promise"],
   "id": "3h5FLKIAPF9O96Sdz2j4Jb",
   "name": "Hakos Baelz",
   "stats": {
@@ -12,7 +9,6 @@
     "2023-10-04": {"monthlyListeners": 104112},
     "2023-11-05": {"monthlyListeners": 95288},
     "2023-12-04": {"monthlyListeners": 95010},
-    "2024-01-06": {"followers": 40726, "monthlyListeners": 96909, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 3295, "region": "13"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 1618, "region": "JK"}, {"city": "Singapore", "country": "SG", "numberOfListeners": 1449, "region": ""}, {"city": "Kuala Lumpur", "country": "MY", "numberOfListeners": 1171, "region": "14"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 1164, "region": "TPE"}]}, "worldRank": 0},
-    "2024-01-07": {"followers": 40777, "monthlyListeners": 96976, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 3314, "region": "13"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 1639, "region": "JK"}, {"city": "Singapore", "country": "SG", "numberOfListeners": 1469, "region": ""}, {"city": "Kuala Lumpur", "country": "MY", "numberOfListeners": 1190, "region": "14"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 1176, "region": "TPE"}]}, "worldRank": 0}
+    "2024-01-06": {"followers": 40726, "monthlyListeners": 96909, "topCities": {"items": [{"city": "Tokyo", "country": "JP", "numberOfListeners": 3295, "region": "13"}, {"city": "Jakarta", "country": "ID", "numberOfListeners": 1618, "region": "JK"}, {"city": "Singapore", "country": "SG", "numberOfListeners": 1449, "region": ""}, {"city": "Kuala Lumpur", "country": "MY", "numberOfListeners": 1171, "region": "14"}, {"city": "Taipei", "country": "TW", "numberOfListeners": 1164, "region": "TPE"}]}, "worldRank": 0}
   }
 }

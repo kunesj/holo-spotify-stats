@@ -8,7 +8,6 @@
     "2023-10-04": {"monthlyListeners": 484061},
     "2023-11-05": {"monthlyListeners": 223985},
     "2023-12-04": {"monthlyListeners": 203054},
-    "2024-01-06": {"followers": 192311, "monthlyListeners": 243642, "topCities": {"items": [{"city": "Jakarta", "country": "ID", "numberOfListeners": 57299, "region": "JK"}, {"city": "Bandung", "country": "ID", "numberOfListeners": 23570, "region": "JB"}, {"city": "Surabaya", "country": "ID", "numberOfListeners": 18803, "region": "JI"}, {"city": "Semarang", "country": "ID", "numberOfListeners": 14912, "region": "JT"}, {"city": "Bekasi", "country": "ID", "numberOfListeners": 10732, "region": "JB"}]}, "worldRank": 0},
-    "2024-01-07": {"followers": 193408, "monthlyListeners": 246167, "topCities": {"items": [{"city": "Jakarta", "country": "ID", "numberOfListeners": 57844, "region": "JK"}, {"city": "Bandung", "country": "ID", "numberOfListeners": 23714, "region": "JB"}, {"city": "Surabaya", "country": "ID", "numberOfListeners": 19060, "region": "JI"}, {"city": "Semarang", "country": "ID", "numberOfListeners": 14994, "region": "JT"}, {"city": "Bekasi", "country": "ID", "numberOfListeners": 10800, "region": "JB"}]}, "worldRank": 0}
+    "2024-01-06": {"followers": 192311, "monthlyListeners": 243642, "topCities": {"items": [{"city": "Jakarta", "country": "ID", "numberOfListeners": 57299, "region": "JK"}, {"city": "Bandung", "country": "ID", "numberOfListeners": 23570, "region": "JB"}, {"city": "Surabaya", "country": "ID", "numberOfListeners": 18803, "region": "JI"}, {"city": "Semarang", "country": "ID", "numberOfListeners": 14912, "region": "JT"}, {"city": "Bekasi", "country": "ID", "numberOfListeners": 10732, "region": "JB"}]}, "worldRank": 0}
   }
 }
