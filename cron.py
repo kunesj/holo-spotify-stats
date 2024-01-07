@@ -53,6 +53,8 @@ def update_spotify_stats() -> None:
     """
     # ensure that git is clean and up to date
 
+    _logger.info("Preparing git repo...")
+
     if has_changes():
         notify_log(logging.ERROR, "Git repository contains uncommitted changes. Fetch stopped.")
         return
@@ -60,6 +62,8 @@ def update_spotify_stats() -> None:
     subprocess.check_call(["git", "pull", "--ff-only"], cwd=DIR_PATH)
 
     # fetch stats
+
+    _logger.info("Fetching stats...")
 
     max_try = 3
     for i in range(max_try):
@@ -77,8 +81,10 @@ def update_spotify_stats() -> None:
 
     # commit changes
 
+    _logger.info("Committing stats...")
+
     if not has_changes():
-        notify_log(logging.INFO, "No stats changes, nothing to commit.")
+        notify_log(logging.INFO, "No stats changed")
         return
 
     try:
@@ -93,6 +99,8 @@ def update_spotify_stats() -> None:
         return
 
     # push changes
+
+    _logger.info("Pushing stats...")
 
     try:
         subprocess.check_call(["git", "push"], cwd=DIR_PATH)
@@ -140,7 +148,6 @@ def main() -> None:
 
         else:
             # skip by one hour until we get to correct weekday
-
             sleep_time = 1 * 60 * 60
 
         _logger.info("Sleeping for %s seconds", sleep_time)
