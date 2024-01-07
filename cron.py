@@ -108,7 +108,7 @@ def update_spotify_stats() -> None:
         _logger.warning("Push interrupted")
         raise
     except Exception:
-        notify_log(logging.INFO, "Stats could not be pushed", exc_info=True)
+        notify_log(logging.ERROR, "Stats could not be pushed", exc_info=True)
         return
 
     notify_log(logging.INFO, "Stats updated")
