@@ -65,7 +65,7 @@ def update_spotify_stats() -> None:
 
     _logger.info("Fetching stats...")
 
-    max_try = 3
+    max_try = 5
     for i in range(max_try):
         try:
             subprocess.check_call(["./fetch_spotify_stats.py"], cwd=DIR_PATH)
@@ -74,7 +74,7 @@ def update_spotify_stats() -> None:
             _logger.warning("Fetch interrupted")
             raise
         except Exception:
-            notify_log(logging.ERROR, f"Spotify fetch failed {i+1}/{max_try}", exc_info=True)
+            notify_log(logging.WARNING, f"Spotify fetch failed {i+1}/{max_try}", exc_info=True)
     else:
         notify_log(logging.ERROR, "All Spotify stats could not be fetched")
         return
