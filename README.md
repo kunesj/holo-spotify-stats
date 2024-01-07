@@ -1,8 +1,17 @@
 # Hololive Spotify Stats
 
-https://holo-spotify-stats.jirikunes.eu/
+Tool for collecting Hololive stats from Spotify and displaying them in a simple graph.
 
-### Testing webpage localy
+Website: https://holo-spotify-stats.jirikunes.eu/
 
-Set `security.fileuri.strict_origin_policy` to `false` in `about:config` on Firefox.
 
+## Setup
+
+- Use Python 3.11+
+- Install script dependencies with `pip install -r requirements.txt`
+
+#### Testing website locally
+
+- Start Firefox
+- Set `security.fileuri.strict_origin_policy` to `false` in `about:config`
+- Open `index.html`
