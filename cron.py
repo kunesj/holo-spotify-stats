@@ -116,7 +116,7 @@ def update_spotify_stats() -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--weekday", default="7", type=lambda x: max(1, min(7, int(x))), help="Monday==1, Sunday==7")
+    parser.add_argument("--interval", default=3, type=int, help="Fetch will be run every N days")
     parser.add_argument("--time", default="22:00:00", type=lambda x: datetime.time.fromisoformat(x))
     args = parser.parse_args()
 
@@ -124,13 +124,13 @@ def main() -> None:
     _logger.setLevel(logging.INFO)
     notify2.init("holo-spotify-stats")
 
-    _logger.info("Stats will be updated on weekday %s after %s", args.weekday, args.time.isoformat())
+    _logger.info("Stats will be updated every %s days after %s", args.interval, args.time.isoformat())
     while True:
         now = datetime.datetime.now()
-        weekday = now.isoweekday()
+        run_today = (now.timetuple().tm_yday - 1) % args.interval == 0
         today_runtime = now.replace(hour=args.time.hour, minute=args.time.minute, second=args.time.second)
 
-        if weekday == args.weekday and now >= today_runtime:
+        if run_today and now >= today_runtime:
             try:
                 update_spotify_stats()
             except KeyboardInterrupt:
@@ -140,14 +140,14 @@ def main() -> None:
                 _logger.exception("Unexpected exception when fetching stats")
 
             # wake up 1 second after next run time
-            sleep_time = (7 * 24 * 60 * 60) - (now - today_runtime).seconds + 1
+            sleep_time = (args.interval * 24 * 60 * 60) - (now - today_runtime).seconds + 1
 
-        elif weekday == args.weekday:
+        elif run_today:
             # wake up 1 second after next run time
             sleep_time = (today_runtime - now).seconds + 1
 
         else:
-            # skip by one hour until we get to correct weekday
+            # skip by one hour until we get to correct day
             sleep_time = 1 * 60 * 60
 
         _logger.info("Sleeping for %s seconds", sleep_time)
