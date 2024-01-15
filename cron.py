@@ -11,6 +11,7 @@ import time
 
 _logger = logging.getLogger(__name__)
 DIR_PATH = os.path.abspath(os.path.dirname(__file__))
+DEFAULT_LOG_PATH = os.path.join(DIR_PATH, "holo-spotify-stats.log")
 
 
 def notify_log(level: int, message: str, exc_info: bool = False) -> None:
@@ -118,17 +119,33 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--interval", default=3, type=int, help="Fetch will be run every N days")
     parser.add_argument("--time", default="22:00:00", type=lambda x: datetime.time.fromisoformat(x))
+    parser.add_argument("--log-file", default=DEFAULT_LOG_PATH)
     args = parser.parse_args()
 
-    logging.basicConfig()
-    _logger.setLevel(logging.INFO)
+    # configure logging
+
+    logging.basicConfig(
+        level=logging.INFO,
+        format="[%(asctime)s] %(levelname)s %(name)s: %(message)s",
+        handlers=[
+            logging.FileHandler(args.log_file),
+            logging.StreamHandler()
+        ]
+    )
+
+    # init desktop notifications
+
     notify2.init("holo-spotify-stats")
+
+    # cron loop
 
     _logger.info("Stats will be updated every %s days after %s", args.interval, args.time.isoformat())
     while True:
         now = datetime.datetime.now()
-        run_today = (now.timetuple().tm_yday - 1) % args.interval == 0
         today_runtime = now.replace(hour=args.time.hour, minute=args.time.minute, second=args.time.second)
+
+        day_index = now.timetuple().tm_yday - 1
+        run_today = day_index % args.interval == 0
 
         if run_today and now >= today_runtime:
             try:
@@ -144,10 +161,12 @@ def main() -> None:
 
         elif run_today:
             # wake up 1 second after next run time
+            _logger.info("Update later today")
             sleep_time = (today_runtime - now).seconds + 1
 
         else:
             # skip by one hour until we get to correct day
+            _logger.info("Update not today: day_index=%s, interval=%s", day_index, args.interval)
             sleep_time = 1 * 60 * 60
 
         _logger.info("Sleeping for %s seconds", sleep_time)
