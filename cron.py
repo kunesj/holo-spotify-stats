@@ -148,6 +148,8 @@ def main() -> None:
         run_today = day_index % args.interval == 0
 
         if run_today and now >= today_runtime:
+            _logger.info("Updating")
+            
             try:
                 update_spotify_stats()
             except KeyboardInterrupt:
@@ -169,8 +171,12 @@ def main() -> None:
             _logger.info("Update not today: day_index=%s, interval=%s", day_index, args.interval)
             sleep_time = 1 * 60 * 60
 
-        _logger.info("Sleeping for %s seconds", sleep_time)
-        time.sleep(sleep_time)
+        sleep_until = now + datetime.timedelta(seconds=sleep_time)
+        _logger.info("Sleeping until %s", sleep_until)
+
+        while sleep_until > datetime.datetime.now():
+            # wake up every N seconds to help prevent process from freezing
+            time.sleep(60)
 
     notify2.uninit()
 
