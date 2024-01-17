@@ -11,7 +11,6 @@ import time
 
 _logger = logging.getLogger(__name__)
 DIR_PATH = os.path.abspath(os.path.dirname(__file__))
-DEFAULT_LOG_PATH = os.path.join(DIR_PATH, "holo-spotify-stats.log")
 
 
 def notify_log(level: int, message: str, exc_info: bool = False) -> None:
@@ -116,10 +115,12 @@ def update_spotify_stats() -> None:
 
 
 def main() -> None:
+    """
+    To redirect both logging and stdout to file use: ./cron.py >> file.txt 2>&1
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument("--interval", default=3, type=int, help="Fetch will be run every N days")
     parser.add_argument("--time", default="22:00:00", type=lambda x: datetime.time.fromisoformat(x))
-    parser.add_argument("--log-file", default=DEFAULT_LOG_PATH)
     args = parser.parse_args()
 
     # configure logging
@@ -127,10 +128,7 @@ def main() -> None:
     logging.basicConfig(
         level=logging.INFO,
         format="[%(asctime)s] %(levelname)s %(name)s: %(message)s",
-        handlers=[
-            logging.FileHandler(args.log_file),
-            logging.StreamHandler()
-        ]
+        handlers=[logging.StreamHandler()]
     )
 
     # init desktop notifications
@@ -149,7 +147,7 @@ def main() -> None:
 
         if run_today and now >= today_runtime:
             _logger.info("Updating")
-            
+
             try:
                 update_spotify_stats()
             except KeyboardInterrupt:
