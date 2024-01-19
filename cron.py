@@ -131,10 +131,6 @@ def main() -> None:
         handlers=[logging.StreamHandler()]
     )
 
-    # init desktop notifications
-
-    notify2.init("holo-spotify-stats")
-
     # cron loop
 
     _logger.info("Stats will be updated every %s days after %s", args.interval, args.time.isoformat())
@@ -149,12 +145,15 @@ def main() -> None:
             _logger.info("Updating")
 
             try:
+                notify2.init("holo-spotify-stats")
                 update_spotify_stats()
             except KeyboardInterrupt:
                 _logger.warning("Interrupt detected")
                 break
             except Exception:
                 _logger.exception("Unexpected exception when fetching stats")
+            finally:
+                notify2.uninit()
 
             # wake up 1 second after next run time
             sleep_time = (args.interval * 24 * 60 * 60) - (now - today_runtime).seconds + 1
@@ -175,8 +174,6 @@ def main() -> None:
         while sleep_until > datetime.datetime.now():
             # wake up every N seconds to help prevent process from freezing
             time.sleep(60)
-
-    notify2.uninit()
 
 
 if __name__ == "__main__":
