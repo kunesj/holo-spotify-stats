@@ -98,12 +98,17 @@ def fetch_stats(*, artist_id: str) -> dict:
 
     try:
         data = response.json()["data"]["artistUnion"]
+        stats = data["stats"].copy()
 
-        stats = data["stats"]
+        if stats.get("monthlyListeners") is None:
+            raise ValueError("monthlyListeners not returned!")
+        elif stats.get("followers") is None:
+            raise ValueError("followers not returned!")
+
         top_tracks = data["discography"]["topTracks"]["items"]
-        top_tracks_playcount = [int(x["track"]["playcount"]) for x in top_tracks]
+        stats["top_tracks_playcount"] = [int(x["track"]["playcount"]) for x in top_tracks]
 
-        return dict(stats, top_tracks_playcount=top_tracks_playcount)
+        return stats
     except Exception:
         _logger.error("Bad API response:\n%s", response.content)
         raise
