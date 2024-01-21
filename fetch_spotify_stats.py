@@ -97,7 +97,13 @@ def fetch_stats(*, artist_id: str) -> dict:
     response.raise_for_status()
 
     try:
-        return response.json()["data"]["artistUnion"]["stats"]
+        data = response.json()["data"]["artistUnion"]
+
+        stats = data["stats"]
+        top_tracks = data["discography"]["topTracks"]["items"]
+        top_tracks_playcount = [int(x["track"]["playcount"]) for x in top_tracks]
+
+        return dict(stats, top_tracks_playcount=top_tracks_playcount)
     except Exception:
         _logger.error("Bad API response:\n%s", response.content)
         raise
