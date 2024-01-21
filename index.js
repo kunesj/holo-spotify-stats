@@ -60,7 +60,9 @@ class ArtistData {
         this.error = false;
         this._data = null;
         this._chartListenersData = null;
-        this._chartFollowersData = null
+        this._chartFollowersData = null;
+        this._chartTop10PlayCountSumData = null;
+        this._chartTop10PlayCountMaxData = null;
     }
 
     async getData() {
@@ -132,6 +134,54 @@ class ArtistData {
             return [];
         }
     }
+
+    get chartTop10PlayCountSumData() {
+        if (this._chartTop10PlayCountSumData) {
+            return this._chartTop10PlayCountSumData;
+        }
+        else if (this._data) {
+            const data = [];
+
+            for (const [key, value] of Object.entries(this._data['stats'])) {
+                if ('top_tracks_playcount' in value) {
+                    data.push({
+                        x: key,
+                        y: value['top_tracks_playcount'].reduce((pv, cv) => pv + cv, 0)
+                    });
+                }
+            }
+
+            this._chartTop10PlayCountSumData = data;
+            return this._chartTop10PlayCountSumData;
+        }
+        else {
+            return [];
+        }
+    }
+
+    get chartTop10PlayCountMaxData() {
+        if (this._chartTop10PlayCountMaxData) {
+            return this._chartTop10PlayCountMaxData;
+        }
+        else if (this._data) {
+            const data = [];
+
+            for (const [key, value] of Object.entries(this._data['stats'])) {
+                if ('top_tracks_playcount' in value) {
+                    data.push({
+                        x: key,
+                        y: Math.max(...value['top_tracks_playcount'], 0)
+                    });
+                }
+            }
+
+            this._chartTop10PlayCountMaxData = data;
+            return this._chartTop10PlayCountMaxData;
+        }
+        else {
+            return [];
+        }
+    }
 }
 
 /**
@@ -149,6 +199,12 @@ function getTimelineChartData(dataType) {
                     break;
                 case 'followers':
                     chartData = artistData.chartFollowersData;
+                    break;
+                case 'top10-play-count-sum':
+                    chartData = artistData.chartTop10PlayCountSumData;
+                    break;
+                case 'top10-play-count-max':
+                    chartData = artistData.chartTop10PlayCountMaxData;
                     break;
                 default:
                     throw new Error(`Invalid dataType: ${dataType}`);
@@ -168,10 +224,11 @@ function getTimelineChartData(dataType) {
 /**
  * @param {String} elementId
  * @param {String} chartTitle
+ * @param {String} chartSubtitle
  * @param {String} dataType
  * @returns {Chart}
  */
-function initTimelineChart(elementId, chartTitle, dataType) {
+function initTimelineChart(elementId, chartTitle, chartSubtitle, dataType) {
     const chart = new Chart(
         document.getElementById(elementId),
         {
@@ -182,11 +239,16 @@ function initTimelineChart(elementId, chartTitle, dataType) {
                 animation: false, // disable all animations
                 plugins: {
                     title: {
-                        display: true,
+                        display: !!chartTitle,
                         text: chartTitle
+                    },
+                    subtitle: {
+                        display: !!chartSubtitle,
+                        text: chartSubtitle,
                     },
                     legend: {
                         display: true,
+                        position: 'bottom',
                         labels: {
                             filter: function(item, chart) {
                                 // Don't show datasets that are not ready in legend
@@ -241,6 +303,12 @@ function getRankChartData(dataType) {
             case 'followers':
                 timelineData = artistData.chartFollowersData;
                 break
+            case 'top10-play-count-sum':
+                timelineData = artistData.chartTop10PlayCountSumData;
+                break;
+            case 'top10-play-count-max':
+                timelineData = artistData.chartTop10PlayCountMaxData;
+                break;
             default:
                 throw new Error(`Invalid dataType: ${dataType}`);
         }
@@ -282,10 +350,11 @@ function getRankChartData(dataType) {
  *
  * @param {String} elementId
  * @param {String} chartTitle
+ * @param {String} chartSubtitle
  * @param {String} dataType
  * @returns {Chart}
  */
-function initCurrentRankChart(elementId, chartTitle, dataType) {
+function initCurrentRankChart(elementId, chartTitle, chartSubtitle, dataType) {
     const canvasElement = document.getElementById(elementId);
 
     // Height of container must be specified when using maintainAspectRatio=false, otherwise chart throws error.
@@ -303,8 +372,12 @@ function initCurrentRankChart(elementId, chartTitle, dataType) {
                     animation: false, // disable all animations
                     plugins: {
                         title: {
-                            display: true,
+                            display: !!chartTitle,
                             text: chartTitle
+                        },
+                        subtitle: {
+                            display: !!chartSubtitle,
+                            text: chartSubtitle,
                         },
                         legend: {
                             display: false,
@@ -353,10 +426,23 @@ function updateCharts() {
 (async function() {
     await loadArtistIndex();
 
-    initTimelineChart('listeners-timeline-graph', 'Hololive Spotify - Monthly Listeners - Timeline', 'listeners');
-    initTimelineChart('followers-timeline-graph', 'Hololive Spotify - Followers - Timeline', 'followers');
-    initCurrentRankChart('listeners-rank-graph', 'Hololive Spotify - Monthly Listeners - Rank', 'listeners');
-    initCurrentRankChart('followers-rank-graph', 'Hololive Spotify - Followers - Rank', 'followers');
+    const listenersSubtitle = 'Count of unique users that have listened to at least one song withing 28-day window.';
+
+    initCurrentRankChart('listeners-rank-graph', 'Monthly Listeners - Rank', listenersSubtitle, 'listeners');
+    initTimelineChart('listeners-timeline-graph', 'Monthly Listeners - Timeline', listenersSubtitle, 'listeners');
+
+    initCurrentRankChart('followers-rank-graph', 'Followers - Rank', '', 'followers');
+    initTimelineChart('followers-timeline-graph', 'Followers - Timeline', '', 'followers');
+
+    const top10PlayCountSumSubtitle = 'Total play count of 10 most popular songs.';
+
+    initCurrentRankChart('top10-play-count-sum-rank-graph', 'Top10 Play Count [SUM] - Rank', top10PlayCountSumSubtitle, 'top10-play-count-sum');
+    initTimelineChart('top10-play-count-sum-timeline-graph', 'Top10 Play Count [SUM] - Timeline', top10PlayCountSumSubtitle, 'top10-play-count-sum');
+
+    const top10PlayCountMaxSubtitle = 'Play count of most popular song.';
+
+    initCurrentRankChart('top10-play-count-max-rank-graph', 'Top10 Play Count [MAX] - Rank', top10PlayCountMaxSubtitle, 'top10-play-count-max');
+    initTimelineChart('top10-play-count-max-timeline-graph', 'Top10 Play Count [MAX] - Timeline', top10PlayCountMaxSubtitle, 'top10-play-count-max');
 
     for (const artistData of artistIndex) {
         // fetch artist data
