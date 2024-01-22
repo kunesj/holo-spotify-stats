@@ -426,7 +426,7 @@ function updateCharts() {
 (async function() {
     await loadArtistIndex();
 
-    const listenersSubtitle = 'Count of unique users that have listened to at least one song withing 28-day window.';
+    const listenersSubtitle = 'Count of unique users that have listened to at least one song within 28-day window.';
 
     initCurrentRankChart('listeners-rank-graph', 'Monthly Listeners - Rank', listenersSubtitle, 'listeners');
     initTimelineChart('listeners-timeline-graph', 'Monthly Listeners - Timeline', listenersSubtitle, 'listeners');
