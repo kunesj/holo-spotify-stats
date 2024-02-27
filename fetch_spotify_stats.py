@@ -46,15 +46,37 @@ class NoIndentEncoder(json.JSONEncoder):
         return result
 
 
+def request_retry(*args, retry_max_count: int = 3, retry_delay: int = 10, **kwargs):
+    retry_count = 0
+    
+    while True:
+        retry_count += 1
+        try:    
+            response = requests.request(*args, **kwargs)
+            response.raise_for_status()
+            break
+        except KeyboardInterrupt:
+            raise
+        except Exception:
+            _logger.exception("Request failed %s/%s", retry_count, retry_max_count)
+            
+            if retry_count > retry_max_count:
+                raise
+                
+            _logger.info("Retry in % seconds...", retry_delay)
+            time.sleep(retry_delay)
+
+    return response
+
+
 def get_auth_token() -> str:
     global AUTH_TOKEN, AUTH_TOKEN_EXPIRY
 
     if not AUTH_TOKEN or AUTH_TOKEN_EXPIRY > time.time():
-        response = requests.request(
+        response = request_retry(
             method="GET",
             url="https://open.spotify.com",
         )
-        response.raise_for_status()
 
         soup = BeautifulSoup(response.content, features="lxml")
         session_tag = soup.find("script", id="session")
@@ -70,7 +92,7 @@ def get_auth_token() -> str:
 
 def fetch_stats(*, artist_id: str) -> dict:
     auth_token = get_auth_token()
-    response = requests.request(
+    response = request_retry(
         method="GET",
         url="https://api-partner.spotify.com/pathfinder/v1/query",
         params={
@@ -94,7 +116,6 @@ def fetch_stats(*, artist_id: str) -> dict:
             # "spotify-app-version": "1.2.29.347.ga8104e6e"
         }
     )
-    response.raise_for_status()
 
     try:
         data = response.json()["data"]["artistUnion"]
