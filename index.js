@@ -444,11 +444,21 @@ function updateCharts() {
     initCurrentRankChart('top10-play-count-max-rank-graph', 'Top10 Play Count [MAX] - Rank', top10PlayCountMaxSubtitle, 'top10-play-count-max');
     initTimelineChart('top10-play-count-max-timeline-graph', 'Top10 Play Count [MAX] - Timeline', top10PlayCountMaxSubtitle, 'top10-play-count-max');
 
+    // start fetching all artist data
+
+    const getDataPromisses = [];
+    
     for (const artistData of artistIndex) {
-        // fetch artist data
+        getDataPromisses.push([artistData, artistData.getData()]);
+    }
+
+    // wait until everything is fetched and update the graph
+    
+    for (const [artistData, getDataPromise] of getDataPromisses) {
+        // wait for data to be fetched
 
         try {
-            await artistData.getData();
+            await getDataPromise;
         }
         catch (e) {
             console.error('Could not fetch:', artistData.dataPath);
