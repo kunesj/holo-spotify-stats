@@ -98,7 +98,7 @@ def fetch_stats(*, artist_id: str) -> dict:
         params={
             "operationName": "queryArtistOverview",
             "variables": json.dumps({"uri": f"spotify:artist:{artist_id}", "locale": "", "includePrerelease": True}),
-            "extensions": json.dumps({"persistedQuery": {"version": 1, "sha256Hash": "6a533f1185ff9c36e60f11c05827dc22d5d28e913e9161782cd9696584e80712"}}),
+            "extensions": json.dumps({"persistedQuery": {"version": 1, "sha256Hash": "da986392124383827dc03cbb3d66c1de81225244b6e20f8d78f9f802cc43df6e"}}),
         },
         headers={
             "accept": "application/json",
