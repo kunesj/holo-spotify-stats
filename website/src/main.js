@@ -7,7 +7,7 @@ import './main.scss';
 import { Chart } from 'chart.js/auto';
 import 'chartjs-adapter-moment';
 
-import { artistIndex, loadArtistIndex, ArtistData } from './artist.js';
+import { artistIndex, loadArtistData, ArtistData } from './artist.js';
 
 const chartRegistry = [];
 
@@ -251,7 +251,7 @@ function updateCharts() {
  * Main
  */
 window.addEventListener('load', async() => {
-    await loadArtistIndex();
+    await loadArtistData();
 
     const listenersSubtitle = 'Count of unique users that have listened to at least one song within 28-day window.';
 
@@ -271,29 +271,5 @@ window.addEventListener('load', async() => {
     initCurrentRankChart('top10-play-count-max-rank-graph', 'Top10 Play Count [MAX] - Rank', top10PlayCountMaxSubtitle, 'top10-play-count-max');
     initTimelineChart('top10-play-count-max-timeline-graph', 'Top10 Play Count [MAX] - Timeline', top10PlayCountMaxSubtitle, 'top10-play-count-max');
 
-    // start fetching all artist data
-
-    const getDataPromisses = [];
-    
-    for (const artistData of artistIndex) {
-        getDataPromisses.push([artistData, artistData.getData()]);
-    }
-
-    // wait until everything is fetched and update the graph
-    
-    for (const [artistData, getDataPromise] of getDataPromisses) {
-        // wait for data to be fetched
-
-        try {
-            await getDataPromise;
-        }
-        catch (e) {
-            console.error('Could not fetch:', artistData.dataPath);
-            artistData.error = true;
-        }
-
-        // update graphs
-
-        updateCharts();
-    }
+    updateCharts();
 });
