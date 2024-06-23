@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 
 import argparse
-import os
+import datetime
 import logging
+import os
 import subprocess
 import sys
-import notify2
-import datetime
 import time
+
+import notify2
 
 _logger = logging.getLogger(__name__)
 DIR_PATH = os.path.abspath(os.path.dirname(__file__))
@@ -40,7 +41,7 @@ def has_changes() -> bool:
     """
     Returns True if repo has any uncommitted changes
     """
-    raw_status = subprocess.check_output(
+    raw_status = subprocess.check_output(  # nosec B607, B603
         ["git", "status", "--porcelain"], cwd=DIR_PATH, encoding=sys.stdout.encoding
     ).strip()
     return len([x for x in raw_status.splitlines() if x.strip()]) > 0
@@ -59,7 +60,7 @@ def update_spotify_stats() -> None:
         notify_log(logging.ERROR, "Git repository contains uncommitted changes. Fetch stopped.")
         return
 
-    subprocess.check_call(["git", "pull", "--ff-only"], cwd=DIR_PATH)
+    subprocess.check_call(["git", "pull", "--ff-only"], cwd=DIR_PATH)  # nosec B607, B603
 
     # fetch stats
 
@@ -68,7 +69,7 @@ def update_spotify_stats() -> None:
     max_try = 5
     for i in range(max_try):
         try:
-            subprocess.check_call(["./fetch_spotify_stats.py"], cwd=DIR_PATH)
+            subprocess.check_call(["./fetch_spotify_stats.py"], cwd=DIR_PATH)  # nosec B607, B603
             break
         except KeyboardInterrupt:
             _logger.warning("Fetch interrupted")
@@ -90,7 +91,7 @@ def update_spotify_stats() -> None:
     try:
         subprocess.check_call(
             ["git", "commit", "-a", "-m", f"DATA:{datetime.date.today().isoformat()}"], cwd=DIR_PATH
-        )
+        )  # nosec B607, B603
     except KeyboardInterrupt:
         _logger.warning("Commit interrupted")
         raise
@@ -103,7 +104,7 @@ def update_spotify_stats() -> None:
     _logger.info("Pushing stats...")
 
     try:
-        subprocess.check_call(["git", "push"], cwd=DIR_PATH)
+        subprocess.check_call(["git", "push"], cwd=DIR_PATH)  # nosec B607, B603
     except KeyboardInterrupt:
         _logger.warning("Push interrupted")
         raise
@@ -128,7 +129,7 @@ def main() -> None:
     logging.basicConfig(
         level=logging.INFO,
         format="[%(asctime)s] %(levelname)s %(name)s: %(message)s",
-        handlers=[logging.StreamHandler()]
+        handlers=[logging.StreamHandler()],
     )
 
     # cron loop

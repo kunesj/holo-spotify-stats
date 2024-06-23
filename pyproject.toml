@@ -1,0 +1,31 @@
+# This config is used only for pre-commit configs
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.bandit]
+targets = ['.']
+exclude_dirs = ['./venv', './.git', 'tests']
+# B105,B106,B107 (Possible hardcoded password) - Too many false positives
+# B324 (Use of weak MD4, MD5, or SHA1 hash for security) - We don't use it for security
+# B404 (Consider possible security implications associated with the subprocess module) - it's just import
+skips = ['B105', 'B106', 'B107', 'B324', 'B404']
+recursive = true
+# for some wierd reason following configs are not aplied (workaround in .pre-commit-config.yaml)
+format = 'custom'
+msg-template = '{relpath}:{line}:{col}: {test_id}[bandit]: {severity}: {msg}'
+quiet = true

@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 
 import argparse
-import requests
-import json
 import datetime
-import os
+import json
 import logging
-from bs4 import BeautifulSoup
+import os
 import time
 import uuid
+
+import requests
+from bs4 import BeautifulSoup
 
 _logger = logging.getLogger(__name__)
 DIR_PATH = os.path.abspath(os.path.dirname(__file__))
@@ -28,7 +29,7 @@ class NoIndentEncoder(json.JSONEncoder):
     def __init__(self, *args, **kwargs):
         super(NoIndentEncoder, self).__init__(*args, **kwargs)
         self.kwargs = dict(kwargs)
-        del self.kwargs['indent']
+        del self.kwargs["indent"]
         self._replacement_map = {}
 
     def default(self, o):
@@ -48,10 +49,10 @@ class NoIndentEncoder(json.JSONEncoder):
 
 def request_retry(*args, retry_max_count: int = 3, retry_delay: int = 10, **kwargs):
     retry_count = 0
-    
+
     while True:
         retry_count += 1
-        try:    
+        try:
             response = requests.request(*args, **kwargs)
             response.raise_for_status()
             break
@@ -59,10 +60,10 @@ def request_retry(*args, retry_max_count: int = 3, retry_delay: int = 10, **kwar
             raise
         except Exception:
             _logger.exception("Request failed %s/%s", retry_count, retry_max_count)
-            
+
             if retry_count > retry_max_count:
                 raise
-                
+
             _logger.info("Retry in % seconds...", retry_delay)
             time.sleep(retry_delay)
 
@@ -98,7 +99,14 @@ def fetch_stats(*, artist_id: str) -> dict:
         params={
             "operationName": "queryArtistOverview",
             "variables": json.dumps({"uri": f"spotify:artist:{artist_id}", "locale": "", "includePrerelease": True}),
-            "extensions": json.dumps({"persistedQuery": {"version": 1, "sha256Hash": "da986392124383827dc03cbb3d66c1de81225244b6e20f8d78f9f802cc43df6e"}}),
+            "extensions": json.dumps(
+                {
+                    "persistedQuery": {
+                        "version": 1,
+                        "sha256Hash": "da986392124383827dc03cbb3d66c1de81225244b6e20f8d78f9f802cc43df6e",
+                    }
+                }
+            ),
         },
         headers={
             "accept": "application/json",
@@ -114,7 +122,7 @@ def fetch_stats(*, artist_id: str) -> dict:
             # "sec-fetch-mode": "cors",
             # "sec-fetch-site": "same-site",
             # "spotify-app-version": "1.2.29.347.ga8104e6e"
-        }
+        },
     )
 
     try:
@@ -159,15 +167,15 @@ def update_stats_file(*, file_path: str, force: bool = False) -> None:
     data["stats"][date_key] = fetch_stats(artist_id=data["id"])
 
     # write new data
-    
+
     data_str = json.dumps(
-        {**data, "stats": {k: NoIndent(v) for k, v in data["stats"].items()}}, 
-        indent=2, 
-        sort_keys=True, 
+        {**data, "stats": {k: NoIndent(v) for k, v in data["stats"].items()}},
+        indent=2,
+        sort_keys=True,
         cls=NoIndentEncoder,
     )
 
-    with open(file_path, "w") as f:       
+    with open(file_path, "w") as f:
         f.write(data_str)
 
 
@@ -189,7 +197,7 @@ def main() -> None:
             force=args.force,
         )
         stats_files.append(os.path.join(STATS_DIR_REL_PATH, file_name))
-        
+
     with open(INDEX_PATH, "w") as f:
         f.write(json.dumps(sorted(stats_files), indent=2))
 
