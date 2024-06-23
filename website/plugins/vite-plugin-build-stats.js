@@ -1,5 +1,6 @@
-import { readFile, writeFile } from 'fs/promises';
+import { readFile, writeFile, mkdir } from 'fs/promises';
 import globby from 'globby';
+import path from 'path';
 
 export default function BuildStats(options = {}) {
     const {
@@ -31,6 +32,7 @@ export default function BuildStats(options = {}) {
             }
 
             console.info(`Writing stats to ${destFile}`);
+            await mkdir(path.dirname(destFile), { recursive: true });
             await writeFile(destFile, JSON.stringify(stats), {encoding: 'utf-8'});
         }
     };
