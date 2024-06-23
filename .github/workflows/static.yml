@@ -27,12 +27,46 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Vite Github Pages Deployer
-        id: deploy_to_pages
-        uses: skywarth/vite-github-pages-deployer@v1.4.0
+
+      - name: Determine Public Base Path
+        run: |
+          if [ -f $GITHUB_WORKSPACE/CNAME ]; then
+            PUBLIC_BASE_PATH="/"
+          else
+            PUBLIC_BASE_PATH="/${{ github.event.repository.name }}"
+          fi
+          echo "PUBLIC_BASE_PATH=${PUBLIC_BASE_PATH}" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install
+        env:
+          NODE_ENV: 'dev'
+        working-directory: ./website
+        run: |
+              echo "Installing via npm";
+              npm ci;
+        shell: bash
+
+      - name: Build
+        env:
+          NODE_ENV: 'production'
+        working-directory: ./website
+        run: |
+              echo "Building via npm";
+              npm run build -- --base=$PUBLIC_BASE_PATH
+        shell: bash
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          public_base_path:
-          build_path: ./website/dist
-          install_phase_node_env: dev
-          package_manager: npm
-          artifact_name: github-pages
+          path: './website/dist'
+          name: 'github-pages'
+
+      - name: Deploy
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: 'github-pages'
+        id: deployment
