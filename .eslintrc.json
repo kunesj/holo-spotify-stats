@@ -1,0 +1,59 @@
+{
+    "globals": {
+        "__dirname": true
+    },
+    "env": {
+        "es2022": true,
+        "browser": true,
+        "jquery": true,
+        "qunit": true
+    },
+    "extends": "eslint:recommended",
+    "ignorePatterns": ["**/website/*/dist/*.js"],
+    "rules": {
+        "indent": ["error", 4, {
+            "SwitchCase": 1
+        }],
+        "linebreak-style": ["error", "unix"],
+        "strict": "error",
+
+        "comma-dangle": ["error", "never"],
+        "camelcase": "off",
+        "quotes": ["error", "single"],
+        "semi": "error",
+        "no-console": "off",
+        "no-extra-boolean-cast": "off",
+
+        "curly": "error",
+        "no-multiple-empty-lines": ["error", {"max": 1}],
+        "space-before-function-paren": ["error", "never"],
+        "space-before-blocks": "error",
+        "brace-style": ["error", "stroustrup"],
+        "keyword-spacing": "error",
+        "space-infix-ops": "error",
+        "padding-line-between-statements": ["error", {
+            "blankLine": "always", "prev": "*", "next": ["block", "if"]
+        }],
+        "object-property-newline": "error",
+        "key-spacing": "error",
+
+        "no-undef": "error",
+        "no-unused-vars": ["warn", { "args": "none" }],
+        "vars-on-top": "error",
+        "one-var": ["error", {
+            "let": "always",
+            "var": "always",
+            "const": "consecutive"
+        }],
+        "newline-after-var": "error",
+        "one-var-declaration-per-line": ["error", "initializations"],
+        "no-var": "warn",
+        "no-eval": "error",
+
+        "no-prototype-builtins": "warn"
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2022
+    }
+}
