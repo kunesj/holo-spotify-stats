@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="web.WebClient">
+        <h1 class="text-center">Hololive Spotify Stats</h1>
+
+        <ul class="nav nav-tabs" role="tablist">
+            <!--  LISTENERS  -->
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" t-att-class="{'active': state.page === 'listeners:rank'}" href="#" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:rank'">Listeners</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" t-att-class="{'active': state.page === 'listeners:timeline'}" href="#" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:timeline'">Listeners (Timeline)</a>
+            </li>
+            <!--  FOLLOWERS  -->
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" t-att-class="{'active': state.page === 'followers:rank'}" href="#" t-on-click.prevent="_onPageClick" t-att-data-page="'followers:rank'">Followers</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" t-att-class="{'active': state.page === 'followers:timeline'}" href="#" t-on-click.prevent="_onPageClick" t-att-data-page="'followers:timeline'">Followers (Timeline)</a>
+            </li>
+            <!--  TOP10 PLAY COUNT [SUM]  -->
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" t-att-class="{'active': state.page === 'top10-play-count-sum:rank'}" href="#" t-on-click.prevent="_onPageClick" t-att-data-page="'top10-play-count-sum:rank'">Top10 SUM</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" t-att-class="{'active': state.page === 'top10-play-count-sum:timeline'}" href="#" t-on-click.prevent="_onPageClick" t-att-data-page="'top10-play-count-sum:timeline'">Top10 SUM (Timeline)</a>
+            </li>
+            <!--  TOP10 PLAY COUNT [MAX]  -->
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" t-att-class="{'active': state.page === 'top10-play-count-max:rank'}" href="#" t-on-click.prevent="_onPageClick" t-att-data-page="'top10-play-count-max:rank'">Top10 MAX</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" t-att-class="{'active': state.page === 'top10-play-count-max:timeline'}" href="#" t-on-click.prevent="_onPageClick" t-att-data-page="'top10-play-count-max:timeline'">Top10 MAX (Timeline)</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane show active" role="tabpanel">
+                <StatsChart title="chartTitle" subtitle="chartSubtitle" dataType="chartDataType" chartType="chartChartType"/>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px;">
+            <a href="https://github.com/kunesj/holo-spotify-stats">Source code and data</a>
+        </div>
+    </t>
+
+</templates>

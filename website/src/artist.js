@@ -1,10 +1,9 @@
 import 'bootstrap';
 
-import { hsvToRgb } from './utils';
+import { hsvToRgb } from './utils/color';
+import { STATE } from './state';
 
 import './main.scss';
-
-export const artistIndex = [];
 
 /**
  * Loads artist data from index.json
@@ -18,19 +17,16 @@ export async function loadArtistData() {
         const [r, g, b] = hsvToRgb(index / stats.length, 1.0, 0.95),
             chartColor = `rgb(${r}, ${g}, ${b})`;
 
-        artistIndex.push(new ArtistData(data, chartColor));
+        STATE.artistIndex.push(new ArtistData(data, chartColor));
     }
 
-    return artistIndex;
+    return STATE.artistIndex;
 }
 
 /**
  * Contains loaded artist data
  */
 export class ArtistData {
-    static UNLOADED_NAME = '???';
-    static ERROR_NAME = '<error>';
-
     constructor(data, chartColor) {
         this.data = data;
         this.chartColor = chartColor;

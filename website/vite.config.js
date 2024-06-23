@@ -1,5 +1,6 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import OwlXmlLoader from './plugins/vite-plugin-owl-xml-loader';
 import BuildStats from './plugins/vite-plugin-build-stats';
 
 export default defineConfig({
@@ -23,6 +24,8 @@ export default defineConfig({
         devSourcemap: true
     },
     plugins: [
+        // automatically register OWL XML
+        OwlXmlLoader(),
         // Builds stats.json
         BuildStats({
             srcDir: resolve(__dirname, '../spotify_stats'),
