@@ -33,7 +33,9 @@ export class StatsChart extends owl.Component {
 
     onMounted() {
         // Height of container must be specified when using maintainAspectRatio=false, otherwise chart throws error.
-        this.canvasRef.el.parentElement.style.minHeight = '5rem';
+        if (!this.canvasRef.el.parentElement.style.minHeight) {
+            this.canvasRef.el.parentElement.style.minHeight = '5rem';
+        }
 
         this._createChart();
     }
@@ -70,16 +72,35 @@ export class StatsChart extends owl.Component {
     }
 
     _updateChart() {
+        let oldData = this.chart.data,
+            oldTitle = this.chart.options.plugins.title.text,
+            oldMinHeight = this.canvasRef.el.parentElement.style.minHeight;
+
         if (this.props.chartType === 'rank') {
             this.chart.data = this._getRankChartData();
-            this.chart.options.plugins.title.text = `${this.props.title} [${this.chart.data.datasets[0].label}]`;
-            this.canvasRef.el.parentElement.style.minHeight = `${3 + 1.5 * Math.max(this.chart.data.datasets[0].data.length, 1)}rem`;
         }
         else if (this.props.chartType === 'timeline') {
             this.chart.data = this._getTimelineChartData();
+        }
+
+        if (this.props.chartType === 'rank') {
+            this.chart.options.plugins.title.text = `${this.props.title} [${this.chart.data.datasets[0].label}]`;
+        }
+
+        if (this.props.chartType === 'rank') {
+            this.canvasRef.el.parentElement.style.minHeight = `${3 + 1.5 * Math.max(this.chart.data.datasets[0].data.length, 1)}rem`;
+        }
+        else {
             this.canvasRef.el.parentElement.style.minHeight = '5rem';
         }
-        this.chart.update(undefined);
+
+        if (
+            JSON.stringify(this.chart.data) !== JSON.stringify(oldData)
+            || this.chart.options.plugins.title.text !== oldTitle
+            || this.canvasRef.el.parentElement.style.minHeight !== oldMinHeight
+        ) {
+            this.chart.update(undefined);
+        }
     }
 
     _destroyChart() {
