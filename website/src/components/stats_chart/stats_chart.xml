@@ -2,8 +2,30 @@
 <templates xml:space="preserve">
 
     <t t-name="web.StatsChart">
-        <div class="holo-graph-container">
-            <canvas t-ref="canvas"/>
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-auto pt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <t t-foreach="branches" t-as="branch" t-key="branch">
+                                <button type="button" class="btn mt-2 d-block" t-on-click="_onClickFilterButton" t-att-data-branch="branch"
+                                        t-att-class="{'btn-primary': !hiddenBranches.has(branch), 'btn-secondary': hiddenBranches.has(branch)}">
+                                    <t t-esc="branch"/>
+                                </button>
+                            </t>
+
+                            <div class="mt-4">
+                                <a href="https://github.com/kunesj/holo-spotify-stats">Raw data</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="holo-graph-container">
+                        <canvas t-ref="canvas"/>
+                    </div>
+                </div>
+            </div>
         </div>
     </t>
 

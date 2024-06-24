@@ -18,9 +18,6 @@ export class WebClient extends owl.Component {
             page: 'listeners:rank'
         });
 
-        // we are expecting that the component will be mounted on the <body> tag
-        window.document.body.classList.add('a_web_client');
-
         owl.onWillStart(this.onWillStart.bind(this));
         owl.useExternalListener(window, 'click', this.onGlobalClick, { capture: true });
         owl.onError(this.onError.bind(this));

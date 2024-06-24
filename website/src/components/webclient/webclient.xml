@@ -26,10 +26,6 @@
                 <StatsChart title="chartTitle" subtitle="chartSubtitle" dataType="chartDataType" chartType="chartChartType"/>
             </div>
         </div>
-
-        <div style="margin-top: 50px;">
-            <a href="https://github.com/kunesj/holo-spotify-stats">Source code and data</a>
-        </div>
     </t>
 
 </templates>

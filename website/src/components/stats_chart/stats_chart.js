@@ -32,11 +32,6 @@ export class StatsChart extends owl.Component {
     }
 
     onMounted() {
-        // Height of container must be specified when using maintainAspectRatio=false, otherwise chart throws error.
-        if (!this.canvasRef.el.parentElement.style.minHeight) {
-            this.canvasRef.el.parentElement.style.minHeight = '5rem';
-        }
-
         this._createChart();
     }
 
@@ -45,10 +40,7 @@ export class StatsChart extends owl.Component {
     }
 
     onPatched() {
-        if (this.chart) {
-            this._updateChart();
-        }
-        else {
+        if (!this.chart) {
             this._createChart();
         }
     }
@@ -57,50 +49,54 @@ export class StatsChart extends owl.Component {
         this._destroyChart();
     }
 
+    get branches() {
+        const branches = new Set();
+
+        for (const artistData of this.envState.artistIndex) {
+            const gens = artistData.data['generations'];
+
+            if (!gens || gens.length === 0) {
+                branches.add('Other');
+            }
+            else {
+                for (const gen of gens) {
+                    branches.add(gen[0]);
+                }
+            }
+        }
+
+        branches.delete('INoNaKa Music');  // not relevant
+        return branches;
+    }
+
+    get hiddenBranches() {
+        return this.envState.hiddenBranches;
+    }
+
     _createChart() {
         this._destroyChart();
 
+        let minHeight = '5rem', 
+            maxHeight;
+
         if (this.props.chartType === 'rank') {
             this.chart = this._createRankChart();
+            minHeight = maxHeight = `${3 + 1.5 * Math.max(this.chart.data.datasets[0].data.length, 1)}rem`;
         }
         else if (this.props.chartType === 'timeline') {
             this.chart = this._createTimelineChart();
         }
 
-        // apply style changes etc.
-        this._updateChart();
-    }
+        // Height of container must be specified when using maintainAspectRatio=false, otherwise chart throws error.
+        this.canvasRef.el.parentElement.style.minHeight = minHeight;
 
-    _updateChart() {
-        let oldData = this.chart.data,
-            oldTitle = this.chart.options.plugins.title.text,
-            oldMinHeight = this.canvasRef.el.parentElement.style.minHeight;
-
-        if (this.props.chartType === 'rank') {
-            this.chart.data = this._getRankChartData();
-        }
-        else if (this.props.chartType === 'timeline') {
-            this.chart.data = this._getTimelineChartData();
-        }
-
-        if (this.props.chartType === 'rank') {
-            this.chart.options.plugins.title.text = `${this.props.title} [${this.chart.data.datasets[0].label}]`;
-        }
-
-        if (this.props.chartType === 'rank') {
-            this.canvasRef.el.parentElement.style.minHeight = `${3 + 1.5 * Math.max(this.chart.data.datasets[0].data.length, 1)}rem`;
+        if (maxHeight) {
+            this.canvasRef.el.parentElement.style.maxHeight = maxHeight;
         }
         else {
-            this.canvasRef.el.parentElement.style.minHeight = '5rem';
+            this.canvasRef.el.parentElement.style.removeProperty('max-height');
         }
-
-        if (
-            JSON.stringify(this.chart.data) !== JSON.stringify(oldData)
-            || this.chart.options.plugins.title.text !== oldTitle
-            || this.canvasRef.el.parentElement.style.minHeight !== oldMinHeight
-        ) {
-            this.chart.update(undefined);
-        }
+        this.chart.resize();
     }
 
     _destroyChart() {
@@ -110,12 +106,30 @@ export class StatsChart extends owl.Component {
         }
     }
 
+    _getArtistHidden(artistData) {
+        const gens = artistData.data['generations'];
+
+        if (!gens || gens.length === 0) {
+            return this.hiddenBranches.has('Other');
+        }
+
+        for (const gen of gens) {
+            if (!this.hiddenBranches.has(gen[0])) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     _createRankChart() {
+        const data = this._getRankChartData();
+
         return new Chart(
             this.canvasRef.el,
             {
                 type: 'bar',
-                data: this._getRankChartData(),
+                data,
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,  // expand vertically
@@ -123,7 +137,7 @@ export class StatsChart extends owl.Component {
                     plugins: {
                         title: {
                             display: !!this.props.title,
-                            text: this.props.title
+                            text: `${this.props.title} [${data.datasets[0].label}]`
                         },
                         subtitle: {
                             display: !!this.props.subtitle,
@@ -157,6 +171,10 @@ export class StatsChart extends owl.Component {
 
         for (const artistData of this.envState.artistIndex) {
             let timelineData, lastPoint;
+
+            if (this._getArtistHidden(artistData)) {
+                continue;
+            }
 
             switch (this.props.dataType) {
                 case 'listeners':
@@ -222,13 +240,7 @@ export class StatsChart extends owl.Component {
                         },
                         legend: {
                             display: true,
-                            position: 'bottom',
-                            labels: {
-                                filter: function(item, chart) {
-                                    // Filter later
-                                    return true;
-                                }
-                            }
+                            position: 'bottom'
                         }
                     },
                     interaction: {
@@ -252,8 +264,12 @@ export class StatsChart extends owl.Component {
     }
 
     _getTimelineChartData() {
+        const artistIndex = this.envState.artistIndex.filter(artistData => {
+            return !this._getArtistHidden(artistData);
+        });
+
         return {
-            datasets: this.envState.artistIndex.map(artistData => {
+            datasets: artistIndex.map(artistData => {
                 let chartData;
 
                 switch (this.props.dataType) {
@@ -271,10 +287,23 @@ export class StatsChart extends owl.Component {
                     label: artistData.chartName,
                     data: chartData,
                     borderColor: artistData.chartColor,
-                    hidden: false,
+                    hidden: this._getArtistHidden(artistData),
                     fill: false
                 };
             })
         };
+    }
+
+    _onClickFilterButton(ev) {
+        const branch = ev.currentTarget.dataset.branch;
+
+        if (this.hiddenBranches.has(branch)) {
+            this.hiddenBranches.delete(branch);
+        }
+        else {
+            this.hiddenBranches.add(branch);
+        }
+
+        this._createChart();
     }
 }
