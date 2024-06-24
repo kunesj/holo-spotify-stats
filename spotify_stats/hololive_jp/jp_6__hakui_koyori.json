@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "6",
+  "generations": [
+    ["Hololive JP", "6"]
+  ],
   "id": "6wzg6ZJ9dBUoOuk0hs2Ert",
   "name": "Hakui Koyori",
   "stats": {

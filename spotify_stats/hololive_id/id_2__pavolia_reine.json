@@ -1,6 +1,7 @@
 {
-  "branch": "ID",
-  "generation": "2",
+  "generations": [
+    ["Hololive ID", "2"]
+  ],
   "id": "44udMKGBm7IJxh63aPv0cj",
   "name": "Pavolia Reine",
   "stats": {

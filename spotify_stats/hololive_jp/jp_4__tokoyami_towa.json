@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "4",
+  "generations": [
+    ["Hololive JP", "4"]
+  ],
   "id": "0XZGQi9wNsE1z9L0AWhC82",
   "name": "Tokoyami Towa",
   "stats": {

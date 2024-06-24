@@ -1,6 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Myth",
+  "generations": [
+    ["Hololive EN", "Myth"]
+  ],
   "id": "1PhE6rv0146ZTQosoPDjk8",
   "name": "Mori Calliope",
   "stats": {

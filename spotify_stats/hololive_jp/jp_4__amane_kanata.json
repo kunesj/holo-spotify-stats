@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "4",
+  "generations": [
+    ["Hololive JP", "4"]
+  ],
   "id": "3xYcccivSuAU13ZHypWoNW",
   "name": "Amane Kanata",
   "stats": {

@@ -1,6 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Advent",
+  "generations": [
+    ["Hololive EN", "Advent"]
+  ],
   "id": "4uzAnzFMXarRPOBAG2lIIa",
   "name": "Nerissa Ravencroft",
   "stats": {

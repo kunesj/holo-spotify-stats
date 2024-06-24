@@ -1,6 +1,7 @@
 {
-  "branch": "DEV_IS",
-  "generation": "ReGLOSS",
+  "generations": [
+    ["Hololive DEV_IS", "ReGLOSS"]
+  ],
   "id": "0HWMbRLZ4EZ7zPXSJOeWzY",
   "name": "Juufuutei Raden",
   "stats": {

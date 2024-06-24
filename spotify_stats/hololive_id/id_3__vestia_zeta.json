@@ -1,6 +1,7 @@
 {
-  "branch": "ID",
-  "generation": "3",
+  "generations": [
+    ["Hololive ID", "3"]
+  ],
   "id": "6EnbBHbsZU4sIYz7HHvBHl",
   "name": "Vestia Zeta",
   "stats": {

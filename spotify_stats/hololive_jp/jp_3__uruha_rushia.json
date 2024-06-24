@@ -1,8 +1,10 @@
 {
-  "branch": "JP",
-  "generation": "3",
+  "generations": [
+    ["Hololive JP", "3"]
+  ],
   "id": "70qI9Ih5VXZMuCsEVhy22C",
-  "name": "Uruha Rushia [R]",
+  "name": "Uruha Rushia",
+  "retired": "2022-02-24",
   "stats": {
     "2023-09-04": {"monthlyListeners": 36735},
     "2023-10-04": {"monthlyListeners": 38495},

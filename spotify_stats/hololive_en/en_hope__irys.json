@@ -1,9 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Hope",
   "generations": [
-    "Hope",
-    "Promise"
+    ["Hololive EN", "Hope"],
+    ["Hololive EN", "Promise"]
   ],
   "id": "7y1hO3QeftnOJmWCbzeZav",
   "name": "IryS",

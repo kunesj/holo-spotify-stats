@@ -1,8 +1,10 @@
 {
-  "branch": "JP",
-  "generation": "1",
+  "generations": [
+    ["Hololive JP", "1"]
+  ],
   "id": "4Hv8fxKG4YGfv5ezI6o4Xx",
-  "name": "Yozora Mel [R]",
+  "name": "Yozora Mel",
+  "retired": "2024-01-16",
   "stats": {
     "2023-09-04": {"monthlyListeners": 28418},
     "2023-10-04": {"monthlyListeners": 27898},

@@ -1,6 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Advent",
+  "generations": [
+    ["Hololive EN", "Advent"]
+  ],
   "id": "6SEuAPLJCdjoxpjic7dTNg",
   "name": "Shiori Novella",
   "stats": {

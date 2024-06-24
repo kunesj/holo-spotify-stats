@@ -1,6 +1,7 @@
 {
-  "branch": "DEV_IS",
-  "generation": "ReGLOSS",
+  "generations": [
+    ["Hololive DEV_IS", "ReGLOSS"]
+  ],
   "id": "2i1mag1k6qyZmTXpeZ34l0",
   "name": "Otonose Kanade",
   "stats": {

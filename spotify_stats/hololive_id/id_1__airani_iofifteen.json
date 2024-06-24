@@ -1,6 +1,7 @@
 {
-  "branch": "ID",
-  "generation": "1",
+  "generations": [
+    ["Hololive ID", "1"]
+  ],
   "id": "0BMLTnMl6Tljh8FUrOjING",
   "name": "Airani Iofifteen",
   "stats": {

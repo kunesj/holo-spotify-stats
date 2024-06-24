@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "6",
+  "generations": [
+    ["Hololive JP", "6"]
+  ],
   "id": "6bqjeuZSue05I1koJvEl0d",
   "name": "La+ Darknesss",
   "stats": {

@@ -1,6 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Myth",
+  "generations": [
+    ["Hololive EN", "Myth"]
+  ],
   "id": "6UCFRdg4ySMWj6O4QRKyZs",
   "name": "Takanashi Kiara",
   "stats": {

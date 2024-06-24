@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "3",
+  "generations": [
+    ["Hololive JP", "3"]
+  ],
   "id": "58dqdL1HubAnJ1QYj5CQCs",
   "name": "Shirogane Noel",
   "stats": {

@@ -1,12 +1,11 @@
 {
-  "branch": "EN",
-  "generation": "Council",
   "generations": [
-    "Council",
-    "Promise"
+    ["Hololive EN", "Council"],
+    ["Hololive EN", "Promise"]
   ],
   "id": "14Ug9p3MMOsXgaB47igqD9",
-  "name": "Tsukumo Sana [R]",
+  "name": "Tsukumo Sana",
+  "retired": "2022-07-31",
   "stats": {
     "2023-09-04": {"monthlyListeners": 13958},
     "2023-10-04": {"monthlyListeners": 13436},

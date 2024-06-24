@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "6",
+  "generations": [
+    ["Hololive JP", "6"]
+  ],
   "id": "2YLI1Exc3ujaC7w7oWAqqy",
   "name": "Sakamata Chloe",
   "stats": {

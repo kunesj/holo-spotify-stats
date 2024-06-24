@@ -1,6 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Advent",
+  "generations": [
+    ["Hololive EN", "Advent"]
+  ],
   "id": "1P0HinK679PsgvTmf8Xyx2",
   "name": "Mococo Abyssgard",
   "stats": {

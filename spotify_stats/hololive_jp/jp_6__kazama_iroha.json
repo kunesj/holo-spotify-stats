@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "6",
+  "generations": [
+    ["Hololive JP", "6"]
+  ],
   "id": "43FPwU0RdUqvTa3VaOAHnF",
   "name": "Kazama Iroha",
   "stats": {

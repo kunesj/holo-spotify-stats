@@ -1,9 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Council",
   "generations": [
-    "Council",
-    "Promise"
+    ["Hololive EN", "Council"],
+    ["Hololive EN", "Promise"]
   ],
   "id": "1LLRRrE5gZ3964ThLvo2nu",
   "name": "Ouro Kronii",

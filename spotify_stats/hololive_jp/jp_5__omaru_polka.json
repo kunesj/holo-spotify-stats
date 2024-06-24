@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "5",
+  "generations": [
+    ["Hololive JP", "5"]
+  ],
   "id": "4lnAamuhZv4tmgOMryoB73",
   "name": "Omaru Polka",
   "stats": {

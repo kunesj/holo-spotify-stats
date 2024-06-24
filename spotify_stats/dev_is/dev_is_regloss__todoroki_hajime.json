@@ -1,6 +1,7 @@
 {
-  "branch": "DEV_IS",
-  "generation": "ReGLOSS",
+  "generations": [
+    ["Hololive DEV_IS", "ReGLOSS"]
+  ],
   "id": "19S7gPOuThglBNwslfkVIm",
   "name": "Todoroki Hajime",
   "stats": {

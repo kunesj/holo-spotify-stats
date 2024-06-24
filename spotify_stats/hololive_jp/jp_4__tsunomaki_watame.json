@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "4",
+  "generations": [
+    ["Hololive JP", "4"]
+  ],
   "id": "68609MOnEU86kVyMf26JnM",
   "name": "Tsunomaki Watame",
   "stats": {

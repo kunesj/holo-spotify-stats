@@ -1,6 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Myth",
+  "generations": [
+    ["Hololive EN", "Myth"]
+  ],
   "id": "3iPvwu8p75fYRa0V4wi8gN",
   "name": "Ninomae Ina'nis",
   "stats": {

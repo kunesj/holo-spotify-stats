@@ -1,6 +1,8 @@
 {
-  "branch": "JP",
-  "generation": "0",
+  "generations": [
+    ["INoNaKa Music", ""],
+    ["Hololive JP", "0"]
+  ],
   "id": "0HX3yJ7THlqC9drRqhOkgo",
   "name": "AZKi",
   "stats": {

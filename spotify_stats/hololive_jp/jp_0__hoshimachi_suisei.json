@@ -1,6 +1,8 @@
 {
-  "branch": "JP",
-  "generation": "0",
+  "generations": [
+    ["INoNaKa Music", ""],
+    ["Hololive JP", "0"]
+  ],
   "id": "726WiFmWkohzodUxK3XjHX",
   "name": "Hoshimachi Suisei",
   "stats": {

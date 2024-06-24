@@ -1,6 +1,7 @@
 {
-  "branch": "DEV_IS",
-  "generation": "ReGLOSS",
+  "generations": [
+    ["Hololive DEV_IS", "ReGLOSS"]
+  ],
   "id": "61CPRQBnU83J9FIcdPincG",
   "name": "Hiodoshi Ao",
   "stats": {

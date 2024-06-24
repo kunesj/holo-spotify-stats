@@ -1,6 +1,7 @@
 {
-  "branch": "ID",
-  "generation": "3",
+  "generations": [
+    ["Hololive ID", "3"]
+  ],
   "id": "4tja6ktAg16YWJphxmw2bV",
   "name": "Kaela Kovalskia",
   "stats": {

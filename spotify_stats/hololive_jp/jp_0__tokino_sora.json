@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "0",
+  "generations": [
+    ["Hololive JP", "0"]
+  ],
   "id": "2g9gjJayRURjomDGRLNaZR",
   "name": "Tokino Sora",
   "stats": {

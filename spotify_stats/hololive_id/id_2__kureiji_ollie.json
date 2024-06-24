@@ -1,6 +1,7 @@
 {
-  "branch": "ID",
-  "generation": "2",
+  "generations": [
+    ["Hololive ID", "2"]
+  ],
   "id": "1OhTcluS7b80jZfvQngApR",
   "name": "Kureiji Ollie",
   "stats": {

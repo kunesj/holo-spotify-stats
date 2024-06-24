@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "2",
+  "generations": [
+    ["Hololive JP", "2"]
+  ],
   "id": "1gSUbOpSpv15bOewxQ64eB",
   "name": "Oozora Subaru",
   "stats": {

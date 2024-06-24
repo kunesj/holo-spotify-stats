@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "4",
+  "generations": [
+    ["Hololive JP", "4"]
+  ],
   "id": "1uLQjE6Ti5jie0J4PWXzyO",
   "name": "Himemori Luna",
   "stats": {

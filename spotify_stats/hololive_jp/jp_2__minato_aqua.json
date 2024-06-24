@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "2",
+  "generations": [
+    ["Hololive JP", "2"]
+  ],
   "id": "6GHr4rGFHGRUuzuCuxJA0f",
   "name": "Minato Aqua",
   "stats": {

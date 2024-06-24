@@ -1,6 +1,7 @@
 {
-  "branch": "ID",
-  "generation": "3",
+  "generations": [
+    ["Hololive ID", "3"]
+  ],
   "id": "6AjW1aE0OlIoRGdnwbHgP2",
   "name": "Kobo Kanaeru",
   "stats": {

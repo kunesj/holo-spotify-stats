@@ -1,9 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Council",
   "generations": [
-    "Council",
-    "Promise"
+    ["Hololive EN", "Council"],
+    ["Hololive EN", "Promise"]
   ],
   "id": "76xXQq2nPiexRDstB9MY70",
   "name": "Ceres Fauna",

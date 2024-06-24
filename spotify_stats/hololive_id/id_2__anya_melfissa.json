@@ -1,6 +1,7 @@
 {
-  "branch": "ID",
-  "generation": "2",
+  "generations": [
+    ["Hololive ID", "2"]
+  ],
   "id": "54Gs353pwY49Rl19Zc8jeu",
   "id__2023-09-04_-_2024-05-03": "3ajRK89RamsBsdbbLH2ufQ",
   "name": "Anya Melfissa",

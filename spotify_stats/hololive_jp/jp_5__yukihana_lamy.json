@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "5",
+  "generations": [
+    ["Hololive JP", "5"]
+  ],
   "id": "0qysjJL9vlQUriZJRQmcVE",
   "name": "Yukihana Lamy",
   "stats": {

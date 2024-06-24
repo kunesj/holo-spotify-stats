@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "1",
+  "generations": [
+    ["Hololive JP", "1"]
+  ],
   "id": "1d7xr1J9jeQpwTOVCc07WU",
   "name": "Akai Haato",
   "stats": {

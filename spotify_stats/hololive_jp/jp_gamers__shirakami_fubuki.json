@@ -1,9 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "Gamers",
   "generations": [
-    "1",
-    "Gamers"
+    ["Hololive JP", "1"],
+    ["Hololive JP", "Gamers"]
   ],
   "id": "2GR0oaCTOgws9PfuheMw0k",
   "name": "Shirakami Fubuki",

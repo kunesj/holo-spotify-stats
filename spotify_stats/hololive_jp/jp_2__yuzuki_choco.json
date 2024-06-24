@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "2",
+  "generations": [
+    ["Hololive JP", "2"]
+  ],
   "id": "7f88eYygFslxqmdh0mDWXn",
   "name": "Yuzuki Choco",
   "stats": {

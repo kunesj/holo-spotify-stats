@@ -1,6 +1,7 @@
 {
-  "branch": "ID",
-  "generation": "1",
+  "generations": [
+    ["Hololive ID", "1"]
+  ],
   "id": "2Iss9rGmxvoEfVigargjTH",
   "name": "Moona Hoshinova",
   "stats": {

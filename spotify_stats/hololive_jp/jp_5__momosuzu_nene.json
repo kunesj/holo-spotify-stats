@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "5",
+  "generations": [
+    ["Hololive JP", "5"]
+  ],
   "id": "3KixQ8ZB7p1AXDaRA62SpX",
   "name": "Momosuzu Nene",
   "stats": {

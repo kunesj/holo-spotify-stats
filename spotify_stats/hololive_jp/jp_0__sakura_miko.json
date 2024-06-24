@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "0",
+  "generations": [
+    ["Hololive JP", "0"]
+  ],
   "id": "6YFKPqnL4YtX9jJmj5zkzv",
   "name": "Sakura Miko",
   "stats": {

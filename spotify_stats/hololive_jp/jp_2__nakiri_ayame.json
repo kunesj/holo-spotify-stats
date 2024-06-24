@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "2",
+  "generations": [
+    ["Hololive JP", "2"]
+  ],
   "id": "1dMlek4eXZns9FyjBcvrF8",
   "name": "Nakiri Ayame",
   "stats": {

@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "1",
+  "generations": [
+    ["Hololive JP", "1"]
+  ],
   "id": "2ANytjXP6otAgDNUwWeym5",
   "name": "Aki Rosenthal",
   "stats": {

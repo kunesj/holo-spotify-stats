@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "0",
+  "generations": [
+    ["Hololive JP", "0"]
+  ],
   "id": "1JSf6ODLyqPpYQAHN7S1Th",
   "name": "Roboco-san",
   "stats": {

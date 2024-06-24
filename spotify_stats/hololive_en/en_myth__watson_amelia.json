@@ -1,6 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Myth",
+  "generations": [
+    ["Hololive EN", "Myth"]
+  ],
   "id": "0R8gPf3buI10EYWrB7FBlm",
   "name": "Watson Amelia",
   "stats": {

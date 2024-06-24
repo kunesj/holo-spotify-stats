@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "3",
+  "generations": [
+    ["Hololive JP", "3"]
+  ],
   "id": "5XaBNKQo65yYcjNA8wQPOk",
   "name": "Houshou Marine",
   "stats": {

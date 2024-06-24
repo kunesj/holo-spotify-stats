@@ -1,6 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Advent",
+  "generations": [
+    ["Hololive EN", "Advent"]
+  ],
   "id": "5E8gJd9z6pNljMI6v78e3F",
   "name": "Koseki Bijou",
   "stats": {

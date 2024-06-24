@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "1",
+  "generations": [
+    ["Hololive JP", "1"]
+  ],
   "id": "5cY0arUoTdpFnqUCiAQMNx",
   "name": "Natsuiro Matsuri",
   "stats": {

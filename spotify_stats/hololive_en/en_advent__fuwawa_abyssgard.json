@@ -1,6 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Advent",
+  "generations": [
+    ["Hololive EN", "Advent"]
+  ],
   "id": "73t8GlAmUyGUzDy5EVYUbB",
   "name": "Fuwawa Abyssgard",
   "stats": {

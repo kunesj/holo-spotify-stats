@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "6",
+  "generations": [
+    ["Hololive JP", "6"]
+  ],
   "id": "3sTxby2WaF9fXznsLp42IS",
   "name": "Takane Lui",
   "stats": {

@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "Gamers",
+  "generations": [
+    ["Hololive JP", "Gamers"]
+  ],
   "id": "6EFbQU0BE4wGLdqBjey64b",
   "name": "Inugami Korone",
   "stats": {

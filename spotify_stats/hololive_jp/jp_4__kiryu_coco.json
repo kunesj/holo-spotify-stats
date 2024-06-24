@@ -1,8 +1,10 @@
 {
-  "branch": "JP",
-  "generation": "4",
+  "generations": [
+    ["Hololive JP", "4"]
+  ],
   "id": "6UVwgcSAKl0SZ9plRC59VQ",
-  "name": "Kiryu Coco [R]",
+  "name": "Kiryu Coco",
+  "retired": "2021-07-01",
   "stats": {
     "2023-09-04": {"monthlyListeners": 20870},
     "2023-10-04": {"monthlyListeners": 20520},

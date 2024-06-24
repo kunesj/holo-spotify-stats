@@ -1,6 +1,7 @@
 {
-  "branch": "EN",
-  "generation": "Myth",
+  "generations": [
+    ["Hololive EN", "Myth"]
+  ],
   "id": "1Spm887PTszc2AoNYpoCld",
   "name": "Gawr Gura",
   "stats": {

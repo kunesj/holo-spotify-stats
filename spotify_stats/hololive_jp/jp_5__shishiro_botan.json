@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "5",
+  "generations": [
+    ["Hololive JP", "5"]
+  ],
   "id": "6SJuFGUxkapaefayFdBwWz",
   "name": "Shishiro Botan",
   "stats": {

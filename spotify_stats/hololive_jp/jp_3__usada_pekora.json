@@ -1,6 +1,7 @@
 {
-  "branch": "JP",
-  "generation": "3",
+  "generations": [
+    ["Hololive JP", "3"]
+  ],
   "id": "4JlcSp9i5LcilRSMqaVimt",
   "name": "Usada Pekora",
   "stats": {
