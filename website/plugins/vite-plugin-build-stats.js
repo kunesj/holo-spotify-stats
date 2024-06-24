@@ -20,7 +20,7 @@ export default function BuildStats(options = {}) {
     return {
         name: 'build-stats',
         buildEnd: async() => {
-            const matchedPaths = await globby(`${srcDir}/*.json`, {
+            const matchedPaths = await globby(`${srcDir}/**/*.json`, {
                     expandDirectories: false,
                     onlyFiles: true
                 }),

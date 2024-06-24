@@ -2,6 +2,7 @@
 
 import argparse
 import datetime
+import glob
 import json
 import logging
 import os
@@ -186,14 +187,8 @@ def main() -> None:
     logging.basicConfig()
     _logger.setLevel(logging.INFO)
 
-    for file_name in os.listdir(STATS_DIR_PATH):
-        if not file_name.endswith(".json"):
-            continue
-
-        update_stats_file(
-            file_path=os.path.join(STATS_DIR_PATH, file_name),
-            force=args.force,
-        )
+    for file_path in glob.glob(os.path.join(STATS_DIR_PATH, "**/*.json"), recursive=True):
+        update_stats_file(file_path=file_path, force=args.force)
 
     _logger.info("Done")
 
