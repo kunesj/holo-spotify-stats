@@ -134,8 +134,8 @@ def fetch_stats(*, artist_id: str) -> dict:
         elif stats.get("followers") is None:
             raise ValueError("followers not returned!")
 
-        top_tracks = data["discography"]["topTracks"]["items"]
-        stats["top_tracks_playcount"] = [int(x["track"]["playcount"]) for x in top_tracks]
+        stats.pop("worldRank", None)
+        stats.pop("topCities", None)
 
         return stats
     except Exception:
@@ -169,7 +169,11 @@ def update_stats_file(*, file_path: str, force: bool = False) -> None:
     # write new data
 
     data_str = json.dumps(
-        {**data, "stats": {k: NoIndent(v) for k, v in data["stats"].items()}},
+        {
+            **data,
+            "generations": [NoIndent(v) for v in data["generations"]],
+            "stats": {k: NoIndent(v) for k, v in data["stats"].items()},
+        },
         indent=2,
         sort_keys=True,
         cls=NoIndentEncoder,

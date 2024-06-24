@@ -165,12 +165,6 @@ export class StatsChart extends owl.Component {
                 case 'followers':
                     timelineData = artistData.chartFollowersData;
                     break;
-                case 'top10-play-count-sum':
-                    timelineData = artistData.chartTop10PlayCountSumData;
-                    break;
-                case 'top10-play-count-max':
-                    timelineData = artistData.chartTop10PlayCountMaxData;
-                    break;
                 default:
                     throw new Error(`Invalid dataType: ${this.props.dataType}`);
             }
@@ -268,12 +262,6 @@ export class StatsChart extends owl.Component {
                         break;
                     case 'followers':
                         chartData = artistData.chartFollowersData;
-                        break;
-                    case 'top10-play-count-sum':
-                        chartData = artistData.chartTop10PlayCountSumData;
-                        break;
-                    case 'top10-play-count-max':
-                        chartData = artistData.chartTop10PlayCountMaxData;
                         break;
                     default:
                         throw new Error(`Invalid dataType: ${this.props.dataType}`);

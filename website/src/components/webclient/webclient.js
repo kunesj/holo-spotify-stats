@@ -71,12 +71,6 @@ export class WebClient extends owl.Component {
         else if (this.chartDataType === 'followers') {
             titleLeft = 'Followers';
         }
-        else if (this.chartDataType === 'top10-play-count-sum') {
-            titleLeft = 'Top10 Play Count [SUM]';
-        }
-        else if (this.chartDataType === 'top10-play-count-max') {
-            titleLeft = 'Top10 Play Count [MAX]';
-        }
 
         if (this.chartChartType === 'rank') {
             titleRight = 'Rank';
@@ -91,12 +85,6 @@ export class WebClient extends owl.Component {
     get chartSubtitle() {
         if (this.chartDataType === 'listeners') {
             return 'Count of unique users that have listened to at least one song within 28-day window.';
-        }
-        else if (this.chartDataType === 'top10-play-count-sum') {
-            return 'Total play count of 10 most popular songs.';
-        }
-        else if (this.chartDataType === 'top10-play-count-max') {
-            return 'Play count of most popular song.';
         }
         return '';
     }
