@@ -54,6 +54,7 @@ def request_retry(*args, retry_max_count: int = 3, retry_delay: int = 10, **kwar
         retry_count += 1
         try:
             response = requests.request(*args, **kwargs)
+            #print(response.content)
             response.raise_for_status()
             break
         except KeyboardInterrupt:
@@ -70,25 +71,33 @@ def request_retry(*args, retry_max_count: int = 3, retry_delay: int = 10, **kwar
     return response
 
 
+# def _get_auth_token_legacy() -> str:
+    # global AUTH_TOKEN, AUTH_TOKEN_EXPIRY
+
+    # if not AUTH_TOKEN or AUTH_TOKEN_EXPIRY > time.time():
+        # response = request_retry(
+            # method="GET",
+            # url="https://open.spotify.com",
+        # )
+
+        # soup = BeautifulSoup(response.content, features="lxml")
+        # session_tag = soup.find("script", id="session")
+
+        # data = json.loads(session_tag.get_text())
+        # AUTH_TOKEN = data["accessToken"]
+        # AUTH_TOKEN_EXPIRY = data["accessTokenExpirationTimestampMs"] / 1000
+
+        # _logger.debug("Auth token: %s", AUTH_TOKEN)
+
+    # return AUTH_TOKEN
+
+
+
+
 def get_auth_token() -> str:
-    global AUTH_TOKEN, AUTH_TOKEN_EXPIRY
+    # FIXME: this is just temporary hotfix. replace the value with one manually extracted from browser devtools
+    return "BQAdjlZs2u_lQBnaa-uvmR-hkGXabpQN5TdQZNr_cp9a3o_4W5nl_e2s-iiAvqJYdVvRNtiP2KOwXhqkNrHCq3ns1et5ON_vkMXybk1_iVIyOgP7991KhICZZMOO2vMsRc8meMsP9Gs"
 
-    if not AUTH_TOKEN or AUTH_TOKEN_EXPIRY > time.time():
-        response = request_retry(
-            method="GET",
-            url="https://open.spotify.com",
-        )
-
-        soup = BeautifulSoup(response.content, features="lxml")
-        session_tag = soup.find("script", id="session")
-
-        data = json.loads(session_tag.get_text())
-        AUTH_TOKEN = data["accessToken"]
-        AUTH_TOKEN_EXPIRY = data["accessTokenExpirationTimestampMs"] / 1000
-
-        _logger.debug("Auth token: %s", AUTH_TOKEN)
-
-    return AUTH_TOKEN
 
 
 def fetch_stats(*, artist_id: str) -> dict:
