@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 
 import argparse
+import base64
 import datetime
 import glob
+import hashlib
 import json
 import logging
 import os
 import time
 import uuid
 
+import pyotp
 import requests
-from bs4 import BeautifulSoup
 
 _logger = logging.getLogger(__name__)
 DIR_PATH = os.path.abspath(os.path.dirname(__file__))
@@ -54,7 +56,7 @@ def request_retry(*args, retry_max_count: int = 3, retry_delay: int = 10, **kwar
         retry_count += 1
         try:
             response = requests.request(*args, **kwargs)
-            #print(response.content)
+            # print(response.content)
             response.raise_for_status()
             break
         except KeyboardInterrupt:
@@ -71,33 +73,104 @@ def request_retry(*args, retry_max_count: int = 3, retry_delay: int = 10, **kwar
     return response
 
 
-# def _get_auth_token_legacy() -> str:
-    # global AUTH_TOKEN, AUTH_TOKEN_EXPIRY
+def spotify_totp(timestamp: float) -> str:
+    """
+    Returns totp value used by spotify
+    :param timestamp: current time in seconds
+    """
+    # raw_secret = [12, 56, 76, 33, 88, 44, 88, 33, 78, 78, 11, 66, 22, 22, 55, 69, 54]
+    # utf8_secret = [5, 50, 71, 45, 85, 34, 87, 49, 95, 92, 24, 86, 3, 0, 32, 93, 47]
+    # hex_secret = "35353037313435383533343837343939353932323438363330333239333437"
+    uint8_secret = [
+        53,
+        53,
+        48,
+        55,
+        49,
+        52,
+        53,
+        56,
+        53,
+        51,
+        52,
+        56,
+        55,
+        52,
+        57,
+        57,
+        53,
+        57,
+        50,
+        50,
+        52,
+        56,
+        54,
+        51,
+        48,
+        51,
+        50,
+        57,
+        51,
+        52,
+        55,
+    ]
+    bytes_secret = bytes(uint8_secret)
 
-    # if not AUTH_TOKEN or AUTH_TOKEN_EXPIRY > time.time():
-        # response = request_retry(
-            # method="GET",
-            # url="https://open.spotify.com",
-        # )
+    secret = base64.b32encode(bytes_secret).decode("ascii")
+    period = 30
 
-        # soup = BeautifulSoup(response.content, features="lxml")
-        # session_tag = soup.find("script", id="session")
-
-        # data = json.loads(session_tag.get_text())
-        # AUTH_TOKEN = data["accessToken"]
-        # AUTH_TOKEN_EXPIRY = data["accessTokenExpirationTimestampMs"] / 1000
-
-        # _logger.debug("Auth token: %s", AUTH_TOKEN)
-
-    # return AUTH_TOKEN
-
-
+    return pyotp.hotp.HOTP(
+        s=secret,
+        digits=6,
+        digest=hashlib.sha1,
+    ).at(int(timestamp / period))
 
 
 def get_auth_token() -> str:
-    # FIXME: this is just temporary hotfix. replace the value with one manually extracted from browser devtools
-    return "BQAdjlZs2u_lQBnaa-uvmR-hkGXabpQN5TdQZNr_cp9a3o_4W5nl_e2s-iiAvqJYdVvRNtiP2KOwXhqkNrHCq3ns1et5ON_vkMXybk1_iVIyOgP7991KhICZZMOO2vMsRc8meMsP9Gs"
+    global AUTH_TOKEN, AUTH_TOKEN_EXPIRY
 
+    if not AUTH_TOKEN or AUTH_TOKEN_EXPIRY > time.time():
+        c_time = int(time.time() * 1000)
+        s_time = c_time // 1000
+        totp = totp_server = spotify_totp(c_time / 1000)
+
+        response = request_retry(
+            method="GET",
+            url="https://open.spotify.com/get_access_token",
+            params={
+                "reason": "init",
+                "productType": "web-player",
+                "totp": totp,
+                "totpServer": totp_server,
+                "totpVer": 5,
+                "sTime": s_time,
+                "cTime": c_time,
+            },
+            headers={
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "dnt": "1",
+                "priority": "u=1, i",
+                "referer": "https://open.spotify.com/",
+                # 'sec-ch-ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+                # 'sec-ch-ua-mobile': '?0',
+                # 'sec-ch-ua-platform': '"Linux"',
+                # 'sec-fetch-dest': 'empty',
+                # 'sec-fetch-mode': 'cors',
+                # 'sec-fetch-site': 'same-origin',
+                # 'sentry-trace': ,
+                # 'user-agent': ('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 '
+                # '(KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36'),
+            },
+        )
+
+        data = response.json()
+        AUTH_TOKEN = data["accessToken"]
+        AUTH_TOKEN_EXPIRY = data["accessTokenExpirationTimestampMs"] / 1000
+
+        _logger.debug("Auth token: %s", AUTH_TOKEN)
+
+    return AUTH_TOKEN
 
 
 def fetch_stats(*, artist_id: str) -> dict:
