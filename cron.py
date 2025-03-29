@@ -90,7 +90,11 @@ def notify_user(level: int, message: str, exc_info: bool = False) -> None:
     if "desktop" in CONFIG.notify_types:
         _notify_user__desktop(level=level, message=message)
 
-    if "email" in CONFIG.notify_types and CONFIG.notify_email and level in (logging.CRITICAL, logging.ERROR):
+    if (
+        "email" in CONFIG.notify_types
+        and CONFIG.notify_email
+        and (level in (logging.CRITICAL, logging.ERROR) or CONFIG.debug)
+    ):
         _notify_user__email(level=level, message=message, exc_info=exc_info)
 
 
