@@ -17,7 +17,7 @@ services:
       # mount the whole repo to always have up-to date code and data
       - $PWD:/opt/holo-spotify-stats
       # mount host ssh and git config to be able to work with the repo
-      - /etc/gitconfig:/etc/gitconfig
+      #- /etc/gitconfig:/etc/gitconfig
       - $HOME/.gitconfig:/root/.gitconfig
       - $HOME/.ssh:/root/.ssh
       # mount host DMA config, to allow sending notification emails from container
