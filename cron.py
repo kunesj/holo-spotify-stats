@@ -2,6 +2,7 @@
 
 import dataclasses
 import datetime
+import functools
 import json
 import logging
 import os
@@ -9,16 +10,18 @@ import subprocess
 import sys
 import time
 import traceback
+import zoneinfo
 from typing import Literal
 
 import notify2
 
 _logger = logging.getLogger(__name__)
 DIR_PATH = os.path.abspath(os.path.dirname(__file__))
+DEFAULT_CONFIG_PATH = os.path.join(DIR_PATH, "config.default.json")
 CONFIG_PATH = os.path.join(DIR_PATH, "config.json")
 
-with open(CONFIG_PATH, "r") as f:
-    RAW_CONFIG = json.loads(f.read())
+with open(DEFAULT_CONFIG_PATH, "r") as f1, open(CONFIG_PATH, "r") as f2:
+    RAW_CONFIG = json.loads(f1.read()) | json.loads(f2.read())
 
 
 @dataclasses.dataclass
@@ -27,7 +30,12 @@ class Config:
     notify_email: str | None
     fetch_interval: int  # Fetch will be run every N days
     fetch_time: datetime.time
+    fetch_tzname: str
     debug: bool
+
+    @functools.cached_property
+    def fetch_tz(self) -> datetime.timezone | None:
+        return zoneinfo.ZoneInfo(CONFIG.fetch_tzname) if CONFIG.fetch_tzname else None
 
 
 CONFIG = Config(
@@ -35,6 +43,7 @@ CONFIG = Config(
     notify_email=RAW_CONFIG["notify_email"],
     fetch_interval=RAW_CONFIG["fetch_interval"],
     fetch_time=datetime.time.fromisoformat(RAW_CONFIG["fetch_time"]),
+    fetch_tzname=RAW_CONFIG["fetch_tzname"],
     debug=RAW_CONFIG["debug"],
 )
 
@@ -150,8 +159,9 @@ def update_spotify_stats() -> None:
         return
 
     try:
+        today = datetime.datetime.now(tz=CONFIG.fetch_tz).date()
         subprocess.check_call(
-            ["git", "commit", "-a", "-m", f"DATA:{datetime.date.today().isoformat()}"], cwd=DIR_PATH
+            ["git", "commit", "-a", "-m", f"DATA:{today.isoformat()}"], cwd=DIR_PATH
         )  # nosec B607, B603
     except KeyboardInterrupt:
         _logger.warning("Commit interrupted")
@@ -190,9 +200,14 @@ def main() -> None:
 
     # cron loop
 
-    _logger.info("Stats will be updated every %s days after %s", CONFIG.fetch_interval, CONFIG.fetch_time.isoformat())
+    _logger.info(
+        "Stats will be updated every %s days after %s tz=%s",
+        CONFIG.fetch_interval,
+        CONFIG.fetch_time.isoformat(),
+        CONFIG.fetch_tzname,
+    )
     while True:
-        now = datetime.datetime.now()
+        now = datetime.datetime.now(tz=CONFIG.fetch_tz)
         today_runtime = now.replace(
             hour=CONFIG.fetch_time.hour, minute=CONFIG.fetch_time.minute, second=CONFIG.fetch_time.second
         )
@@ -232,7 +247,7 @@ def main() -> None:
         sleep_until = now + datetime.timedelta(seconds=sleep_time)
         _logger.info("Sleeping until %s", sleep_until)
 
-        while sleep_until > datetime.datetime.now():
+        while sleep_until > datetime.datetime.now(tz=CONFIG.fetch_tz):
             # wake up every N seconds to help prevent process from freezing
             time.sleep(60)
 
