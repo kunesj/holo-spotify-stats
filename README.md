@@ -9,6 +9,17 @@ Website: https://holo-spotify-stats.jirikunes.eu/
 
 - Use Python 3.11+
 - Install script dependencies with `pip install -r requirements.txt`
+- Configure git, ssh and [dma](https://github.com/corecode/dma)
+- Create `config.json` from `config.default.json`
+- Run with `python3.11 cron.py`
+
+### Docker
+
+Alternatively, you can also run the script from docker.
+
+- Configure git, ssh and [dma](https://github.com/corecode/dma) on host
+- Create `config.json` from `config.default.json`
+- Run `docker compose up -d` to start the container
 
 
 ## Website Setup

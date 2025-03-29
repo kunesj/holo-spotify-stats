@@ -1,40 +1,97 @@
 #!/usr/bin/env python3
 
-import argparse
+import dataclasses
 import datetime
+import json
 import logging
 import os
 import subprocess
 import sys
 import time
+import traceback
+from typing import Literal
 
 import notify2
 
 _logger = logging.getLogger(__name__)
 DIR_PATH = os.path.abspath(os.path.dirname(__file__))
+CONFIG_PATH = os.path.join(DIR_PATH, "config.json")
+
+with open(CONFIG_PATH, "r") as f:
+    RAW_CONFIG = json.loads(f.read())
 
 
-def notify_log(level: int, message: str, exc_info: bool = False) -> None:
-    match level:
-        case logging.CRITICAL | logging.ERROR:
-            # critical notifications are always sticky even with timeout
-            urgency = notify2.URGENCY_CRITICAL
-            timeout = notify2.EXPIRES_NEVER
-        case logging.WARNING | logging.INFO:
-            urgency = notify2.URGENCY_NORMAL
-            timeout = 2 * 1000
-        case logging.DEBUG | logging.NOTSET:
-            urgency = notify2.URGENCY_LOW
-            timeout = 2 * 1000
-        case _:
-            raise ValueError(level)
+@dataclasses.dataclass
+class Config:
+    notify_types: set[Literal["desktop", "email"]]
+    notify_email: str | None
+    fetch_interval: int  # Fetch will be run every N days
+    fetch_time: datetime.time
+    debug: bool
 
+
+CONFIG = Config(
+    notify_types=set(RAW_CONFIG["notify_types"]),
+    notify_email=RAW_CONFIG["notify_email"],
+    fetch_interval=RAW_CONFIG["fetch_interval"],
+    fetch_time=datetime.time.fromisoformat(RAW_CONFIG["fetch_time"]),
+    debug=RAW_CONFIG["debug"],
+)
+
+
+def _notify_user__log(level: int, message: str, exc_info: bool = False) -> None:
     _logger.log(level, "Notify: %s", message, exc_info=exc_info)
 
-    notif = notify2.Notification("Hololive Spotify Stats", message)
-    notif.set_urgency(urgency)
-    notif.set_timeout(timeout)
-    notif.show()
+
+def _notify_user__desktop(level: int, message: str) -> None:
+    try:
+        match level:
+            case logging.CRITICAL | logging.ERROR:
+                # critical notifications are always sticky even with timeout
+                urgency = notify2.URGENCY_CRITICAL
+                timeout = notify2.EXPIRES_NEVER
+            case logging.WARNING | logging.INFO:
+                urgency = notify2.URGENCY_NORMAL
+                timeout = 2 * 1000
+            case logging.DEBUG | logging.NOTSET:
+                urgency = notify2.URGENCY_LOW
+                timeout = 2 * 1000
+            case _:
+                raise ValueError(level)
+
+        notif = notify2.Notification("Hololive Spotify Stats", message)
+        notif.set_urgency(urgency)
+        notif.set_timeout(timeout)
+        notif.show()
+
+    except Exception:
+        _logger.exception("Error when displaying desktop notification!\nlevel=%r\nmessage=%r", level, message)
+
+
+def _notify_user__email(level: int, message: str, exc_info: bool = False) -> None:
+    try:
+        level_name = logging.getLevelName(level)
+        subject = f"Hololive Spotify Stats: {level_name}"
+        body = message
+        if exc_info:
+            body += f"\n\nTraceback:\n\n{traceback.format_exc()}"
+
+        subprocess.run(
+            ["mail", "-s", subject, CONFIG.notify_email], text=True, input=body, check=True
+        )  # nosec B607, B603
+
+    except Exception:
+        _logger.exception("Error when sending email notification!\nlevel=%r\nmessage=%r", level, message)
+
+
+def notify_user(level: int, message: str, exc_info: bool = False) -> None:
+    _notify_user__log(level=level, message=message, exc_info=exc_info)
+
+    if "desktop" in CONFIG.notify_types:
+        _notify_user__desktop(level=level, message=message)
+
+    if "email" in CONFIG.notify_types and CONFIG.notify_email and level in (logging.CRITICAL, logging.ERROR):
+        _notify_user__email(level=level, message=message, exc_info=exc_info)
 
 
 def has_changes() -> bool:
@@ -57,7 +114,7 @@ def update_spotify_stats() -> None:
     _logger.info("Preparing git repo...")
 
     if has_changes():
-        notify_log(logging.ERROR, "Git repository contains uncommitted changes. Fetch stopped.")
+        notify_user(logging.ERROR, "Git repository contains uncommitted changes. Fetch stopped.")
         return
 
     subprocess.check_call(["git", "pull", "--ff-only"], cwd=DIR_PATH)  # nosec B607, B603
@@ -75,9 +132,9 @@ def update_spotify_stats() -> None:
             _logger.warning("Fetch interrupted")
             raise
         except Exception:
-            notify_log(logging.WARNING, f"Spotify fetch failed {i+1}/{max_try}", exc_info=True)
+            notify_user(logging.WARNING, f"Spotify fetch failed {i+1}/{max_try}", exc_info=True)
     else:
-        notify_log(logging.ERROR, "All Spotify stats could not be fetched")
+        notify_user(logging.ERROR, "All Spotify stats could not be fetched")
         return
 
     # commit changes
@@ -85,7 +142,7 @@ def update_spotify_stats() -> None:
     _logger.info("Committing stats...")
 
     if not has_changes():
-        notify_log(logging.INFO, "No stats changed")
+        notify_user(logging.INFO, "No stats changed")
         return
 
     try:
@@ -96,7 +153,7 @@ def update_spotify_stats() -> None:
         _logger.warning("Commit interrupted")
         raise
     except Exception:
-        notify_log(logging.ERROR, "Stats could not be committed", exc_info=True)
+        notify_user(logging.ERROR, "Stats could not be committed", exc_info=True)
         return
 
     # push changes
@@ -109,21 +166,16 @@ def update_spotify_stats() -> None:
         _logger.warning("Push interrupted")
         raise
     except Exception:
-        notify_log(logging.ERROR, "Stats could not be pushed", exc_info=True)
+        notify_user(logging.ERROR, "Stats could not be pushed", exc_info=True)
         return
 
-    notify_log(logging.INFO, "Stats updated")
+    notify_user(logging.INFO, "Stats updated")
 
 
 def main() -> None:
     """
     To redirect both logging and stdout to file use: ./cron.py >> file.txt 2>&1
     """
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--interval", default=3, type=int, help="Fetch will be run every N days")
-    parser.add_argument("--time", default="22:00:00", type=lambda x: datetime.time.fromisoformat(x))
-    args = parser.parse_args()
-
     # configure logging
 
     logging.basicConfig(
@@ -134,19 +186,22 @@ def main() -> None:
 
     # cron loop
 
-    _logger.info("Stats will be updated every %s days after %s", args.interval, args.time.isoformat())
+    _logger.info("Stats will be updated every %s days after %s", CONFIG.fetch_interval, CONFIG.fetch_time.isoformat())
     while True:
         now = datetime.datetime.now()
-        today_runtime = now.replace(hour=args.time.hour, minute=args.time.minute, second=args.time.second)
+        today_runtime = now.replace(
+            hour=CONFIG.fetch_time.hour, minute=CONFIG.fetch_time.minute, second=CONFIG.fetch_time.second
+        )
 
         day_index = now.timetuple().tm_yday - 1
-        run_today = day_index % args.interval == 0
+        run_today = day_index % CONFIG.fetch_interval == 0
 
         if run_today and now >= today_runtime:
             _logger.info("Updating")
 
             try:
-                notify2.init("holo-spotify-stats")
+                if "desktop" in CONFIG.notify_types:
+                    notify2.init("holo-spotify-stats")
                 update_spotify_stats()
             except KeyboardInterrupt:
                 _logger.warning("Interrupt detected")
@@ -154,10 +209,11 @@ def main() -> None:
             except Exception:
                 _logger.exception("Unexpected exception when fetching stats")
             finally:
-                notify2.uninit()
+                if "desktop" in CONFIG.notify_types:
+                    notify2.uninit()
 
             # wake up 1 second after next run time
-            sleep_time = (args.interval * 24 * 60 * 60) - (now - today_runtime).seconds + 1
+            sleep_time = (CONFIG.fetch_interval * 24 * 60 * 60) - (now - today_runtime).seconds + 1
 
         elif run_today:
             # wake up 1 second after next run time
@@ -166,7 +222,7 @@ def main() -> None:
 
         else:
             # skip by one hour until we get to correct day
-            _logger.info("Update not today: day_index=%s, interval=%s", day_index, args.interval)
+            _logger.info("Update not today: day_index=%s, interval=%s", day_index, CONFIG.fetch_interval)
             sleep_time = 1 * 60 * 60
 
         sleep_until = now + datetime.timedelta(seconds=sleep_time)

@@ -1,0 +1,7 @@
+{
+    "notify_types": ["desktop", "email"],
+    "notify_email": null,
+    "fetch_interval": 3,
+    "fetch_time": "22:00:00",
+    "debug": true
+}

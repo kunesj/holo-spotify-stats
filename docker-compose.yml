@@ -1,0 +1,31 @@
+# start with: docker compose up
+
+services:
+  holo-spotify-stats:
+    container_name: holo-spotify-stats
+    restart: always
+    
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    image: local/holo-spotify-stats
+    pull_policy: never
+
+    # create .env file from .env.default to set the parameters
+    command: "/launch.sh"
+    volumes:
+      # mount the whole repo to always have up-to date code and data
+      - $PWD:/opt/holo-spotify-stats
+      # mount host ssh and git config to be able to work with the repo
+      - /etc/gitconfig:/etc/gitconfig
+      - $HOME/.gitconfig:/root/.gitconfig
+      - $HOME/.ssh:/root/.ssh
+      # mount host DMA config, to allow sending notification emails from container
+      - /etc/dma/dma.conf:/etc/dma/dma.conf
+      - /etc/dma/auth.conf:/etc/dma/auth.conf
+
+    logging:
+      driver:  json-file
+      options:
+        max-file: "3"
+        max-size: "10M"
