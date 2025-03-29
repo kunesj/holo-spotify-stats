@@ -226,7 +226,8 @@ def main() -> None:
                 _logger.warning("Interrupt detected")
                 break
             except Exception:
-                _logger.exception("Unexpected exception when fetching stats")
+                # notifying should be safe here, since the function should catch exceptions raised inside it
+                notify_user(logging.ERROR, "Unexpected exception when fetching stats", exc_info=True)
             finally:
                 if "desktop" in CONFIG.notify_types:
                     notify2.uninit()
