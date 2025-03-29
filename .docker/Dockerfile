@@ -5,11 +5,9 @@ ENV PGCLIENTENCODING utf8
 ENV PYTHONIOENCODING utf8
 ENV DEBIAN_FRONTEND noninteractive
 
-ARG DOCKER_SRC=/opt/holo-spotify-stats
+# init home directory of non-root user where everything will be mounted
 
-# init path where the code and data will be mounted
-
-RUN mkdir -p ${DOCKER_SRC}/
+RUN mkdir -p /home/host/
 
 # install apt requirements
 

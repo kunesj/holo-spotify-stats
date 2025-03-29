@@ -1,9 +1,13 @@
 #!/bin/bash
 set -e
 
-DOCKER_SRC="/opt/holo-spotify-stats"
+# home was created by root, so the ownership must be changed
+chown "$GID:$UID" /home/host/
 
-groupadd -g "$GID" holo-spotify-stats \
-&& useradd holo-spotify-stats -u "$UID" -g "$GID" -m -s /bin/bash \
-&& cd "$DOCKER_SRC" \
-&& sudo -u holo-spotify-stats python cron.py
+groupadd --force -g "$GID" host
+useradd host -u "$UID" -g "$GID" -s /bin/bash --home /home/host/ || true
+
+cd /home/host/holo-spotify-stats && sudo -u host python cron.py
+
+
+
