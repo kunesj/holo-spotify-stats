@@ -1,10 +1,10 @@
 {
+  "color": "#e05248",
   "generations": [
     ["Holostars EN", "Tempus VG"]
   ],
   "id": "0AJOhoiPAFCrFIP1OxV8vN",
   "name": "Machina X Flayon",
-  "color": "#e05248",
   "stats": {
     "2024-06-25": {"followers": 761, "monthlyListeners": 8804},
     "2024-06-26": {"followers": 765, "monthlyListeners": 8921},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 1063, "monthlyListeners": 6936},
     "2025-04-04": {"followers": 1066, "monthlyListeners": 6935},
     "2025-04-07": {"followers": 1068, "monthlyListeners": 6977},
-    "2025-04-10": {"followers": 1072, "monthlyListeners": 7070}
+    "2025-04-10": {"followers": 1072, "monthlyListeners": 7070},
+    "2025-04-13": {"followers": 1078, "monthlyListeners": 7116}
   }
 }

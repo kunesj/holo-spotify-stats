@@ -1,10 +1,10 @@
 {
+  "color": "#bc1e78",
   "generations": [
     ["Hololive JP", "6"]
   ],
   "id": "3sTxby2WaF9fXznsLp42IS",
   "name": "Takane Lui",
-  "color": "#bc1e78",
   "stats": {
     "2023-09-04": {"monthlyListeners": 67156},
     "2023-10-04": {"monthlyListeners": 81177},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 44277, "monthlyListeners": 90051},
     "2025-04-04": {"followers": 44439, "monthlyListeners": 90334},
     "2025-04-07": {"followers": 44574, "monthlyListeners": 88820},
-    "2025-04-10": {"followers": 44699, "monthlyListeners": 87330}
+    "2025-04-10": {"followers": 44699, "monthlyListeners": 87330},
+    "2025-04-13": {"followers": 44826, "monthlyListeners": 86378}
   }
 }

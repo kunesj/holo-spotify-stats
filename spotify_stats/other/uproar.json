@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "2He0616S1qDbM4Zmk7UuR9",
   "name": "UPROAR!!",
-  "color": "#83cceb",
   "stats": {
     "2024-06-25": {"followers": 1638, "monthlyListeners": 3752},
     "2024-06-26": {"followers": 1641, "monthlyListeners": 3788},
@@ -91,6 +91,7 @@
     "2025-04-01": {"followers": 1937, "monthlyListeners": 1561},
     "2025-04-04": {"followers": 1943, "monthlyListeners": 1638},
     "2025-04-07": {"followers": 1948, "monthlyListeners": 1687},
-    "2025-04-10": {"followers": 1946, "monthlyListeners": 1707}
+    "2025-04-10": {"followers": 1946, "monthlyListeners": 1707},
+    "2025-04-13": {"followers": 1948, "monthlyListeners": 1714}
   }
 }

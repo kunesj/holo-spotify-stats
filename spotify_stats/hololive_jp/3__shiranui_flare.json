@@ -1,10 +1,10 @@
 {
+  "color": "#fe5f19",
   "generations": [
     ["Hololive JP", "3"]
   ],
   "id": "0JHnoazUTZHoJMqRwsCDNT",
   "name": "Shiranui Flare",
-  "color": "#fe5f19",
   "stats": {
     "2023-09-04": {"monthlyListeners": 50175},
     "2023-10-04": {"monthlyListeners": 53670},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 43364, "monthlyListeners": 54772},
     "2025-04-04": {"followers": 43483, "monthlyListeners": 56109},
     "2025-04-07": {"followers": 43590, "monthlyListeners": 56726},
-    "2025-04-10": {"followers": 43682, "monthlyListeners": 57414}
+    "2025-04-10": {"followers": 43682, "monthlyListeners": 57414},
+    "2025-04-13": {"followers": 43767, "monthlyListeners": 58604}
   }
 }

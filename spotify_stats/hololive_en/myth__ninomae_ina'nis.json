@@ -1,10 +1,10 @@
 {
+  "color": "#73658c",
   "generations": [
     ["Hololive EN", "Myth"]
   ],
   "id": "3iPvwu8p75fYRa0V4wi8gN",
   "name": "Ninomae Ina'nis",
-  "color": "#73658c",
   "stats": {
     "2023-09-04": {"monthlyListeners": 90125},
     "2023-10-04": {"monthlyListeners": 89367},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 45961, "monthlyListeners": 76253},
     "2025-04-04": {"followers": 46035, "monthlyListeners": 75995},
     "2025-04-07": {"followers": 46090, "monthlyListeners": 75660},
-    "2025-04-10": {"followers": 46152, "monthlyListeners": 75417}
+    "2025-04-10": {"followers": 46152, "monthlyListeners": 75417},
+    "2025-04-13": {"followers": 46216, "monthlyListeners": 74811}
   }
 }

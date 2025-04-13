@@ -1,10 +1,10 @@
 {
+  "color": "#fc7319",
   "generations": [
     ["Holostars JP", "2"]
   ],
   "id": "49VPZqdN3rQ9oHtkHrIfNN",
   "name": "Yukoku Roberu",
-  "color": "#fc7319",
   "stats": {
     "2024-06-25": {"followers": 1978, "monthlyListeners": 3315},
     "2024-06-26": {"followers": 1979, "monthlyListeners": 3295},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 2143, "monthlyListeners": 2150},
     "2025-04-04": {"followers": 2143, "monthlyListeners": 2168},
     "2025-04-07": {"followers": 2146, "monthlyListeners": 2160},
-    "2025-04-10": {"followers": 2148, "monthlyListeners": 2154}
+    "2025-04-10": {"followers": 2148, "monthlyListeners": 2154},
+    "2025-04-13": {"followers": 2150, "monthlyListeners": 2177}
   }
 }

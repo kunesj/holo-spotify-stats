@@ -1,10 +1,10 @@
 {
+  "color": "#e25156",
   "generations": [
     ["Hololive JP", "6"]
   ],
   "id": "2YLI1Exc3ujaC7w7oWAqqy",
   "name": "Sakamata Chloe",
-  "color": "#e25156",
   "retired": "2025-01-26",
   "stats": {
     "2023-09-04": {"monthlyListeners": 64813},
@@ -152,6 +152,7 @@
     "2025-04-01": {"followers": 53701, "monthlyListeners": 64451},
     "2025-04-04": {"followers": 53892, "monthlyListeners": 64482},
     "2025-04-07": {"followers": 54054, "monthlyListeners": 63911},
-    "2025-04-10": {"followers": 54187, "monthlyListeners": 63198}
+    "2025-04-10": {"followers": 54187, "monthlyListeners": 63198},
+    "2025-04-13": {"followers": 54307, "monthlyListeners": 62609}
   }
 }

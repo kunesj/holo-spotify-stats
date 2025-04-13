@@ -1,10 +1,10 @@
 {
+  "color": "#bb5e46",
   "generations": [
     ["Holostars EN", "Tempus VG"]
   ],
   "id": "1os8R8i54obbQZV4fZVzhQ",
   "name": "Josuiji Shinri",
-  "color": "#bb5e46",
   "stats": {
     "2024-06-25": {"followers": 315, "monthlyListeners": 7251},
     "2024-06-26": {"followers": 317, "monthlyListeners": 7383},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 384, "monthlyListeners": 5447},
     "2025-04-04": {"followers": 386, "monthlyListeners": 5431},
     "2025-04-07": {"followers": 386, "monthlyListeners": 5435},
-    "2025-04-10": {"followers": 389, "monthlyListeners": 5453}
+    "2025-04-10": {"followers": 389, "monthlyListeners": 5453},
+    "2025-04-13": {"followers": 391, "monthlyListeners": 5472}
   }
 }

@@ -1,10 +1,10 @@
 {
+  "color": "#febec0",
   "generations": [
     ["Hololive ID", "1"]
   ],
   "id": "3PLJjPD8KDRzaEdznJT16j",
   "name": "Ayunda Risu",
-  "color": "#febec0",
   "stats": {
     "2023-09-04": {"monthlyListeners": 36221},
     "2023-10-04": {"monthlyListeners": 34489},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 46136, "monthlyListeners": 46634},
     "2025-04-04": {"followers": 46257, "monthlyListeners": 46531},
     "2025-04-07": {"followers": 46391, "monthlyListeners": 46524},
-    "2025-04-10": {"followers": 46523, "monthlyListeners": 46786}
+    "2025-04-10": {"followers": 46523, "monthlyListeners": 46786},
+    "2025-04-13": {"followers": 46637, "monthlyListeners": 47950}
   }
 }

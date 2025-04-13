@@ -1,10 +1,10 @@
 {
+  "color": "#ec50ab",
   "generations": [
     ["Holostars EN", "Tempus VG"]
   ],
   "id": "3kpIO6ssbX2EQQjwL8F2Kc",
   "name": "Gavis Bettel",
-  "color": "#ec50ab",
   "stats": {
     "2024-06-25": {"followers": 1835, "monthlyListeners": 9666},
     "2024-06-26": {"followers": 1856, "monthlyListeners": 9796},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 3276, "monthlyListeners": 9708},
     "2025-04-04": {"followers": 3295, "monthlyListeners": 9812},
     "2025-04-07": {"followers": 3307, "monthlyListeners": 9863},
-    "2025-04-10": {"followers": 3322, "monthlyListeners": 9673}
+    "2025-04-10": {"followers": 3322, "monthlyListeners": 9673},
+    "2025-04-13": {"followers": 3336, "monthlyListeners": 9597}
   }
 }

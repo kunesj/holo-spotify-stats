@@ -1,10 +1,10 @@
 {
+  "color": "#ff75d2",
   "generations": [
     ["Hololive DEV_IS", "FLOW GLOW"]
   ],
   "id": "0aVm7puAVPMkwSTaWfe6WB",
   "name": "Kikirara Vivi",
-  "color": "#ff75d2",
   "stats": {
     "2024-12-05": {"followers": 390, "monthlyListeners": 29827},
     "2024-12-08": {"followers": 415, "monthlyListeners": 31296},
@@ -43,6 +43,7 @@
     "2025-04-01": {"followers": 1449, "monthlyListeners": 23472},
     "2025-04-04": {"followers": 1472, "monthlyListeners": 24373},
     "2025-04-07": {"followers": 1494, "monthlyListeners": 25062},
-    "2025-04-10": {"followers": 1510, "monthlyListeners": 25111}
+    "2025-04-10": {"followers": 1510, "monthlyListeners": 25111},
+    "2025-04-13": {"followers": 1531, "monthlyListeners": 24009}
   }
 }

@@ -1,10 +1,10 @@
 {
+  "color": "#c0bffe",
   "generations": [
     ["Hololive DEV_IS", "ReGLOSS"]
   ],
   "id": "19S7gPOuThglBNwslfkVIm",
   "name": "Todoroki Hajime",
-  "color": "#c0bffe",
   "stats": {
     "2024-01-06": {"followers": 304, "monthlyListeners": 18851},
     "2024-01-07": {"followers": 319, "monthlyListeners": 19884},
@@ -147,6 +147,7 @@
     "2025-04-01": {"followers": 11949, "monthlyListeners": 72365},
     "2025-04-04": {"followers": 12161, "monthlyListeners": 72622},
     "2025-04-07": {"followers": 12346, "monthlyListeners": 72466},
-    "2025-04-10": {"followers": 12504, "monthlyListeners": 71828}
+    "2025-04-10": {"followers": 12504, "monthlyListeners": 71828},
+    "2025-04-13": {"followers": 12654, "monthlyListeners": 70886}
   }
 }

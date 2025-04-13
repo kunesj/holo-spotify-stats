@@ -1,10 +1,10 @@
 {
+  "color": "#fec119",
   "generations": [
     ["Holostars JP", "UPROAR!!"]
   ],
   "id": "5VxOI5IWHU5EQEOKPbT5Nv",
   "name": "Yatogami Fuma",
-  "color": "#fec119",
   "stats": {
     "2024-06-25": {"followers": 294, "monthlyListeners": 1170},
     "2024-06-26": {"followers": 294, "monthlyListeners": 1183},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 369, "monthlyListeners": 682},
     "2025-04-04": {"followers": 369, "monthlyListeners": 696},
     "2025-04-07": {"followers": 370, "monthlyListeners": 690},
-    "2025-04-10": {"followers": 370, "monthlyListeners": 685}
+    "2025-04-10": {"followers": 370, "monthlyListeners": 685},
+    "2025-04-13": {"followers": 370, "monthlyListeners": 685}
   }
 }

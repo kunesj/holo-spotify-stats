@@ -1,10 +1,10 @@
 {
+  "color": "#ed4518",
   "generations": [
     ["Hololive EN", "Myth"]
   ],
   "id": "6UCFRdg4ySMWj6O4QRKyZs",
   "name": "Takanashi Kiara",
-  "color": "#ed4518",
   "stats": {
     "2023-09-04": {"monthlyListeners": 128335},
     "2023-10-04": {"monthlyListeners": 143495},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 95524, "monthlyListeners": 136107},
     "2025-04-04": {"followers": 95601, "monthlyListeners": 136097},
     "2025-04-07": {"followers": 95687, "monthlyListeners": 134328},
-    "2025-04-10": {"followers": 95771, "monthlyListeners": 132991}
+    "2025-04-10": {"followers": 95771, "monthlyListeners": 132991},
+    "2025-04-13": {"followers": 95847, "monthlyListeners": 131565}
   }
 }

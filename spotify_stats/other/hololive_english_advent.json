@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "7FVVDdMqSwBCH61GQwzCmc",
   "name": "Hololive English -Advent-",
-  "color": "#83cceb",
   "stats": {
     "2024-12-05": {"followers": 11087, "monthlyListeners": 43010},
     "2024-12-08": {"followers": 11166, "monthlyListeners": 42972},
@@ -41,6 +41,7 @@
     "2025-04-01": {"followers": 14901, "monthlyListeners": 42319},
     "2025-04-04": {"followers": 14981, "monthlyListeners": 42559},
     "2025-04-07": {"followers": 15046, "monthlyListeners": 42557},
-    "2025-04-10": {"followers": 15106, "monthlyListeners": 42395}
+    "2025-04-10": {"followers": 15106, "monthlyListeners": 42395},
+    "2025-04-13": {"followers": 15180, "monthlyListeners": 42442}
   }
 }

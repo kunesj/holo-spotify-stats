@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "7iDL7tTq20cIwXsAewcz4d",
   "name": "hololive Indonesia",
-  "color": "#83cceb",
   "stats": {
     "2023-09-04": {"monthlyListeners": 27625},
     "2023-10-04": {"monthlyListeners": 25883},
@@ -149,6 +149,7 @@
     "2025-04-01": {"followers": 73015, "monthlyListeners": 34148},
     "2025-04-04": {"followers": 73119, "monthlyListeners": 34382},
     "2025-04-07": {"followers": 73277, "monthlyListeners": 34626},
-    "2025-04-10": {"followers": 73397, "monthlyListeners": 35093}
+    "2025-04-10": {"followers": 73397, "monthlyListeners": 35093},
+    "2025-04-13": {"followers": 73515, "monthlyListeners": 36466}
   }
 }

@@ -1,10 +1,10 @@
 {
+  "color": "#f7aecf",
   "generations": [
     ["Hololive EN", "Advent"]
   ],
   "id": "1P0HinK679PsgvTmf8Xyx2",
   "name": "Mococo Abyssgard",
-  "color": "#f7aecf",
   "stats": {
     "2023-09-04": {"monthlyListeners": 35965},
     "2023-10-04": {"monthlyListeners": 24029},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 4158, "monthlyListeners": 53530},
     "2025-04-04": {"followers": 4172, "monthlyListeners": 53843},
     "2025-04-07": {"followers": 4187, "monthlyListeners": 53640},
-    "2025-04-10": {"followers": 4205, "monthlyListeners": 53464}
+    "2025-04-10": {"followers": 4205, "monthlyListeners": 53464},
+    "2025-04-13": {"followers": 4219, "monthlyListeners": 53506}
   }
 }

@@ -1,10 +1,10 @@
 {
+  "color": "#c0c4c7",
   "generations": [
     ["Holostars EN", "Tempus HQ"]
   ],
   "id": "3P0WzYAxHOI8FbvaYgVNuh",
   "name": "Noir Vesper",
-  "color": "#c0c4c7",
   "retired": "2023-08-31",
   "stats": {
     "2024-06-25": {"followers": 362, "monthlyListeners": 3337},
@@ -94,6 +94,7 @@
     "2025-04-01": {"followers": 367, "monthlyListeners": 2318},
     "2025-04-04": {"followers": 368, "monthlyListeners": 2321},
     "2025-04-07": {"followers": 368, "monthlyListeners": 2341},
-    "2025-04-10": {"followers": 368, "monthlyListeners": 2321}
+    "2025-04-10": {"followers": 368, "monthlyListeners": 2321},
+    "2025-04-13": {"followers": 368, "monthlyListeners": 2285}
   }
 }

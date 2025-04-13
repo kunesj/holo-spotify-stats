@@ -1,10 +1,10 @@
 {
+  "color": "#fe88f4",
   "generations": [
     ["Hololive JP", "0"]
   ],
   "id": "1JSf6ODLyqPpYQAHN7S1Th",
   "name": "Roboco-san",
-  "color": "#fe88f4",
   "stats": {
     "2023-09-04": {"monthlyListeners": 21200},
     "2023-10-04": {"monthlyListeners": 20772},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 33758, "monthlyListeners": 17383},
     "2025-04-04": {"followers": 33865, "monthlyListeners": 17224},
     "2025-04-07": {"followers": 33951, "monthlyListeners": 16879},
-    "2025-04-10": {"followers": 34027, "monthlyListeners": 16771}
+    "2025-04-10": {"followers": 34027, "monthlyListeners": 16771},
+    "2025-04-13": {"followers": 34112, "monthlyListeners": 16562}
   }
 }

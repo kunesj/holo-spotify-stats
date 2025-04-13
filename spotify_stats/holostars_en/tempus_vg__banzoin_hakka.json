@@ -1,10 +1,10 @@
 {
+  "color": "#cea4f6",
   "generations": [
     ["Holostars EN", "Tempus VG"]
   ],
   "id": "0ucXfseEhzouaDAhL3Y3wM",
   "name": "Banzoin Hakka",
-  "color": "#cea4f6",
   "stats": {
     "2024-06-25": {"followers": 3049, "monthlyListeners": 2399},
     "2024-06-26": {"followers": 3056, "monthlyListeners": 2411},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 3377, "monthlyListeners": 1580},
     "2025-04-04": {"followers": 3381, "monthlyListeners": 1560},
     "2025-04-07": {"followers": 3383, "monthlyListeners": 1544},
-    "2025-04-10": {"followers": 3386, "monthlyListeners": 1539}
+    "2025-04-10": {"followers": 3386, "monthlyListeners": 1539},
+    "2025-04-13": {"followers": 3388, "monthlyListeners": 1544}
   }
 }

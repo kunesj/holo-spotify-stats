@@ -1,10 +1,10 @@
 {
+  "color": "#747474",
   "generations": [
     ["Hololive JP", "Gamers"]
   ],
   "id": "539Z6h1XU1IripGR4rTtbz",
   "name": "Ookami Mio",
-  "color": "#747474",
   "stats": {
     "2023-09-04": {"monthlyListeners": 41782},
     "2023-10-04": {"monthlyListeners": 43751},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 62160, "monthlyListeners": 48928},
     "2025-04-04": {"followers": 62313, "monthlyListeners": 49079},
     "2025-04-07": {"followers": 62462, "monthlyListeners": 48768},
-    "2025-04-10": {"followers": 62586, "monthlyListeners": 48410}
+    "2025-04-10": {"followers": 62586, "monthlyListeners": 48410},
+    "2025-04-13": {"followers": 62696, "monthlyListeners": 48011}
   }
 }

@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "1PYhosw0TGSMCw1ZrJFVfe",
   "name": "Blue Journey",
-  "color": "#83cceb",
   "stats": {
     "2023-09-04": {"monthlyListeners": 9173},
     "2023-10-04": {"monthlyListeners": 25239},
@@ -149,6 +149,7 @@
     "2025-04-01": {"followers": 19371, "monthlyListeners": 12268},
     "2025-04-04": {"followers": 19412, "monthlyListeners": 12145},
     "2025-04-07": {"followers": 19446, "monthlyListeners": 11892},
-    "2025-04-10": {"followers": 19477, "monthlyListeners": 11649}
+    "2025-04-10": {"followers": 19477, "monthlyListeners": 11649},
+    "2025-04-13": {"followers": 19500, "monthlyListeners": 11424}
   }
 }

@@ -1,10 +1,10 @@
 {
+  "color": "#fe8b04",
   "generations": [
     ["Hololive JP", "4"]
   ],
   "id": "6UVwgcSAKl0SZ9plRC59VQ",
   "name": "Kiryu Coco",
-  "color": "#fe8b04",
   "retired": "2021-07-01",
   "stats": {
     "2023-09-04": {"monthlyListeners": 20870},
@@ -152,6 +152,7 @@
     "2025-04-01": {"followers": 2936, "monthlyListeners": 14437},
     "2025-04-04": {"followers": 2940, "monthlyListeners": 14509},
     "2025-04-07": {"followers": 2945, "monthlyListeners": 14527},
-    "2025-04-10": {"followers": 2949, "monthlyListeners": 14646}
+    "2025-04-10": {"followers": 2949, "monthlyListeners": 14646},
+    "2025-04-13": {"followers": 2952, "monthlyListeners": 14560}
   }
 }

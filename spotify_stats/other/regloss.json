@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "1mHZT1y9KKMq3YsGFLR9xH",
   "name": "ReGLOSS",
-  "color": "#83cceb",
   "stats": {
     "2023-10-04": {"monthlyListeners": 33914},
     "2023-11-05": {"monthlyListeners": 21035},
@@ -148,6 +148,7 @@
     "2025-04-01": {"followers": 33121, "monthlyListeners": 77116},
     "2025-04-04": {"followers": 33430, "monthlyListeners": 78367},
     "2025-04-07": {"followers": 33697, "monthlyListeners": 80291},
-    "2025-04-10": {"followers": 33905, "monthlyListeners": 79899}
+    "2025-04-10": {"followers": 33905, "monthlyListeners": 79899},
+    "2025-04-13": {"followers": 34118, "monthlyListeners": 76452}
   }
 }

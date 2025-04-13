@@ -1,10 +1,10 @@
 {
+  "color": "#4863a6",
   "generations": [
     ["Hololive DEV_IS", "ReGLOSS"]
   ],
   "id": "61CPRQBnU83J9FIcdPincG",
   "name": "Hiodoshi Ao",
-  "color": "#4863a6",
   "stats": {
     "2024-01-06": {"followers": 386, "monthlyListeners": 18935},
     "2024-01-07": {"followers": 403, "monthlyListeners": 20033},
@@ -147,6 +147,7 @@
     "2025-04-01": {"followers": 8027, "monthlyListeners": 64081},
     "2025-04-04": {"followers": 8225, "monthlyListeners": 63839},
     "2025-04-07": {"followers": 8389, "monthlyListeners": 63424},
-    "2025-04-10": {"followers": 8529, "monthlyListeners": 62758}
+    "2025-04-10": {"followers": 8529, "monthlyListeners": 62758},
+    "2025-04-13": {"followers": 8667, "monthlyListeners": 61336}
   }
 }

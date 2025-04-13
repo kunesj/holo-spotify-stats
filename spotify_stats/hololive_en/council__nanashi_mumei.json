@@ -1,11 +1,11 @@
 {
+  "color": "#c4a495",
   "generations": [
     ["Hololive EN", "Council"],
     ["Hololive EN", "Promise"]
   ],
   "id": "3LWmimMpybGBGCjuvFqhAT",
   "name": "Nanashi Mumei",
-  "color": "#c4a495",
   "stats": {
     "2023-09-04": {"monthlyListeners": 52110},
     "2023-10-04": {"monthlyListeners": 67594},
@@ -152,6 +152,7 @@
     "2025-04-01": {"followers": 45675, "monthlyListeners": 71969},
     "2025-04-04": {"followers": 45818, "monthlyListeners": 73111},
     "2025-04-07": {"followers": 45926, "monthlyListeners": 73641},
-    "2025-04-10": {"followers": 46034, "monthlyListeners": 74009}
+    "2025-04-10": {"followers": 46034, "monthlyListeners": 74009},
+    "2025-04-13": {"followers": 46130, "monthlyListeners": 74298}
   }
 }

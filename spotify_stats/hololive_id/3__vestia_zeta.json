@@ -1,10 +1,10 @@
 {
+  "color": "#c0bfc8",
   "generations": [
     ["Hololive ID", "3"]
   ],
   "id": "6EnbBHbsZU4sIYz7HHvBHl",
   "name": "Vestia Zeta",
-  "color": "#c0bfc8",
   "stats": {
     "2023-11-05": {"monthlyListeners": 12211},
     "2023-12-04": {"monthlyListeners": 12085},
@@ -149,6 +149,7 @@
     "2025-04-01": {"followers": 20274, "monthlyListeners": 43559},
     "2025-04-04": {"followers": 20487, "monthlyListeners": 45314},
     "2025-04-07": {"followers": 20745, "monthlyListeners": 47823},
-    "2025-04-10": {"followers": 20991, "monthlyListeners": 52029}
+    "2025-04-10": {"followers": 20991, "monthlyListeners": 52029},
+    "2025-04-13": {"followers": 21233, "monthlyListeners": 55204}
   }
 }

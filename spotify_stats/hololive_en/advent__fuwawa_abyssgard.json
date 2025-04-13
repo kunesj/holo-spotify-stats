@@ -1,10 +1,10 @@
 {
+  "color": "#76b9fe",
   "generations": [
     ["Hololive EN", "Advent"]
   ],
   "id": "73t8GlAmUyGUzDy5EVYUbB",
   "name": "Fuwawa Abyssgard",
-  "color": "#76b9fe",
   "stats": {
     "2023-09-04": {"monthlyListeners": 35965},
     "2023-10-04": {"monthlyListeners": 24029},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 5126, "monthlyListeners": 53528},
     "2025-04-04": {"followers": 5156, "monthlyListeners": 53862},
     "2025-04-07": {"followers": 5176, "monthlyListeners": 53641},
-    "2025-04-10": {"followers": 5205, "monthlyListeners": 53463}
+    "2025-04-10": {"followers": 5205, "monthlyListeners": 53463},
+    "2025-04-13": {"followers": 5227, "monthlyListeners": 53511}
   }
 }

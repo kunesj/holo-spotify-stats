@@ -1,11 +1,11 @@
 {
+  "color": "#64b9f3",
   "generations": [
     ["INoNaKa Music", ""],
     ["Hololive JP", "0"]
   ],
   "id": "726WiFmWkohzodUxK3XjHX",
   "name": "Hoshimachi Suisei",
-  "color": "#64b9f3",
   "stats": {
     "2023-09-04": {"monthlyListeners": 385763},
     "2023-10-04": {"monthlyListeners": 391485},
@@ -152,6 +152,7 @@
     "2025-04-01": {"followers": 511009, "monthlyListeners": 1132529},
     "2025-04-04": {"followers": 512899, "monthlyListeners": 1139695},
     "2025-04-07": {"followers": 514889, "monthlyListeners": 1142497},
-    "2025-04-10": {"followers": 516811, "monthlyListeners": 1147192}
+    "2025-04-10": {"followers": 516811, "monthlyListeners": 1147192},
+    "2025-04-13": {"followers": 519047, "monthlyListeners": 1188476}
   }
 }

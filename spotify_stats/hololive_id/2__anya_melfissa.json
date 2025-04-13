@@ -1,11 +1,11 @@
 {
+  "color": "#f8cb53",
   "generations": [
     ["Hololive ID", "2"]
   ],
   "id": "54Gs353pwY49Rl19Zc8jeu",
   "id__2023-09-04_-_2024-05-03": "3ajRK89RamsBsdbbLH2ufQ",
   "name": "Anya Melfissa",
-  "color": "#f8cb53",
   "stats": {
     "2023-09-04": {"monthlyListeners": 9400},
     "2023-10-04": {"monthlyListeners": 7968},
@@ -144,6 +144,7 @@
     "2025-04-01": {"followers": 8969, "monthlyListeners": 35979},
     "2025-04-04": {"followers": 9013, "monthlyListeners": 36970},
     "2025-04-07": {"followers": 9077, "monthlyListeners": 38387},
-    "2025-04-10": {"followers": 9138, "monthlyListeners": 39465}
+    "2025-04-10": {"followers": 9138, "monthlyListeners": 39465},
+    "2025-04-13": {"followers": 9200, "monthlyListeners": 40698}
   }
 }

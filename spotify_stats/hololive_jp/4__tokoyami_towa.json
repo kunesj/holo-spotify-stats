@@ -1,10 +1,10 @@
 {
+  "color": "#fe19b4",
   "generations": [
     ["Hololive JP", "4"]
   ],
   "id": "0XZGQi9wNsE1z9L0AWhC82",
   "name": "Tokoyami Towa",
-  "color": "#fe19b4",
   "stats": {
     "2023-09-04": {"monthlyListeners": 112369},
     "2023-10-04": {"monthlyListeners": 113125},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 121410, "monthlyListeners": 107206},
     "2025-04-04": {"followers": 121620, "monthlyListeners": 106732},
     "2025-04-07": {"followers": 121769, "monthlyListeners": 104330},
-    "2025-04-10": {"followers": 121891, "monthlyListeners": 102378}
+    "2025-04-10": {"followers": 121891, "monthlyListeners": 102378},
+    "2025-04-13": {"followers": 122030, "monthlyListeners": 100050}
   }
 }

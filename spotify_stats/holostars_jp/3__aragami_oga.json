@@ -1,10 +1,10 @@
 {
+  "color": "#80ef19",
   "generations": [
     ["Holostars JP", "3"]
   ],
   "id": "51y5hQaDx7FLqH0Lcm6ubZ",
   "name": "Aragami Oga",
-  "color": "#80ef19",
   "stats": {
     "2024-06-25": {"followers": 2011, "monthlyListeners": 5644},
     "2024-06-26": {"followers": 2011, "monthlyListeners": 5616},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 2421, "monthlyListeners": 4630},
     "2025-04-04": {"followers": 2424, "monthlyListeners": 4672},
     "2025-04-07": {"followers": 2430, "monthlyListeners": 4676},
-    "2025-04-10": {"followers": 2431, "monthlyListeners": 4601}
+    "2025-04-10": {"followers": 2431, "monthlyListeners": 4601},
+    "2025-04-13": {"followers": 2435, "monthlyListeners": 4575}
   }
 }

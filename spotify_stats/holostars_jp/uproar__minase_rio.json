@@ -1,10 +1,10 @@
 {
+  "color": "#acafda",
   "generations": [
     ["Holostars JP", "UPROAR!!"]
   ],
   "id": "0QM3bsmmOZUICoxk4AuQFt",
   "name": "Minase Rio",
-  "color": "#acafda",
   "stats": {
     "2024-06-25": {"followers": 321, "monthlyListeners": 1134},
     "2024-06-26": {"followers": 321, "monthlyListeners": 1144},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 393, "monthlyListeners": 656},
     "2025-04-04": {"followers": 393, "monthlyListeners": 667},
     "2025-04-07": {"followers": 394, "monthlyListeners": 665},
-    "2025-04-10": {"followers": 394, "monthlyListeners": 666}
+    "2025-04-10": {"followers": 394, "monthlyListeners": 666},
+    "2025-04-13": {"followers": 394, "monthlyListeners": 664}
   }
 }

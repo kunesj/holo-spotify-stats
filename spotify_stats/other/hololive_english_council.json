@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "4IzVrwKeO1QbIeKZOhBUVv",
   "name": "Hololive English -Council-",
-  "color": "#83cceb",
   "stats": {
     "2024-12-05": {"followers": 9465, "monthlyListeners": 12146},
     "2024-12-08": {"followers": 9472, "monthlyListeners": 12268},
@@ -41,6 +41,7 @@
     "2025-04-01": {"followers": 9809, "monthlyListeners": 11633},
     "2025-04-04": {"followers": 9816, "monthlyListeners": 11854},
     "2025-04-07": {"followers": 9823, "monthlyListeners": 11974},
-    "2025-04-10": {"followers": 9830, "monthlyListeners": 12064}
+    "2025-04-10": {"followers": 9830, "monthlyListeners": 12064},
+    "2025-04-13": {"followers": 9840, "monthlyListeners": 12090}
   }
 }

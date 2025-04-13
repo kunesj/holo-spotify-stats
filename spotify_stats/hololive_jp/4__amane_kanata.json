@@ -1,10 +1,10 @@
 {
+  "color": "#3271d6",
   "generations": [
     ["Hololive JP", "4"]
   ],
   "id": "3xYcccivSuAU13ZHypWoNW",
   "name": "Amane Kanata",
-  "color": "#3271d6",
   "stats": {
     "2023-09-04": {"monthlyListeners": 53105},
     "2023-10-04": {"monthlyListeners": 52812},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 77514, "monthlyListeners": 56073},
     "2025-04-04": {"followers": 77664, "monthlyListeners": 56191},
     "2025-04-07": {"followers": 77815, "monthlyListeners": 56131},
-    "2025-04-10": {"followers": 77940, "monthlyListeners": 55980}
+    "2025-04-10": {"followers": 77940, "monthlyListeners": 55980},
+    "2025-04-13": {"followers": 78053, "monthlyListeners": 55523}
   }
 }

@@ -1,10 +1,10 @@
 {
+  "color": "#fe514d",
   "generations": [
     ["Hololive ID", "3"]
   ],
   "id": "4tja6ktAg16YWJphxmw2bV",
   "name": "Kaela Kovalskia",
-  "color": "#fe514d",
   "stats": {
     "2023-11-05": {"monthlyListeners": 6901},
     "2023-12-04": {"monthlyListeners": 8287},
@@ -149,6 +149,7 @@
     "2025-04-01": {"followers": 11329, "monthlyListeners": 31584},
     "2025-04-04": {"followers": 11396, "monthlyListeners": 31782},
     "2025-04-07": {"followers": 11454, "monthlyListeners": 32070},
-    "2025-04-10": {"followers": 11511, "monthlyListeners": 32442}
+    "2025-04-10": {"followers": 11511, "monthlyListeners": 32442},
+    "2025-04-13": {"followers": 11579, "monthlyListeners": 33784}
   }
 }

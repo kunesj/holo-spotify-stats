@@ -1,10 +1,10 @@
 {
+  "color": "#fddc8f",
   "generations": [
     ["Hololive EN", "Myth"]
   ],
   "id": "0R8gPf3buI10EYWrB7FBlm",
   "name": "Watson Amelia",
-  "color": "#fddc8f",
   "retired": "2024-09-30",
   "stats": {
     "2023-09-04": {"monthlyListeners": 47238},
@@ -152,6 +152,7 @@
     "2025-04-01": {"followers": 32334, "monthlyListeners": 43416},
     "2025-04-04": {"followers": 32361, "monthlyListeners": 43172},
     "2025-04-07": {"followers": 32397, "monthlyListeners": 43049},
-    "2025-04-10": {"followers": 32423, "monthlyListeners": 42684}
+    "2025-04-10": {"followers": 32423, "monthlyListeners": 42684},
+    "2025-04-13": {"followers": 32464, "monthlyListeners": 42286}
   }
 }

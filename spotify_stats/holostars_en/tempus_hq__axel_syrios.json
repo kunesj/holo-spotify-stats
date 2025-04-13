@@ -1,10 +1,10 @@
 {
+  "color": "#fea11b",
   "generations": [
     ["Holostars EN", "Tempus HQ"]
   ],
   "id": "0TXXSPkskHrEj85G682bCP",
   "name": "Axel Syrios",
-  "color": "#fea11b",
   "stats": {
     "2024-06-25": {"followers": 909, "monthlyListeners": 6906},
     "2024-06-26": {"followers": 909, "monthlyListeners": 6989},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 1141, "monthlyListeners": 5239},
     "2025-04-04": {"followers": 1143, "monthlyListeners": 5221},
     "2025-04-07": {"followers": 1144, "monthlyListeners": 5240},
-    "2025-04-10": {"followers": 1147, "monthlyListeners": 5226}
+    "2025-04-10": {"followers": 1147, "monthlyListeners": 5226},
+    "2025-04-13": {"followers": 1149, "monthlyListeners": 5212}
   }
 }

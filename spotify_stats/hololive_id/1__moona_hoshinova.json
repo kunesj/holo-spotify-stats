@@ -1,10 +1,10 @@
 {
+  "color": "#bba3e1",
   "generations": [
     ["Hololive ID", "1"]
   ],
   "id": "2Iss9rGmxvoEfVigargjTH",
   "name": "Moona Hoshinova",
-  "color": "#bba3e1",
   "stats": {
     "2023-09-04": {"monthlyListeners": 85338},
     "2023-10-04": {"monthlyListeners": 83557},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 72156, "monthlyListeners": 95257},
     "2025-04-04": {"followers": 72267, "monthlyListeners": 94744},
     "2025-04-07": {"followers": 72385, "monthlyListeners": 93671},
-    "2025-04-10": {"followers": 72493, "monthlyListeners": 92766}
+    "2025-04-10": {"followers": 72493, "monthlyListeners": 92766},
+    "2025-04-13": {"followers": 72727, "monthlyListeners": 92535}
   }
 }

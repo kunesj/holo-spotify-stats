@@ -1,10 +1,10 @@
 {
+  "color": "#7580f8",
   "generations": [
     ["Hololive JP", "0"]
   ],
   "id": "2g9gjJayRURjomDGRLNaZR",
   "name": "Tokino Sora",
-  "color": "#7580f8",
   "stats": {
     "2023-09-04": {"monthlyListeners": 34732},
     "2023-10-04": {"monthlyListeners": 37068},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 80884, "monthlyListeners": 52438},
     "2025-04-04": {"followers": 80984, "monthlyListeners": 52394},
     "2025-04-07": {"followers": 81080, "monthlyListeners": 51751},
-    "2025-04-10": {"followers": 81159, "monthlyListeners": 50627}
+    "2025-04-10": {"followers": 81159, "monthlyListeners": 50627},
+    "2025-04-13": {"followers": 81258, "monthlyListeners": 50128}
   }
 }

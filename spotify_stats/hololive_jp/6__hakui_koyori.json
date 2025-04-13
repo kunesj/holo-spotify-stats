@@ -1,10 +1,10 @@
 {
+  "color": "#feb0d9",
   "generations": [
     ["Hololive JP", "6"]
   ],
   "id": "6wzg6ZJ9dBUoOuk0hs2Ert",
   "name": "Hakui Koyori",
-  "color": "#feb0d9",
   "stats": {
     "2023-09-04": {"monthlyListeners": 35320},
     "2023-10-04": {"monthlyListeners": 37375},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 42853, "monthlyListeners": 65791},
     "2025-04-04": {"followers": 42991, "monthlyListeners": 66210},
     "2025-04-07": {"followers": 43119, "monthlyListeners": 65601},
-    "2025-04-10": {"followers": 43245, "monthlyListeners": 64562}
+    "2025-04-10": {"followers": 43245, "monthlyListeners": 64562},
+    "2025-04-13": {"followers": 43364, "monthlyListeners": 63775}
   }
 }

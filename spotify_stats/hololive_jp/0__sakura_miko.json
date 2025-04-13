@@ -1,10 +1,10 @@
 {
+  "color": "#fd949c",
   "generations": [
     ["Hololive JP", "0"]
   ],
   "id": "6YFKPqnL4YtX9jJmj5zkzv",
   "name": "Sakura Miko",
-  "color": "#fd949c",
   "stats": {
     "2023-09-04": {"monthlyListeners": 54814},
     "2023-10-04": {"monthlyListeners": 56549},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 103753, "monthlyListeners": 112326},
     "2025-04-04": {"followers": 104063, "monthlyListeners": 112303},
     "2025-04-07": {"followers": 104342, "monthlyListeners": 111898},
-    "2025-04-10": {"followers": 104573, "monthlyListeners": 110903}
+    "2025-04-10": {"followers": 104573, "monthlyListeners": 110903},
+    "2025-04-13": {"followers": 104771, "monthlyListeners": 111620}
   }
 }

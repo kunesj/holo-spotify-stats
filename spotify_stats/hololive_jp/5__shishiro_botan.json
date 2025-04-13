@@ -1,10 +1,10 @@
 {
+  "color": "#766e7c",
   "generations": [
     ["Hololive JP", "5"]
   ],
   "id": "6SJuFGUxkapaefayFdBwWz",
   "name": "Shishiro Botan",
-  "color": "#766e7c",
   "stats": {
     "2023-09-04": {"monthlyListeners": 23389},
     "2023-10-04": {"monthlyListeners": 23469},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 30803, "monthlyListeners": 23053},
     "2025-04-04": {"followers": 30903, "monthlyListeners": 22861},
     "2025-04-07": {"followers": 30987, "monthlyListeners": 22493},
-    "2025-04-10": {"followers": 31067, "monthlyListeners": 21974}
+    "2025-04-10": {"followers": 31067, "monthlyListeners": 21974},
+    "2025-04-13": {"followers": 31144, "monthlyListeners": 21665}
   }
 }

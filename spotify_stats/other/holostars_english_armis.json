@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "4agnXiSpzjJJq36Qqq2ThS",
   "name": "HOLOSTARS English -ARMIS-",
-  "color": "#83cceb",
   "stats": {
     "2024-06-25": {"followers": 1303, "monthlyListeners": 3047},
     "2024-06-26": {"followers": 1320, "monthlyListeners": 3206},
@@ -91,6 +91,7 @@
     "2025-04-01": {"followers": 1797, "monthlyListeners": 3359},
     "2025-04-04": {"followers": 1802, "monthlyListeners": 3437},
     "2025-04-07": {"followers": 1801, "monthlyListeners": 3496},
-    "2025-04-10": {"followers": 1807, "monthlyListeners": 3421}
+    "2025-04-10": {"followers": 1807, "monthlyListeners": 3421},
+    "2025-04-13": {"followers": 1812, "monthlyListeners": 3426}
   }
 }

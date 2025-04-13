@@ -1,10 +1,10 @@
 {
+  "color": "#628dd1",
   "generations": [
     ["Hololive EN", "Myth"]
   ],
   "id": "1Spm887PTszc2AoNYpoCld",
   "name": "Gawr Gura",
-  "color": "#628dd1",
   "stats": {
     "2023-09-04": {"monthlyListeners": 242139},
     "2023-10-04": {"monthlyListeners": 230948},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 161402, "monthlyListeners": 182355},
     "2025-04-04": {"followers": 161527, "monthlyListeners": 181477},
     "2025-04-07": {"followers": 161703, "monthlyListeners": 180912},
-    "2025-04-10": {"followers": 161844, "monthlyListeners": 180470}
+    "2025-04-10": {"followers": 161844, "monthlyListeners": 180470},
+    "2025-04-13": {"followers": 161988, "monthlyListeners": 179914}
   }
 }

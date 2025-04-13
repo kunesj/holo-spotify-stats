@@ -1,10 +1,10 @@
 {
+  "color": "#47c7fe",
   "generations": [
     ["Hololive DEV_IS", "FLOW GLOW"]
   ],
   "id": "4KQK9Vyz8AuDVPTXCo5e3U",
   "name": "Mizumiya Su",
-  "color": "#47c7fe",
   "stats": {
     "2024-12-05": {"followers": 720, "monthlyListeners": 29827},
     "2024-12-08": {"followers": 759, "monthlyListeners": 31305},
@@ -43,6 +43,7 @@
     "2025-04-01": {"followers": 1798, "monthlyListeners": 22761},
     "2025-04-04": {"followers": 1813, "monthlyListeners": 23689},
     "2025-04-07": {"followers": 1831, "monthlyListeners": 24391},
-    "2025-04-10": {"followers": 1851, "monthlyListeners": 24543}
+    "2025-04-10": {"followers": 1851, "monthlyListeners": 24543},
+    "2025-04-13": {"followers": 1867, "monthlyListeners": 23452}
   }
 }

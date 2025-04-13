@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "60lgIOOISxGcxyjX4GJeii",
   "name": "Midnight Grand Orchestra",
-  "color": "#83cceb",
   "stats": {
     "2023-09-04": {"monthlyListeners": 34164},
     "2023-10-04": {"monthlyListeners": 62213},
@@ -149,6 +149,7 @@
     "2025-04-01": {"followers": 38997, "monthlyListeners": 55255},
     "2025-04-04": {"followers": 39036, "monthlyListeners": 55267},
     "2025-04-07": {"followers": 39092, "monthlyListeners": 55152},
-    "2025-04-10": {"followers": 39153, "monthlyListeners": 55650}
+    "2025-04-10": {"followers": 39153, "monthlyListeners": 55650},
+    "2025-04-13": {"followers": 39221, "monthlyListeners": 56513}
   }
 }

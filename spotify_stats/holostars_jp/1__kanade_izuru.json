@@ -1,10 +1,10 @@
 {
+  "color": "#354fad",
   "generations": [
     ["Holostars JP", "1"]
   ],
   "id": "0asG3iGnDzxlo0S4O595Td",
   "name": "Kanade Izuru",
-  "color": "#354fad",
   "stats": {
     "2024-06-25": {"followers": 5626, "monthlyListeners": 4288},
     "2024-06-26": {"followers": 5627, "monthlyListeners": 4268},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 5977, "monthlyListeners": 4592},
     "2025-04-04": {"followers": 5975, "monthlyListeners": 4636},
     "2025-04-07": {"followers": 5979, "monthlyListeners": 4678},
-    "2025-04-10": {"followers": 5978, "monthlyListeners": 4678}
+    "2025-04-10": {"followers": 5978, "monthlyListeners": 4678},
+    "2025-04-13": {"followers": 5975, "monthlyListeners": 4679}
   }
 }

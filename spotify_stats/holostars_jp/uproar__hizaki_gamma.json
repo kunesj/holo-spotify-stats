@@ -1,10 +1,10 @@
 {
+  "color": "#fb1819",
   "generations": [
     ["Holostars JP", "UPROAR!!"]
   ],
   "id": "7e71qqETSqhB8mnfHQiDtb",
   "name": "Hizaki Gamma",
-  "color": "#fb1819",
   "retired": "2024-07-17",
   "stats": {
     "2024-06-25": {"followers": 250, "monthlyListeners": 1107},
@@ -94,6 +94,7 @@
     "2025-04-01": {"followers": 294, "monthlyListeners": 637},
     "2025-04-04": {"followers": 294, "monthlyListeners": 642},
     "2025-04-07": {"followers": 295, "monthlyListeners": 634},
-    "2025-04-10": {"followers": 295, "monthlyListeners": 640}
+    "2025-04-10": {"followers": 295, "monthlyListeners": 640},
+    "2025-04-13": {"followers": 296, "monthlyListeners": 633}
   }
 }

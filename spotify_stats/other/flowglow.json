@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "5iNbxrseVXidSkeSWrLOJv",
   "name": "FLOW GLOW",
-  "color": "#83cceb",
   "stats": {
     "2024-12-05": {"followers": 2605, "monthlyListeners": 29830},
     "2024-12-08": {"followers": 2697, "monthlyListeners": 31294},
@@ -41,6 +41,7 @@
     "2025-04-01": {"followers": 6621, "monthlyListeners": 26033},
     "2025-04-04": {"followers": 6747, "monthlyListeners": 26819},
     "2025-04-07": {"followers": 6844, "monthlyListeners": 27495},
-    "2025-04-10": {"followers": 6936, "monthlyListeners": 27500}
+    "2025-04-10": {"followers": 6936, "monthlyListeners": 27500},
+    "2025-04-13": {"followers": 7014, "monthlyListeners": 26405}
   }
 }

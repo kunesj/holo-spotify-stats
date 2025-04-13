@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "4R8Qf3gbqd9bhiQoUToAAU",
   "name": "HOLOLIVE FANTASY",
-  "color": "#83cceb",
   "stats": {
     "2023-09-04": {"monthlyListeners": 26390},
     "2023-10-04": {"monthlyListeners": 27743},
@@ -149,6 +149,7 @@
     "2025-04-01": {"followers": 9953, "monthlyListeners": 13961},
     "2025-04-04": {"followers": 9975, "monthlyListeners": 13967},
     "2025-04-07": {"followers": 9989, "monthlyListeners": 13950},
-    "2025-04-10": {"followers": 9997, "monthlyListeners": 14034}
+    "2025-04-10": {"followers": 9997, "monthlyListeners": 14034},
+    "2025-04-13": {"followers": 10011, "monthlyListeners": 13884}
   }
 }

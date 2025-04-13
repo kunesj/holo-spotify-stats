@@ -1,10 +1,10 @@
 {
+  "color": "#fed84d",
   "generations": [
     ["Hololive JP", "Gamers"]
   ],
   "id": "6EFbQU0BE4wGLdqBjey64b",
   "name": "Inugami Korone",
-  "color": "#fed84d",
   "stats": {
     "2023-09-04": {"monthlyListeners": 55121},
     "2023-10-04": {"monthlyListeners": 56580},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 62486, "monthlyListeners": 59170},
     "2025-04-04": {"followers": 62590, "monthlyListeners": 59066},
     "2025-04-07": {"followers": 62673, "monthlyListeners": 58458},
-    "2025-04-10": {"followers": 62768, "monthlyListeners": 58268}
+    "2025-04-10": {"followers": 62768, "monthlyListeners": 58268},
+    "2025-04-13": {"followers": 62874, "monthlyListeners": 58153}
   }
 }

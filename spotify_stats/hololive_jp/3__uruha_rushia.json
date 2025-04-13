@@ -1,10 +1,10 @@
 {
+  "color": "#30f9d2",
   "generations": [
     ["Hololive JP", "3"]
   ],
   "id": "70qI9Ih5VXZMuCsEVhy22C",
   "name": "Uruha Rushia",
-  "color": "#30f9d2",
   "retired": "2022-02-24",
   "stats": {
     "2023-09-04": {"monthlyListeners": 36735},
@@ -152,6 +152,7 @@
     "2025-04-01": {"followers": 49880, "monthlyListeners": 20947},
     "2025-04-04": {"followers": 49925, "monthlyListeners": 21028},
     "2025-04-07": {"followers": 49964, "monthlyListeners": 20973},
-    "2025-04-10": {"followers": 49988, "monthlyListeners": 20985}
+    "2025-04-10": {"followers": 49988, "monthlyListeners": 20985},
+    "2025-04-13": {"followers": 50014, "monthlyListeners": 20769}
   }
 }

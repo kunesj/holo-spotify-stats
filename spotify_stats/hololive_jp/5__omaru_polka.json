@@ -1,10 +1,10 @@
 {
+  "color": "#eb5782",
   "generations": [
     ["Hololive JP", "5"]
   ],
   "id": "4lnAamuhZv4tmgOMryoB73",
   "name": "Omaru Polka",
-  "color": "#eb5782",
   "stats": {
     "2023-09-04": {"monthlyListeners": 34235},
     "2023-10-04": {"monthlyListeners": 37840},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 46059, "monthlyListeners": 45130},
     "2025-04-04": {"followers": 46180, "monthlyListeners": 44969},
     "2025-04-07": {"followers": 46290, "monthlyListeners": 44582},
-    "2025-04-10": {"followers": 46387, "monthlyListeners": 44138}
+    "2025-04-10": {"followers": 46387, "monthlyListeners": 44138},
+    "2025-04-13": {"followers": 46475, "monthlyListeners": 44008}
   }
 }

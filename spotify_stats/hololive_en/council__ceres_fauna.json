@@ -1,11 +1,11 @@
 {
+  "color": "#acd59b",
   "generations": [
     ["Hololive EN", "Council"],
     ["Hololive EN", "Promise"]
   ],
   "id": "76xXQq2nPiexRDstB9MY70",
   "name": "Ceres Fauna",
-  "color": "#acd59b",
   "retired": "2025-01-03",
   "stats": {
     "2023-09-04": {"monthlyListeners": 28007},
@@ -153,6 +153,7 @@
     "2025-04-01": {"followers": 25025, "monthlyListeners": 42434},
     "2025-04-04": {"followers": 25089, "monthlyListeners": 42807},
     "2025-04-07": {"followers": 25138, "monthlyListeners": 42753},
-    "2025-04-10": {"followers": 25202, "monthlyListeners": 42938}
+    "2025-04-10": {"followers": 25202, "monthlyListeners": 42938},
+    "2025-04-13": {"followers": 25256, "monthlyListeners": 42856}
   }
 }

@@ -1,11 +1,11 @@
 {
+  "color": "#eb1a1a",
   "generations": [
     ["Hololive EN", "Council"],
     ["Hololive EN", "Promise"]
   ],
   "id": "3h5FLKIAPF9O96Sdz2j4Jb",
   "name": "Hakos Baelz",
-  "color": "#eb1a1a",
   "stats": {
     "2023-09-04": {"monthlyListeners": 106835},
     "2023-10-04": {"monthlyListeners": 104112},
@@ -152,6 +152,7 @@
     "2025-04-01": {"followers": 63759, "monthlyListeners": 122658},
     "2025-04-04": {"followers": 63898, "monthlyListeners": 120679},
     "2025-04-07": {"followers": 64047, "monthlyListeners": 117663},
-    "2025-04-10": {"followers": 64199, "monthlyListeners": 116696}
+    "2025-04-10": {"followers": 64199, "monthlyListeners": 116696},
+    "2025-04-13": {"followers": 64354, "monthlyListeners": 114961}
   }
 }

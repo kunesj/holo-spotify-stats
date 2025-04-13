@@ -1,10 +1,10 @@
 {
+  "color": "#f3b6bd",
   "generations": [
     ["Holostars JP", "1"]
   ],
   "id": "0nEKA86Og8b1gll9dc0tS9",
   "name": "Rikka",
-  "color": "#f3b6bd",
   "stats": {
     "2024-06-25": {"followers": 7861, "monthlyListeners": 14117},
     "2024-06-26": {"followers": 7862, "monthlyListeners": 14050},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 8035, "monthlyListeners": 11500},
     "2025-04-04": {"followers": 8032, "monthlyListeners": 11574},
     "2025-04-07": {"followers": 8036, "monthlyListeners": 11605},
-    "2025-04-10": {"followers": 8039, "monthlyListeners": 11655}
+    "2025-04-10": {"followers": 8039, "monthlyListeners": 11655},
+    "2025-04-13": {"followers": 8039, "monthlyListeners": 11606}
   }
 }

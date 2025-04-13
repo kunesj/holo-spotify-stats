@@ -1,10 +1,10 @@
 {
+  "color": "#dc1c5e",
   "generations": [
     ["Hololive JP", "2"]
   ],
   "id": "1dMlek4eXZns9FyjBcvrF8",
   "name": "Nakiri Ayame",
-  "color": "#dc1c5e",
   "stats": {
     "2023-09-04": {"monthlyListeners": 46852},
     "2023-10-04": {"monthlyListeners": 47539},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 72528, "monthlyListeners": 45678},
     "2025-04-04": {"followers": 72699, "monthlyListeners": 45453},
     "2025-04-07": {"followers": 72842, "monthlyListeners": 45131},
-    "2025-04-10": {"followers": 72977, "monthlyListeners": 44515}
+    "2025-04-10": {"followers": 72977, "monthlyListeners": 44515},
+    "2025-04-13": {"followers": 73091, "monthlyListeners": 43995}
   }
 }

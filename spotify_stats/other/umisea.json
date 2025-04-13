@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "57uGbHiQfAA2Emy3NqxWgK",
   "name": "UMISEA",
-  "color": "#83cceb",
   "stats": {
     "2023-09-04": {"monthlyListeners": 39333},
     "2023-10-04": {"monthlyListeners": 37542},
@@ -149,6 +149,7 @@
     "2025-04-01": {"followers": 9188, "monthlyListeners": 16803},
     "2025-04-04": {"followers": 9191, "monthlyListeners": 16830},
     "2025-04-07": {"followers": 9192, "monthlyListeners": 16755},
-    "2025-04-10": {"followers": 9190, "monthlyListeners": 16544}
+    "2025-04-10": {"followers": 9190, "monthlyListeners": 16544},
+    "2025-04-13": {"followers": 9195, "monthlyListeners": 16281}
   }
 }

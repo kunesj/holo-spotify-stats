@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "3xsiv3OekVUqyDlM3oQLFo",
   "name": "ORIO",
-  "color": "#83cceb",
   "stats": {
     "2023-09-04": {"monthlyListeners": 13683},
     "2023-10-04": {"monthlyListeners": 13410},
@@ -149,6 +149,7 @@
     "2025-04-01": {"followers": 15834, "monthlyListeners": 7904},
     "2025-04-04": {"followers": 15846, "monthlyListeners": 7880},
     "2025-04-07": {"followers": 15871, "monthlyListeners": 7787},
-    "2025-04-10": {"followers": 15878, "monthlyListeners": 7737}
+    "2025-04-10": {"followers": 15878, "monthlyListeners": 7737},
+    "2025-04-13": {"followers": 15895, "monthlyListeners": 7687}
   }
 }

@@ -1,11 +1,11 @@
 {
+  "color": "#efdecc",
   "generations": [
     ["Hololive EN", "Council"],
     ["Hololive EN", "Promise"]
   ],
   "id": "14Ug9p3MMOsXgaB47igqD9",
   "name": "Tsukumo Sana",
-  "color": "#efdecc",
   "retired": "2022-07-31",
   "stats": {
     "2023-09-04": {"monthlyListeners": 13958},
@@ -153,6 +153,7 @@
     "2025-04-01": {"followers": 538, "monthlyListeners": 11633},
     "2025-04-04": {"followers": 540, "monthlyListeners": 11854},
     "2025-04-07": {"followers": 542, "monthlyListeners": 11974},
-    "2025-04-10": {"followers": 543, "monthlyListeners": 12064}
+    "2025-04-10": {"followers": 543, "monthlyListeners": 12064},
+    "2025-04-13": {"followers": 545, "monthlyListeners": 12090}
   }
 }

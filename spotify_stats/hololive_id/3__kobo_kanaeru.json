@@ -1,10 +1,10 @@
 {
+  "color": "#33ccff",
   "generations": [
     ["Hololive ID", "3"]
   ],
   "id": "6AjW1aE0OlIoRGdnwbHgP2",
   "name": "Kobo Kanaeru",
-  "color": "#33ccff",
   "stats": {
     "2023-09-04": {"monthlyListeners": 515098},
     "2023-10-04": {"monthlyListeners": 484061},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 453244, "monthlyListeners": 457634},
     "2025-04-04": {"followers": 453818, "monthlyListeners": 455233},
     "2025-04-07": {"followers": 454512, "monthlyListeners": 452405},
-    "2025-04-10": {"followers": 455147, "monthlyListeners": 451032}
+    "2025-04-10": {"followers": 455147, "monthlyListeners": 451032},
+    "2025-04-13": {"followers": 455729, "monthlyListeners": 450384}
   }
 }

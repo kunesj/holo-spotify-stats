@@ -1,10 +1,10 @@
 {
+  "color": "#ff0000",
   "generations": [
     ["Hololive JP", "1"]
   ],
   "id": "1d7xr1J9jeQpwTOVCc07WU",
   "name": "Akai Haato",
-  "color": "#ff0000",
   "stats": {
     "2023-09-04": {"monthlyListeners": 21686},
     "2023-10-04": {"monthlyListeners": 21249},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 21651, "monthlyListeners": 21360},
     "2025-04-04": {"followers": 21733, "monthlyListeners": 21136},
     "2025-04-07": {"followers": 21808, "monthlyListeners": 20550},
-    "2025-04-10": {"followers": 21869, "monthlyListeners": 19631}
+    "2025-04-10": {"followers": 21869, "monthlyListeners": 19631},
+    "2025-04-13": {"followers": 21924, "monthlyListeners": 19299}
   }
 }

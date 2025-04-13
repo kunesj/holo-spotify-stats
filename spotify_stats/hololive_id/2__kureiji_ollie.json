@@ -1,10 +1,10 @@
 {
+  "color": "#eb1964",
   "generations": [
     ["Hololive ID", "2"]
   ],
   "id": "1OhTcluS7b80jZfvQngApR",
   "name": "Kureiji Ollie",
-  "color": "#eb1964",
   "stats": {
     "2023-09-04": {"monthlyListeners": 17597},
     "2023-10-04": {"monthlyListeners": 16615},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 50710, "monthlyListeners": 35574},
     "2025-04-04": {"followers": 50765, "monthlyListeners": 35713},
     "2025-04-07": {"followers": 50832, "monthlyListeners": 35807},
-    "2025-04-10": {"followers": 50884, "monthlyListeners": 36117}
+    "2025-04-10": {"followers": 50884, "monthlyListeners": 36117},
+    "2025-04-13": {"followers": 50935, "monthlyListeners": 37419}
   }
 }

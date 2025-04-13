@@ -1,10 +1,10 @@
 {
+  "color": "#a377d1",
   "generations": [
     ["Hololive JP", "6"]
   ],
   "id": "6bqjeuZSue05I1koJvEl0d",
   "name": "La+ Darknesss",
-  "color": "#a377d1",
   "stats": {
     "2023-09-04": {"monthlyListeners": 42322},
     "2023-10-04": {"monthlyListeners": 44328},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 51610, "monthlyListeners": 47782},
     "2025-04-04": {"followers": 51798, "monthlyListeners": 47879},
     "2025-04-07": {"followers": 51948, "monthlyListeners": 47094},
-    "2025-04-10": {"followers": 52063, "monthlyListeners": 46392}
+    "2025-04-10": {"followers": 52063, "monthlyListeners": 46392},
+    "2025-04-13": {"followers": 52192, "monthlyListeners": 45849}
   }
 }

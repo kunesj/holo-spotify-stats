@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "5NkXryxdtHg2t0ZcXfzeyq",
   "name": "hololive Indonesia 1st Generation",
-  "color": "#83cceb",
   "stats": {
     "2023-09-04": {"monthlyListeners": 12382},
     "2023-10-04": {"monthlyListeners": 11908},
@@ -149,6 +149,7 @@
     "2025-04-01": {"followers": 13336, "monthlyListeners": 11412},
     "2025-04-04": {"followers": 13340, "monthlyListeners": 11488},
     "2025-04-07": {"followers": 13349, "monthlyListeners": 11623},
-    "2025-04-10": {"followers": 13358, "monthlyListeners": 11655}
+    "2025-04-10": {"followers": 13358, "monthlyListeners": 11655},
+    "2025-04-13": {"followers": 13365, "monthlyListeners": 11717}
   }
 }

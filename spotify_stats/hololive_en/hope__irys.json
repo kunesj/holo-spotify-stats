@@ -1,11 +1,11 @@
 {
+  "color": "#c41e55",
   "generations": [
     ["Hololive EN", "Hope"],
     ["Hololive EN", "Promise"]
   ],
   "id": "7y1hO3QeftnOJmWCbzeZav",
   "name": "IryS",
-  "color": "#c41e55",
   "stats": {
     "2023-09-04": {"monthlyListeners": 82853},
     "2023-10-04": {"monthlyListeners": 83136},
@@ -152,6 +152,7 @@
     "2025-04-01": {"followers": 88620, "monthlyListeners": 98858},
     "2025-04-04": {"followers": 88733, "monthlyListeners": 100808},
     "2025-04-07": {"followers": 88833, "monthlyListeners": 102906},
-    "2025-04-10": {"followers": 88930, "monthlyListeners": 104682}
+    "2025-04-10": {"followers": 88930, "monthlyListeners": 104682},
+    "2025-04-13": {"followers": 89028, "monthlyListeners": 106849}
   }
 }

@@ -1,10 +1,10 @@
 {
+  "color": "#426bc6",
   "generations": [
     ["Holostars EN", "Armis"]
   ],
   "id": "326XF80hUbVzm2QZ1BiWPe",
   "name": "Octavio",
-  "color": "#426bc6",
   "stats": {
     "2024-06-25": {"followers": 13, "monthlyListeners": 2020},
     "2024-06-26": {"followers": 18, "monthlyListeners": 2353},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 1065, "monthlyListeners": 3977},
     "2025-04-04": {"followers": 1111, "monthlyListeners": 4653},
     "2025-04-07": {"followers": 1125, "monthlyListeners": 5037},
-    "2025-04-10": {"followers": 1145, "monthlyListeners": 5264}
+    "2025-04-10": {"followers": 1145, "monthlyListeners": 5264},
+    "2025-04-13": {"followers": 1171, "monthlyListeners": 5624}
   }
 }

@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "7msVentVTxKtCHHBmmDfIl",
   "name": "Hololive English -Myth-",
-  "color": "#83cceb",
   "stats": {
     "2024-12-05": {"followers": 11644, "monthlyListeners": 48175},
     "2024-12-08": {"followers": 11695, "monthlyListeners": 48179},
@@ -41,6 +41,7 @@
     "2025-04-01": {"followers": 13012, "monthlyListeners": 45368},
     "2025-04-04": {"followers": 13035, "monthlyListeners": 45055},
     "2025-04-07": {"followers": 13061, "monthlyListeners": 44944},
-    "2025-04-10": {"followers": 13091, "monthlyListeners": 44647}
+    "2025-04-10": {"followers": 13091, "monthlyListeners": 44647},
+    "2025-04-13": {"followers": 13123, "monthlyListeners": 44239}
   }
 }

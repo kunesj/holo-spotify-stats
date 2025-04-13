@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "6bk51KYcUESMvf5rJGRbnH",
   "name": "HOLOSTARS",
-  "color": "#83cceb",
   "stats": {
     "2024-06-25": {"followers": 10037, "monthlyListeners": 7129},
     "2024-06-26": {"followers": 10039, "monthlyListeners": 7159},
@@ -91,6 +91,7 @@
     "2025-04-01": {"followers": 10807, "monthlyListeners": 3237},
     "2025-04-04": {"followers": 10810, "monthlyListeners": 3271},
     "2025-04-07": {"followers": 10812, "monthlyListeners": 3237},
-    "2025-04-10": {"followers": 10811, "monthlyListeners": 3251}
+    "2025-04-10": {"followers": 10811, "monthlyListeners": 3251},
+    "2025-04-13": {"followers": 10819, "monthlyListeners": 3240}
   }
 }

@@ -1,10 +1,10 @@
 {
+  "color": "#e359f5",
   "generations": [
     ["Hololive JP", "Gamers"]
   ],
   "id": "28lO8lCOqFvDB5la90xKUW",
   "name": "Nekomata Okayu",
-  "color": "#e359f5",
   "stats": {
     "2023-09-04": {"monthlyListeners": 89708},
     "2023-10-04": {"monthlyListeners": 90681},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 95100, "monthlyListeners": 118898},
     "2025-04-04": {"followers": 95437, "monthlyListeners": 119237},
     "2025-04-07": {"followers": 95782, "monthlyListeners": 119957},
-    "2025-04-10": {"followers": 96117, "monthlyListeners": 124561}
+    "2025-04-10": {"followers": 96117, "monthlyListeners": 124561},
+    "2025-04-13": {"followers": 96376, "monthlyListeners": 127818}
   }
 }

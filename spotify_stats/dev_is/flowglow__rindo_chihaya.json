@@ -1,10 +1,10 @@
 {
+  "color": "#34dcc3",
   "generations": [
     ["Hololive DEV_IS", "FLOW GLOW"]
   ],
   "id": "6hc2HjY4x1Pt9WPubhY7Aa",
   "name": "Rindo Chihaya",
-  "color": "#34dcc3",
   "stats": {
     "2024-12-05": {"followers": 450, "monthlyListeners": 29834},
     "2024-12-08": {"followers": 474, "monthlyListeners": 31298},
@@ -43,6 +43,7 @@
     "2025-04-01": {"followers": 1416, "monthlyListeners": 22899},
     "2025-04-04": {"followers": 1430, "monthlyListeners": 23775},
     "2025-04-07": {"followers": 1442, "monthlyListeners": 24461},
-    "2025-04-10": {"followers": 1457, "monthlyListeners": 24555}
+    "2025-04-10": {"followers": 1457, "monthlyListeners": 24555},
+    "2025-04-13": {"followers": 1466, "monthlyListeners": 23424}
   }
 }

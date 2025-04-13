@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "55aqmEN6WKxVA33CWGpWWK",
   "name": "hololive English -Justice-",
-  "color": "#83cceb",
   "stats": {
     "2024-06-25": {"followers": 528, "monthlyListeners": 986},
     "2024-06-26": {"followers": 941, "monthlyListeners": 5768},
@@ -91,6 +91,7 @@
     "2025-04-01": {"followers": 6689, "monthlyListeners": 27465},
     "2025-04-04": {"followers": 6734, "monthlyListeners": 27662},
     "2025-04-07": {"followers": 6785, "monthlyListeners": 27759},
-    "2025-04-10": {"followers": 6845, "monthlyListeners": 27741}
+    "2025-04-10": {"followers": 6845, "monthlyListeners": 27741},
+    "2025-04-13": {"followers": 6895, "monthlyListeners": 27620}
   }
 }

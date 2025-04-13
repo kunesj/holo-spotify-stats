@@ -1,10 +1,10 @@
 {
+  "color": "#ff3c86",
   "generations": [
     ["Hololive DEV_IS", "FLOW GLOW"]
   ],
   "id": "15y191bqGymFwYg05tnlPg",
   "name": "Isaki Riona",
-  "color": "#ff3c86",
   "stats": {
     "2024-12-05": {"followers": 920, "monthlyListeners": 29831},
     "2024-12-08": {"followers": 959, "monthlyListeners": 31300},
@@ -43,6 +43,7 @@
     "2025-04-01": {"followers": 1932, "monthlyListeners": 22605},
     "2025-04-04": {"followers": 1949, "monthlyListeners": 23483},
     "2025-04-07": {"followers": 1975, "monthlyListeners": 24170},
-    "2025-04-10": {"followers": 1989, "monthlyListeners": 24323}
+    "2025-04-10": {"followers": 1989, "monthlyListeners": 24323},
+    "2025-04-13": {"followers": 2006, "monthlyListeners": 23231}
   }
 }

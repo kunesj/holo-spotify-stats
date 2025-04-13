@@ -1,10 +1,10 @@
 {
+  "color": "#8cc4f9",
   "generations": [
     ["Hololive JP", "3"]
   ],
   "id": "4JlcSp9i5LcilRSMqaVimt",
   "name": "Usada Pekora",
-  "color": "#8cc4f9",
   "stats": {
     "2023-09-04": {"monthlyListeners": 59934},
     "2023-10-04": {"monthlyListeners": 63276},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 98463, "monthlyListeners": 68381},
     "2025-04-04": {"followers": 98635, "monthlyListeners": 68187},
     "2025-04-07": {"followers": 98786, "monthlyListeners": 67434},
-    "2025-04-10": {"followers": 98905, "monthlyListeners": 66827}
+    "2025-04-10": {"followers": 98905, "monthlyListeners": 66827},
+    "2025-04-13": {"followers": 99024, "monthlyListeners": 66019}
   }
 }

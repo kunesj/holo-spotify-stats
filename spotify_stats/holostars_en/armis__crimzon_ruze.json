@@ -1,10 +1,10 @@
 {
+  "color": "#ea3a47",
   "generations": [
     ["Holostars EN", "Armis"]
   ],
   "id": "5sp0zoBBAk4hbZK42Wwlqb",
   "name": "Crimzon Ruze",
-  "color": "#ea3a47",
   "stats": {
     "2024-06-25": {"followers": 151, "monthlyListeners": 3047},
     "2024-06-26": {"followers": 152, "monthlyListeners": 3206},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 331, "monthlyListeners": 3359},
     "2025-04-04": {"followers": 334, "monthlyListeners": 3437},
     "2025-04-07": {"followers": 335, "monthlyListeners": 3496},
-    "2025-04-10": {"followers": 336, "monthlyListeners": 3421}
+    "2025-04-10": {"followers": 336, "monthlyListeners": 3421},
+    "2025-04-13": {"followers": 338, "monthlyListeners": 3426}
   }
 }

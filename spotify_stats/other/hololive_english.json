@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "3abKMima1GlskOQjTXqUNs",
   "name": "Hololive English",
-  "color": "#83cceb",
   "stats": {
     "2023-09-04": {"monthlyListeners": 8615},
     "2023-10-04": {"monthlyListeners": 7558},
@@ -149,6 +149,7 @@
     "2025-04-01": {"followers": 22248, "monthlyListeners": 33630},
     "2025-04-04": {"followers": 22341, "monthlyListeners": 33731},
     "2025-04-07": {"followers": 22428, "monthlyListeners": 33654},
-    "2025-04-10": {"followers": 22518, "monthlyListeners": 33417}
+    "2025-04-10": {"followers": 22518, "monthlyListeners": 33417},
+    "2025-04-13": {"followers": 22603, "monthlyListeners": 33240}
   }
 }

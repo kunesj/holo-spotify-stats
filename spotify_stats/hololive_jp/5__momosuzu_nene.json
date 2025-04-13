@@ -1,10 +1,10 @@
 {
+  "color": "#fe921a",
   "generations": [
     ["Hololive JP", "5"]
   ],
   "id": "3KixQ8ZB7p1AXDaRA62SpX",
   "name": "Momosuzu Nene",
-  "color": "#fe921a",
   "stats": {
     "2023-09-04": {"monthlyListeners": 33172},
     "2023-10-04": {"monthlyListeners": 33056},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 58262, "monthlyListeners": 50051},
     "2025-04-04": {"followers": 58362, "monthlyListeners": 49899},
     "2025-04-07": {"followers": 58455, "monthlyListeners": 48491},
-    "2025-04-10": {"followers": 58536, "monthlyListeners": 46743}
+    "2025-04-10": {"followers": 58536, "monthlyListeners": 46743},
+    "2025-04-13": {"followers": 58609, "monthlyListeners": 46042}
   }
 }

@@ -1,10 +1,10 @@
 {
+  "color": "#fdf595",
   "generations": [
     ["Holostars JP", "2"]
   ],
   "id": "5gTlfT6qniQ05RaRcnZSdp",
   "name": "Kishido Temma",
-  "color": "#fdf595",
   "stats": {
     "2024-06-25": {"followers": 2320, "monthlyListeners": 3169},
     "2024-06-26": {"followers": 2322, "monthlyListeners": 3143},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 2498, "monthlyListeners": 1799},
     "2025-04-04": {"followers": 2498, "monthlyListeners": 1814},
     "2025-04-07": {"followers": 2501, "monthlyListeners": 1820},
-    "2025-04-10": {"followers": 2501, "monthlyListeners": 1801}
+    "2025-04-10": {"followers": 2501, "monthlyListeners": 1801},
+    "2025-04-13": {"followers": 2501, "monthlyListeners": 1778}
   }
 }

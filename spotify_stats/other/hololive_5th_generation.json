@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "2Yifj1OZBwgUXlTJCqK3FV",
   "name": "hololive 5th Generation",
-  "color": "#83cceb",
   "stats": {
     "2023-09-04": {"monthlyListeners": 11386},
     "2023-10-04": {"monthlyListeners": 11252},
@@ -149,6 +149,7 @@
     "2025-04-01": {"followers": 7849, "monthlyListeners": 6984},
     "2025-04-04": {"followers": 7878, "monthlyListeners": 6935},
     "2025-04-07": {"followers": 7900, "monthlyListeners": 6846},
-    "2025-04-10": {"followers": 7909, "monthlyListeners": 6689}
+    "2025-04-10": {"followers": 7909, "monthlyListeners": 6689},
+    "2025-04-13": {"followers": 7931, "monthlyListeners": 6623}
   }
 }

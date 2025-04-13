@@ -1,8 +1,8 @@
 {
+  "color": "#83cceb",
   "generations": [],
   "id": "72IRL72d19sAVCL4GJ6jHz",
   "name": "HOLOTORI",
-  "color": "#83cceb",
   "stats": {
     "2023-09-04": {"monthlyListeners": 25219},
     "2023-10-04": {"monthlyListeners": 44476},
@@ -149,6 +149,7 @@
     "2025-04-01": {"followers": 5500, "monthlyListeners": 28953},
     "2025-04-04": {"followers": 5504, "monthlyListeners": 29446},
     "2025-04-07": {"followers": 5508, "monthlyListeners": 29447},
-    "2025-04-10": {"followers": 5509, "monthlyListeners": 29524}
+    "2025-04-10": {"followers": 5509, "monthlyListeners": 29524},
+    "2025-04-13": {"followers": 5512, "monthlyListeners": 29806}
   }
 }

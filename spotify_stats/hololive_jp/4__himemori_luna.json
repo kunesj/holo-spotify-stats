@@ -1,10 +1,10 @@
 {
+  "color": "#fda5da",
   "generations": [
     ["Hololive JP", "4"]
   ],
   "id": "1uLQjE6Ti5jie0J4PWXzyO",
   "name": "Himemori Luna",
-  "color": "#fda5da",
   "stats": {
     "2023-09-04": {"monthlyListeners": 27263},
     "2023-10-04": {"monthlyListeners": 26624},
@@ -151,6 +151,7 @@
     "2025-04-01": {"followers": 32653, "monthlyListeners": 32557},
     "2025-04-04": {"followers": 32743, "monthlyListeners": 32725},
     "2025-04-07": {"followers": 32831, "monthlyListeners": 32409},
-    "2025-04-10": {"followers": 32895, "monthlyListeners": 32224}
+    "2025-04-10": {"followers": 32895, "monthlyListeners": 32224},
+    "2025-04-13": {"followers": 32965, "monthlyListeners": 31879}
   }
 }

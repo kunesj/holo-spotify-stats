@@ -1,10 +1,10 @@
 {
+  "color": "#1959b6",
   "generations": [
     ["Holostars JP", "2"]
   ],
   "id": "4OmOWaMOm0N7X2GE93tvTZ",
   "name": "Astel Leda",
-  "color": "#1959b6",
   "stats": {
     "2024-06-25": {"followers": 3851, "monthlyListeners": 3564},
     "2024-06-26": {"followers": 3853, "monthlyListeners": 3545},
@@ -93,6 +93,7 @@
     "2025-04-01": {"followers": 4117, "monthlyListeners": 3249},
     "2025-04-04": {"followers": 4114, "monthlyListeners": 3290},
     "2025-04-07": {"followers": 4114, "monthlyListeners": 3315},
-    "2025-04-10": {"followers": 4115, "monthlyListeners": 3357}
+    "2025-04-10": {"followers": 4115, "monthlyListeners": 3357},
+    "2025-04-13": {"followers": 4118, "monthlyListeners": 3378}
   }
 }

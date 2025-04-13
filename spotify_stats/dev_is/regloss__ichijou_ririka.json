@@ -1,10 +1,10 @@
 {
+  "color": "#f78ab5",
   "generations": [
     ["Hololive DEV_IS", "ReGLOSS"]
   ],
   "id": "2JevDdymuQqbHKsPJTWyv3",
   "name": "Ichijou Ririka",
-  "color": "#f78ab5",
   "stats": {
     "2024-01-06": {"followers": 286, "monthlyListeners": 18691},
     "2024-01-07": {"followers": 296, "monthlyListeners": 19728},
@@ -147,6 +147,7 @@
     "2025-04-01": {"followers": 7442, "monthlyListeners": 57618},
     "2025-04-04": {"followers": 7552, "monthlyListeners": 57979},
     "2025-04-07": {"followers": 7655, "monthlyListeners": 57882},
-    "2025-04-10": {"followers": 7741, "monthlyListeners": 57302}
+    "2025-04-10": {"followers": 7741, "monthlyListeners": 57302},
+    "2025-04-13": {"followers": 7828, "monthlyListeners": 56429}
   }
 }
