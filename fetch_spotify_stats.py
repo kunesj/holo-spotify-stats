@@ -136,7 +136,7 @@ def get_auth_token() -> str:
 
         response = request_retry(
             method="GET",
-            url="https://open.spotify.com/get_access_token",
+            url="https://open.spotify.com/api/token",
             params={
                 "reason": "init",
                 "productType": "web-player",
@@ -145,6 +145,8 @@ def get_auth_token() -> str:
                 "totpVer": 5,
                 "sTime": s_time,
                 "cTime": c_time,
+                "buildVer": "web-player_2025-06-09_1749496854537_7573b29",
+                "buildDate": "2025-06-09",
             },
             headers={
                 "accept": "*/*",
