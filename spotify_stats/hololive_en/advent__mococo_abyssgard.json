@@ -3,8 +3,15 @@
   "generations": [
     ["Hololive EN", "Advent"]
   ],
-  "id": "1P0HinK679PsgvTmf8Xyx2",
-  "name": "Mococo Abyssgard",
+  "id": "1xMnU9x62MT8ojHTxaR2dl",
+  "ids": {
+    "1P0HinK679PsgvTmf8Xyx2": {
+      "from": "2023-09-04",
+      "to": "2025-06-09",
+      "info": "replaced by single channel for both Mococo and Fuwawa"
+    }
+  },
+  "name": "FUWAMOCO (Mococo Abyssgard)",
   "stats": {
     "2023-09-04": {"monthlyListeners": 35965},
     "2023-10-04": {"monthlyListeners": 24029},
