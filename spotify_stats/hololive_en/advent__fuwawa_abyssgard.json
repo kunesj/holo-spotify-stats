@@ -7,8 +7,8 @@
   "ids": {
     "73t8GlAmUyGUzDy5EVYUbB": {
       "from": "2023-09-04",
-      "to": "2025-06-09",
-      "info": "replaced by single channel for both Mococo and Fuwawa"
+      "info": "replaced by single channel for both Mococo and Fuwawa",
+      "to": "2025-06-09"
     }
   },
   "name": "FUWAMOCO (Fuwawa Abyssgard)",
@@ -178,6 +178,7 @@
     "2025-05-31": {"followers": 5562, "monthlyListeners": 34762},
     "2025-06-03": {"followers": 5562, "monthlyListeners": 30186},
     "2025-06-06": {"followers": 5559, "monthlyListeners": 23512},
-    "2025-06-09": {"followers": 5559, "monthlyListeners": 14849}
+    "2025-06-09": {"followers": 5559, "monthlyListeners": 14849},
+    "2025-06-12": {"followers": 10484, "monthlyListeners": 58725}
   }
 }
