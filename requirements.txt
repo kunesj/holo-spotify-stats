@@ -1,4 +1,4 @@
 dbus-python==1.2.16
 requests==2.31.0
 notify2==0.3
-pyotp==2.9.0
+playwright==1.53.0
