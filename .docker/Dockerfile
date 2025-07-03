@@ -19,10 +19,6 @@ RUN set -x; apt-get update -y && apt-get install -f -y --no-install-recommends $
 COPY /requirements.txt /tmp/requirements.txt
 RUN pip3 install dbus-python && pip3 install --upgrade -r /tmp/requirements.txt
 
-# install playwright browsers
-
-RUN playwright install --with-deps chromium-headless-shell
-
 # copy launch script to /
 
 COPY .docker/launch.sh /
