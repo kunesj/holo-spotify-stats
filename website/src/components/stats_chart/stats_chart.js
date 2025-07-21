@@ -66,7 +66,7 @@ export class StatsChart extends owl.Component {
         }
 
         branches.delete('INoNaKa Music');  // not relevant
-        return new Set([...branches.sort()]);
+        return new Set([...branches].sort());
     }
 
     get hiddenBranches() {
