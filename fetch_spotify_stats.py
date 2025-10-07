@@ -101,34 +101,49 @@ def get_auth_token() -> str:
 def fetch_stats(*, artist_id: str) -> dict:
     auth_token = get_auth_token()
     response = request_retry(
-        method="GET",
-        url="https://api-partner.spotify.com/pathfinder/v1/query",
-        params={
+        method="POST",
+        url="https://api-partner.spotify.com/pathfinder/v2/query",
+        json={
             "operationName": "queryArtistOverview",
-            "variables": json.dumps({"uri": f"spotify:artist:{artist_id}", "locale": "", "includePrerelease": True}),
-            "extensions": json.dumps(
-                {
-                    "persistedQuery": {
-                        "version": 1,
-                        "sha256Hash": "da986392124383827dc03cbb3d66c1de81225244b6e20f8d78f9f802cc43df6e",
-                    }
+            "variables": {
+                "uri": f"spotify:artist:{artist_id}",
+                "locale": "",
+                # "includePrerelease": True,  # was used in v1
+            },
+            "extensions": {
+                "persistedQuery": {
+                    "version": 1,
+                    "sha256Hash": "446130b4a0aa6522a686aafccddb0ae849165b5e0436fd802f96e0243617b5d8",
                 }
-            ),
+            },
         },
         headers={
+            # ":authority": "api-partner.spotify.com",
+            # ":method": "POST",
+            # ":path": "/pathfinder/v2/query",
+            # ":scheme": "https",
             "accept": "application/json",
+            "accept-encoding": "gzip, deflate, br, zstd",
             "accept-language": "en",
-            # "app-platform": "WebPlayer",
+            "app-platform": "WebPlayer",
             "authorization": f"Bearer {auth_token}",
             # "client-token": client_token,
+            # "content-length": "237",
             # "content-type": "application/json;charset=UTF-8",
-            # "sec-ch-ua": "\"Not_A Brand\";v=\"8\", \"Chromium\";v=\"120\", \"Google Chrome\";v=\"120\"",
-            # "sec-ch-ua-mobile": "?0",
-            # "sec-ch-ua-platform": "\"Linux\"",
-            # "sec-fetch-dest": "empty",
-            # "sec-fetch-mode": "cors",
-            # "sec-fetch-site": "same-site",
-            # "spotify-app-version": "1.2.29.347.ga8104e6e"
+            "dnt": "1",
+            "origin": "https://open.spotify.com",
+            "priority": "u=1, i",
+            "referer": "https://open.spotify.com/",
+            "sec-ch-ua": '"Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"',
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": '"Linux"',
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-site",
+            "spotify-app-version": "896000000",
+            "user-agent": (
+                "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+            ),
         },
     )
 
