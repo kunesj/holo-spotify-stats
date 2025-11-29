@@ -1,0 +1,33 @@
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+max_line_length = 120
+tab_width = 4
+# default indent style
+indent_size = 4
+indent_style = space
+
+[{*.py,*.pyw}]
+indent_size = 4
+indent_style = space
+
+[{*.cjs,*.es6,*.js,*.mjs}]
+indent_size = 4
+indent_style = space
+
+[{*.css,*.less,*.scss,*.sass}]
+indent_size = 4
+indent_style = space
+
+[{*.htm,*.html,*.sht,*.shtm,*.shtml,*.xml,*.jinja,*.jinja2}]
+indent_size = 4
+indent_style = space
+
+[{*.json,*.json5,*.jsonc,.eslintrc}]
+indent_size = 4
+indent_style = space
+
+[{*.yaml,*.yml}]
+indent_size = 2
+indent_style = space
