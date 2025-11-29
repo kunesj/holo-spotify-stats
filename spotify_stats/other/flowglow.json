@@ -100,6 +100,23 @@
     "2025-09-25": {"followers": 11363, "monthlyListeners": 20999},
     "2025-09-28": {"followers": 11474, "monthlyListeners": 21835},
     "2025-10-01": {"followers": 11583, "monthlyListeners": 22305},
-    "2025-10-04": {"followers": 11666, "monthlyListeners": 22869}
+    "2025-10-04": {"followers": 11666, "monthlyListeners": 22869},
+    "2025-10-07": {"followers": 11777, "monthlyListeners": 23305},
+    "2025-10-10": {"followers": 11890, "monthlyListeners": 23882},
+    "2025-10-13": {"followers": 11986, "monthlyListeners": 24151},
+    "2025-10-16": {"followers": 12087, "monthlyListeners": 24310},
+    "2025-10-19": {"followers": 12188, "monthlyListeners": 24521},
+    "2025-10-22": {"followers": 12275, "monthlyListeners": 24198},
+    "2025-10-25": {"followers": 12350, "monthlyListeners": 23711},
+    "2025-10-28": {"followers": 12435, "monthlyListeners": 23548},
+    "2025-10-31": {"followers": 12514, "monthlyListeners": 23132},
+    "2025-11-03": {"followers": 12583, "monthlyListeners": 22826},
+    "2025-11-06": {"followers": 12659, "monthlyListeners": 22616},
+    "2025-11-09": {"followers": 12743, "monthlyListeners": 22308},
+    "2025-11-12": {"followers": 13031, "monthlyListeners": 23295},
+    "2025-11-15": {"followers": 13175, "monthlyListeners": 24389},
+    "2025-11-21": {"followers": 13399, "monthlyListeners": 25499},
+    "2025-11-24": {"followers": 13848, "monthlyListeners": 26482},
+    "2025-11-27": {"followers": 14557, "monthlyListeners": 31716}
   }
 }
