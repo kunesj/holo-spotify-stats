@@ -7,11 +7,12 @@ Website: https://holo-spotify-stats.jirikunes.eu/
 
 ## Script Setup
 
-- Use Python 3.11+
-- Install script dependencies with `pip install -r requirements.txt`
+- Use `uv` with Python 3.11+
+- Install script dependencies with `uv sync --locked`
 - Configure git, ssh and [dma](https://github.com/corecode/dma)
 - Create `config.json` from `config.default.json`
-- Run with `python3.11 cron.py`
+- Run with `uv run python cron.py`
+
 
 ### Docker
 

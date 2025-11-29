@@ -1,4 +1,19 @@
-# This config is used only for pre-commit configs
+[project]
+name = "holo-spotify-stats"
+version = "0.0.1"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "dbus-python>=1.2.16,<2.0.0",
+    "requests>=2.31.0,<3.0.0",
+    "notify2>=0.3,<1.0",
+    "playwright>=1.53.0,<2.0.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.extra-build-dependencies]
+notify2 = ["dbus-python"]
 
 [tool.black]
 line-length = 120
