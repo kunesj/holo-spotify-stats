@@ -2,33 +2,20 @@ default_language_version:
   python: python3.11
 
 repos:
-- repo: https://github.com/PyCQA/isort
-  rev: 5.12.0
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.12.2
   hooks:
-  - id: isort
-    exclude: __init__.py
-    args: ["--profile", "black", "--filter-files"]
-- repo: https://github.com/psf/black
-  rev: 23.9.1
-  hooks:
-  - id: black
-    args: ["--config", "pyproject.toml"]
-- repo: https://github.com/PyCQA/flake8
-  rev: 6.1.0
-  hooks:
-  - id: flake8
-- repo: https://github.com/PyCQA/bandit
-  rev: 1.7.5
-  hooks:
-  - id: bandit
-    args: [
-      "-c", "pyproject.toml",
-      # for some wierd reason following configs are not read from pyproject.toml
-      "--quiet",
-      "--format", "custom",
-      "--msg-template", "{relpath}:{line}:{col}: {test_id}[bandit]: {severity}: {msg}"
-    ]
-    additional_dependencies: ["bandit[toml]"]
+    # Run the linter.
+    - id: ruff-check
+      # --fix - automatically fix fixable issues
+      # --exit-non-zero-on-fix - prevent successful pre-commit when issues were automatically fixed
+      # --config:  must be specified, because it's not in the repo that is being checked
+      args: [ "--fix", "--exit-non-zero-on-fix", "--config", "pyproject.toml" ]
+    # Run the formatter.
+    - id: ruff-format
+      # --exit-non-zero-on-fix - prevent successful pre-commit when files were automatically formatted
+      # --config:  must be specified, because it's not in the repo that is being checked
+      args: ["--exit-non-zero-on-fix", "--config", "pyproject.toml" ]
 - repo: https://github.com/pre-commit/mirrors-eslint
   rev: v8.43.0
   hooks:

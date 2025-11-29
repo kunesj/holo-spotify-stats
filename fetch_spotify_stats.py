@@ -2,21 +2,20 @@
 
 import argparse
 import datetime
-import glob
 import json
 import logging
-import os
+import pathlib
 import time
 import uuid
+from typing import Any
 
 import playwright
 import playwright.sync_api
 import requests
 
 _logger = logging.getLogger(__name__)
-DIR_PATH = os.path.abspath(os.path.dirname(__file__))
-STATS_DIR_REL_PATH = "./spotify_stats"
-STATS_DIR_PATH = os.path.abspath(os.path.join(DIR_PATH, STATS_DIR_REL_PATH))
+DIR_PATH = pathlib.Path(__file__).parent.absolute()
+STATS_DIR_PATH = (DIR_PATH / "spotify_stats").absolute()
 AUTH_TOKEN: str | None = None
 AUTH_TOKEN_EXPIRY: float = 0
 SECRETS: list[dict] | None = None
@@ -24,39 +23,40 @@ SECRETS_EXPIRY: float = 0
 
 
 class NoIndent(object):
-    def __init__(self, value):
+    def __init__(self, value: Any) -> None:
         self.value = value
 
 
 class NoIndentEncoder(json.JSONEncoder):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
         super(NoIndentEncoder, self).__init__(*args, **kwargs)
         self.kwargs = dict(kwargs)
         del self.kwargs["indent"]
         self._replacement_map = {}
 
-    def default(self, o):
+    def default(self, o: Any) -> Any:
         if isinstance(o, NoIndent):
             key = uuid.uuid4().hex
             self._replacement_map[key] = json.dumps(o.value, **self.kwargs)
             return "@@%s@@" % (key,)
-        else:
-            return super(NoIndentEncoder, self).default(o)
+        return super(NoIndentEncoder, self).default(o)
 
-    def encode(self, o):
+    def encode(self, o: Any) -> str:
         result = super(NoIndentEncoder, self).encode(o)
         for k, v in iter(self._replacement_map.items()):
             result = result.replace('"@@%s@@"' % (k,), v)
         return result
 
 
-def request_retry(*args, retry_max_count: int = 3, retry_delay: int = 10, **kwargs):
+def request_retry(
+    *args: Any, retry_max_count: int = 3, retry_delay: int = 10, timeout: int = 60, **kwargs: Any
+) -> requests.Response:
     retry_count = 0
 
     while True:
         retry_count += 1
         try:
-            response = requests.request(*args, **kwargs)
+            response = requests.request(*args, timeout=timeout, **kwargs)
             # print(response.content)
             response.raise_for_status()
             break
@@ -75,9 +75,9 @@ def request_retry(*args, retry_max_count: int = 3, retry_delay: int = 10, **kwar
 
 
 def get_auth_token() -> str:
-    global AUTH_TOKEN, AUTH_TOKEN_EXPIRY
+    global AUTH_TOKEN, AUTH_TOKEN_EXPIRY  # noqa: PLW0603
 
-    if not AUTH_TOKEN or AUTH_TOKEN_EXPIRY > time.time():
+    if not AUTH_TOKEN or time.time() < AUTH_TOKEN_EXPIRY:
         with playwright.sync_api.sync_playwright() as pw:
             browser = pw.chromium.launch(headless=True)
             context = browser.new_context(viewport={"width": 1920, "height": 1080})
@@ -148,30 +148,34 @@ def fetch_stats(*, artist_id: str) -> dict:
     )
 
     try:
-        data = response.json()["data"]["artistUnion"]
-        stats = data["stats"].copy()
-
-        if stats.get("monthlyListeners") is None:
-            raise ValueError("monthlyListeners not returned!")
-        elif stats.get("followers") is None:
-            raise ValueError("followers not returned!")
-
-        stats.pop("worldRank", None)
-        stats.pop("topCities", None)
-
-        return stats
+        return parse_stats_response(response)
     except Exception:
         _logger.error("Bad API response:\n%s", response.content)
         raise
 
 
-def update_stats_file(*, file_path: str, force: bool = False) -> None:
+def parse_stats_response(response: requests.Response) -> dict:
+    data = response.json()["data"]["artistUnion"]
+    stats = data["stats"].copy()
+
+    if stats.get("monthlyListeners") is None:
+        raise ValueError("monthlyListeners not returned!")
+
+    if stats.get("followers") is None:
+        raise ValueError("followers not returned!")
+
+    stats.pop("worldRank", None)
+    stats.pop("topCities", None)
+
+    return stats
+
+
+def update_stats_file(*, file_path: pathlib.Path, force: bool = False) -> None:
     date_key = datetime.date.today().isoformat()
 
     # read old data
 
-    with open(file_path, "r") as f:
-        data = json.loads(f.read())
+    data = json.loads(file_path.read_text())
 
     # check if stats should be fetched
 
@@ -179,7 +183,7 @@ def update_stats_file(*, file_path: str, force: bool = False) -> None:
         _logger.info("%s (%s): Not found", data["name"], data["id"])
         return
 
-    elif date_key in data["stats"] and not force:
+    if date_key in data["stats"] and not force:
         _logger.debug("%s (%s): Already fetched", data["name"], data["id"])
         return
 
@@ -201,8 +205,7 @@ def update_stats_file(*, file_path: str, force: bool = False) -> None:
         cls=NoIndentEncoder,
     )
 
-    with open(file_path, "w") as f:
-        f.write(data_str)
+    file_path.write_text(data_str)
 
 
 def main() -> None:
@@ -213,7 +216,7 @@ def main() -> None:
     logging.basicConfig()
     _logger.setLevel(logging.INFO)
 
-    for file_path in glob.glob(os.path.join(STATS_DIR_PATH, "**/*.json"), recursive=True):
+    for file_path in STATS_DIR_PATH.glob("**/*.json"):
         update_stats_file(file_path=file_path, force=args.force)
 
     _logger.info("Done")

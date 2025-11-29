@@ -15,32 +15,298 @@ package = false
 [tool.uv.extra-build-dependencies]
 notify2 = ["dbus-python"]
 
-[tool.black]
+[tool.ruff]
+# ruff is used to ensure code consistency
+# Error suppression:
+#   Supress line violation: add "# noqa: {code}" at the end of the line
+#   Supress multi-line violation: add "# noqa: {code}" at the end of the last line
+#   Supress violation in whole file: add "# ruff: noqa: {code}" somewhere at the top of the file
+#   Supress whole file: add "# ruff: noqa" somewhere at the top of the file
+#
+# For rules explanations see: https://docs.astral.sh/ruff/rules/
+builtins = []
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "dist",
+    "node_modules",
+    "venv",
+]
 line-length = 120
-include = '\.pyi?$'
-exclude = '''
-/(
-    \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-)/
-'''
+indent-width = 4
+target-version = "py311"
 
-[tool.bandit]
-targets = ['.']
-exclude_dirs = ['./venv', './.git', 'tests']
-# B105,B106,B107 (Possible hardcoded password) - Too many false positives
-# B324 (Use of weak MD4, MD5, or SHA1 hash for security) - We don't use it for security
-# B404 (Consider possible security implications associated with the subprocess module) - it's just import
-skips = ['B105', 'B106', 'B107', 'B324', 'B404']
-recursive = true
-# for some wierd reason following configs are not aplied (workaround in .pre-commit-config.yaml)
-format = 'custom'
-msg-template = '{relpath}:{line}:{col}: {test_id}[bandit]: {severity}: {msg}'
-quiet = true
+[tool.ruff.lint]
+select = [
+    # Airflow - Airflow lib not used in our codebase
+    # "AIR",
+    # eradicate - Prevent commented-out code
+    "ERA",
+    # FastAPI - FastAPI specific rules
+    # "FAST",
+    # flake8-2020 - backwards compatibility with old Python not needed
+    # "YTT",
+    # flake8-annotations - require type annotations
+    "ANN",
+    # flake8-async - async specific rules
+    "ASYNC",
+    # flake8-bandit - security rules
+    "S",
+    # flake8-blind-except - rule blind try-except statements
+    "BLE",
+    # flake8-boolean-trap - boolean parameters / flags are allowed in our codebase
+    # "FBT",
+    # flake8-bugbear - rules catching common code pitfalls leading to bugs
+    "B",
+    # flake8-builtins - rules preventing re-defining builtins
+    "A",
+    # flake8-commas - comma usage consistency
+    "COM",
+    # flake8-comprehensions - comprehensions consistency
+    "C4",
+    # flake8-copyright - enforcing copyright string is undesirable
+    # "CPY",
+    # flake8-datetimez - rules (mainly) preventing usage of naive datetime(s)
+    # "DTZ",
+    # flake8-debugger - no breakpoints in code allowed
+    "T10",
+    # flake8-django - Django not used in our codebase
+    # "DJ",
+    # flake8-errmsg - allow raw error messages in exceptions
+    # "EM",
+    # flake8-executable - rules for shebanks not necessary
+    # "EXE",
+    # flake8-fixme - do not allow todo, fixme (etc) comments in code
+    # "FIX",
+    # flake8-future-annotations - only relevant for python versions < 3.11
+    # "FA",
+    # flake8-gettext - prevents incorrect usage (untranslatable texts) of gettext lib
+    "INT",
+    # flake8-implicit-str-concat - prevent weird string splits
+    "ISC",
+    # flake8-import-conventions - imports consistency
+    "ICN",
+    # flake8-logging - logging consistency
+    "LOG",
+    # flake8-logging-format - logging consistency continuation
+    "G",
+    # flake8-no-pep420 - ensure packages are not missing the __init__.py file
+    "INP",
+    # flake8-pie - validates mostly duplicate definitions or pointless usages
+    "PIE",
+    # flake8-print - prevent prints in code
+    "T20",
+    # flake8-pyi - stub files checks
+    "PYI",
+    # flake8-pytest-style - enforces specific test format
+    # "PT",
+    # flake8-quotes - single/double quotes consistency
+    "Q",
+    # flake8-raise - remove redundant parentheses on raises
+    "RSE",
+    # flake8-return - return consistency
+    "RET",
+    # flake8-self - accessing private members
+    "SLF",
+    # flake8-simplify - some commonly used expression can be simplified
+    "SIM",
+    # flake8-slots - slots must be used for several subtypes
+    "SLOT",
+    # flake8-tidy-imports - relative imports are allowed from siblings only
+    "TID",
+    # flake8-todos - enforces specific TODO format
+    # "TD",
+    # flake8-type-checking - type checking consistency
+    "TC",
+    # flake8-unused-arguments - prevent unused arguments
+    "ARG",
+    # flake8-use-pathlib - prefer the pathlib stdlib
+    "PTH",
+    # flynt - use f-strings instead of static joins
+    "FLY",
+    # isort - sort imports
+    "I",
+    # mccabe - prevent complex code
+    "C90",
+    # NumPy-specific rules - numpy specific rules
+    "NPY",
+    # pandas-vet - pandas specific rules
+    "PD",
+    # pep8-naming - respect naming conventions
+    "N",
+    # Perflint - performance harming list operations
+    "PERF",
+    # Error - general errors
+    "E",
+    # Warning - general warnings
+    "W",
+    # pydoclint - too restrictive documentation checks
+    # "DOC",
+    # pydocstyle - docstrings should in code -
+    "D",
+    # Pyflakes - formatting checks
+    "F",
+    # pygrep-hooks - ignoring rules must be specific
+    "PGH",
+    # Pylint - "classic" pylint checks
+    "PL",
+    # Convention - common code convetions
+    "PLC",
+    # Error - common easily detectable runtime errors
+    "PLE",
+    # Refactor - easily refactorable code
+    "PLR",
+    # Warning - general warnings
+    "PLW",
+    # pyupgrade - no automatic code upgrade checks needed
+    # "UP",
+    # refurb - code refurbishment checks
+    "FURB",
+    # Ruff-specific rules
+    "RUF",
+    # tryceratops - exception handling antipatterns
+    "TRY",
+]
+ignore = [
+    # no not forbid typing.Any - Any type is needed for at least *args and **kwargs
+    "ANN401",
+
+    # allow unused arguments in methods/functions/... (too many false positives)
+    "ARG001",
+    "ARG002",
+    "ARG003",
+    "ARG004",
+    "ARG005",
+
+    # do not force use of asyncio.timeout
+    "ASYNC109",
+
+    # allow use of `getattr` and `setattr`
+    # - Using `getattr` and `setattr` makes it more clear that we are accessing attribute that might not exist
+    #   + it doesn't confuse syntax highlighting in IDE
+    "B009",
+    "B010",
+
+    # allow catching blind exceptions - it's very useful
+    "BLE001",
+
+    # allow unnecessary collection calls
+    # - `dict(foo=1)` looks better than `{"foo": 1}` when dynamically building function args etc.
+    # - empty `tuple()` is less confusing than empty `()`
+    "C408",
+
+    # do not enforce trailing comma missing
+    "COM812",
+
+    # do not require docstrings for now
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+    # does not respect line length and flags long one-line docstrings that do not fit on one line
+    "D200",
+    # no blank line before class docstring, prefer D211 - no blank line before docstring
+    "D203",
+    # do not require blank line after the first line of a docstring
+    "D205",
+    # disable D212 to prefer D213 - mulit-line docstrings should start at the second line
+    "D212",
+    # do not enforce punctuation of the docstring of the first docstring line
+    "D400",
+    "D415",
+    # do not force imperative mood in the first line of a docstring
+    "D401",
+    # do not forbid starting docstring with "This"
+    "D404",
+
+    # do not forbid commented out code
+    "ERA001",
+
+    # allow unnecessary parentheses on raised exception - Always using them makes code look more consistent
+    "RSE102",
+
+    # do not forbid private member access
+    "SLF001",
+
+    # do not prefere ternary operators to "simple" IFs
+    # - sometimes "simple" IFs benefit readability more than ternary operators
+    "SIM108",
+
+    # Possible hardcoded password - Too many false positives
+    "S105",
+    "S106",
+    "S107",
+    # Use of weak MD4, MD5, or SHA1 hash for security - We don't use it for security
+    "S324",
+    # Consider possible security implications associated with the subprocess module - it's just import
+    "S404",
+
+    # do not forbid explicit "pass" when it's not needed because of docstring - it looks more readable
+    "PIE790",
+
+    # allow imports that are not top-level
+    "PLC0415",
+    # has some false positives + using `dict.items()` over `dict[key]` is not that important
+    "PLC0206",
+
+    # ignore check of too many branches/locals/statements/... - complexity check does something very similar
+    "PLR0911",
+    "PLR0912",
+    "PLR0914",
+    "PLR0915",
+    "PLR0916",
+    # allow functions with large number of arguments
+    "PLR0913",
+    "PLR0917",
+    # allow explicit returns
+    "PLR1711",
+    # allow magic value used in comparison - too many false positives
+    "PLR2004",
+    # never collapse else-if - The ones I have are there to make code more readable
+    "PLR5501",
+
+    # allow explict `return None` for methods that return only None - it's more consistent
+    "RET501",
+    # allow unnecessary assignment before return - it can be useful to make it more clear what we are returning
+    "RET504",
+
+    # allow not returning the condition directly - It's "looks" better when there are multiple checks
+    "SIM103",
+    # allow use of `dict.keys()` - personal preference
+    "SIM118",
+
+    # allow "long" messages outside of exception class - prevented normal use of ValueError
+    "TRY003",
+    # allow using `_logger.error` instead of `_logger.exception`
+    # - we don't want to always log the traceback (especially when we plan to re-raise the exception)
+    "TRY400",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.mccabe]
+# Flag errors (`C901`) whenever the complexity level is exceeded
+max-complexity = 18

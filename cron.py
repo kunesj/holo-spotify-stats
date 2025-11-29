@@ -5,7 +5,7 @@ import datetime
 import functools
 import json
 import logging
-import os
+import pathlib
 import subprocess
 import sys
 import time
@@ -16,12 +16,10 @@ from typing import Literal
 import notify2
 
 _logger = logging.getLogger(__name__)
-DIR_PATH = os.path.abspath(os.path.dirname(__file__))
-DEFAULT_CONFIG_PATH = os.path.join(DIR_PATH, "config.default.json")
-CONFIG_PATH = os.path.join(DIR_PATH, "config.json")
-
-with open(DEFAULT_CONFIG_PATH, "r") as f1, open(CONFIG_PATH, "r") as f2:
-    RAW_CONFIG = json.loads(f1.read()) | json.loads(f2.read())
+DIR_PATH = pathlib.Path(__file__).parent.absolute()
+DEFAULT_CONFIG_PATH = DIR_PATH / "config.default.json"
+CONFIG_PATH = DIR_PATH / "config.json"
+RAW_CONFIG = json.loads(DEFAULT_CONFIG_PATH.read_text()) | json.loads(CONFIG_PATH.read_text())
 
 
 @dataclasses.dataclass
@@ -66,7 +64,9 @@ def _notify_user__desktop(level: int, message: str) -> None:
                 urgency = notify2.URGENCY_LOW
                 timeout = 2 * 1000
             case _:
-                raise ValueError(level)
+                _logger.error("Unexpected logging level: %s", level)
+                urgency = notify2.URGENCY_NORMAL
+                timeout = notify2.EXPIRES_NEVER
 
         notif = notify2.Notification("Hololive Spotify Stats", message)
         notif.set_urgency(urgency)
@@ -85,9 +85,7 @@ def _notify_user__email(level: int, message: str, exc_info: bool = False) -> Non
         if exc_info:
             body += f"\n\nTraceback:\n\n{traceback.format_exc()}"
 
-        subprocess.run(
-            ["mail", "-s", subject, CONFIG.notify_email], text=True, input=body, check=True
-        )  # nosec B607, B603
+        subprocess.run(["mail", "-s", subject, CONFIG.notify_email], text=True, input=body, check=True)  # noqa: S607, S603
 
     except Exception:
         _logger.exception("Error when sending email notification!\nlevel=%r\nmessage=%r", level, message)
@@ -111,8 +109,10 @@ def has_changes() -> bool:
     """
     Returns True if repo has any uncommitted changes
     """
-    raw_status = subprocess.check_output(  # nosec B607, B603
-        ["git", "status", "--porcelain"], cwd=DIR_PATH, encoding=sys.stdout.encoding
+    raw_status = subprocess.check_output(
+        ["git", "status", "--porcelain"],  # noqa: S607
+        cwd=DIR_PATH,
+        encoding=sys.stdout.encoding,
     ).strip()
     return len([x for x in raw_status.splitlines() if x.strip()]) > 0
 
@@ -130,7 +130,7 @@ def update_spotify_stats() -> None:
         notify_user(logging.ERROR, "Git repository contains uncommitted changes. Fetch stopped.")
         return
 
-    subprocess.check_call(["git", "pull", "--ff-only"], cwd=DIR_PATH)  # nosec B607, B603
+    subprocess.check_call(["git", "pull", "--ff-only"], cwd=DIR_PATH)  # noqa: S607
 
     # fetch stats
 
@@ -139,13 +139,13 @@ def update_spotify_stats() -> None:
     max_try = 5
     for i in range(max_try):
         try:
-            subprocess.check_call(["./fetch_spotify_stats.py"], cwd=DIR_PATH)  # nosec B607, B603
+            subprocess.check_call(["./fetch_spotify_stats.py"], cwd=DIR_PATH)
             break
         except KeyboardInterrupt:
             _logger.warning("Fetch interrupted")
             raise
         except Exception:
-            notify_user(logging.WARNING, f"Spotify fetch failed {i+1}/{max_try}", exc_info=True)
+            notify_user(logging.WARNING, f"Spotify fetch failed {i + 1}/{max_try}", exc_info=True)
     else:
         notify_user(logging.ERROR, "All Spotify stats could not be fetched")
         return
@@ -160,9 +160,7 @@ def update_spotify_stats() -> None:
 
     try:
         today = datetime.datetime.now(tz=CONFIG.fetch_tz).date()
-        subprocess.check_call(
-            ["git", "commit", "-a", "-m", f"DATA:{today.isoformat()}"], cwd=DIR_PATH
-        )  # nosec B607, B603
+        subprocess.check_call(["git", "commit", "-a", "-m", f"DATA:{today.isoformat()}"], cwd=DIR_PATH)  # noqa: S607, S603
     except KeyboardInterrupt:
         _logger.warning("Commit interrupted")
         raise
@@ -175,7 +173,7 @@ def update_spotify_stats() -> None:
     _logger.info("Pushing stats...")
 
     try:
-        subprocess.check_call(["git", "push"], cwd=DIR_PATH)  # nosec B607, B603
+        subprocess.check_call(["git", "push"], cwd=DIR_PATH)  # noqa: S607
     except KeyboardInterrupt:
         _logger.warning("Push interrupted")
         raise
