@@ -34,7 +34,7 @@ ENV UV_PYTHON_CACHE_DIR=/root/.cache/uv/python
 RUN --mount=type=cache,target=/root/.cache/uv,sharing=locked \
   --mount=type=bind,source=uv.lock,target=uv.lock \
   --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
-  uv sync --locked --no-install-project -v
+  uv venv /home/host/.venv && uv sync --locked --no-install-project -v
 
 # install playwright dependencies
 # - uses apt, so we must mount apt cache
