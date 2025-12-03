@@ -2,6 +2,10 @@ default_language_version:
   python: python3.11
 
 repos:
+- repo: https://github.com/astral-sh/uv-pre-commit
+  rev: 0.9.15
+  hooks:
+    - id: uv-lock
 - repo: https://github.com/astral-sh/ruff-pre-commit
   rev: v0.12.2
   hooks:
