@@ -58,7 +58,24 @@ npm run preview
 
 ## Development
 
-Use pre-commit
+### Pre-commit
+
+Install prek:
+
 ```bash
-pre-commit install
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/j178/prek/releases/download/v0.2.3/prek-installer.sh | sh
+prek self update
+```
+
+Install hooks:
+
+```bash
+prek install
+prek install-hooks
+```
+
+To manually run it on all files:
+
+```bash
+prek run --all-files
 ```
