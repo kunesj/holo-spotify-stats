@@ -12,6 +12,7 @@ from typing import Any
 import playwright
 import playwright.sync_api
 import requests
+import zstandard
 
 _logger = logging.getLogger(__name__)
 DIR_PATH = pathlib.Path(__file__).parent.absolute()
@@ -154,8 +155,19 @@ def fetch_stats(*, artist_id: str) -> dict:
         raise
 
 
+def decode_response(response: requests.Response) -> dict:
+    try:
+        return response.json()
+    except requests.exceptions.JSONDecodeError:
+        _logger.debug("Response is not decodable JSON", exc_info=True)
+
+    response_bytes = zstandard.ZstdDecompressor().decompress(response.content)
+    return json.loads(response_bytes)
+
+
 def parse_stats_response(response: requests.Response) -> dict:
-    data = response.json()["data"]["artistUnion"]
+    response_json = decode_response(response)
+    data = response_json["data"]["artistUnion"]
     stats = data["stats"].copy()
 
     if stats.get("monthlyListeners") is None:
