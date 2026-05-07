@@ -21,6 +21,9 @@ export class TimelineView extends owl.Component {
         super.setup();
 
         this.envState = owl.useState(this.env.state);
+        this.localState = owl.useState({
+            hiddenArtists: new Set()
+        });
         this.canvasRef = owl.useRef('canvas');
         this.chart = null;
 
@@ -88,8 +91,7 @@ export class TimelineView extends owl.Component {
                             text: this.props.subtitle
                         },
                         legend: {
-                            display: true,
-                            position: 'bottom'
+                            display: false
                         },
                         decimation: {
                             enabled: true,
@@ -121,18 +123,7 @@ export class TimelineView extends owl.Component {
     }
 
     _updateChart() {
-        const oldDatasets = this.chart.data.datasets || [],
-            newData = this._getChartData();
-
-        for (const newDs of newData.datasets) {
-            const oldIndex = oldDatasets.findIndex(ds => ds.label === newDs.label);
-
-            if (oldIndex !== -1) {
-                newDs.hidden = !this.chart.isDatasetVisible(oldIndex);
-            }
-        }
-
-        this.chart.data = newData;
+        this.chart.data = this._getChartData();
         this.chart.update('none');
         this.chart.resize();
     }
@@ -156,7 +147,8 @@ export class TimelineView extends owl.Component {
                 label: artistData.chartName,
                 data: chartData,
                 borderColor: artistData.chartColor,
-                fill: false
+                fill: false,
+                hidden: this.localState.hiddenArtists.has(artistData.data.id)
             });
         }
 
@@ -175,5 +167,19 @@ export class TimelineView extends owl.Component {
         }
 
         this.envState.hiddenBranches = newSet;
+    }
+
+    _onClickLegendItem(ev) {
+        const artistId = ev.currentTarget.dataset.artistId,
+            newSet = new Set(this.localState.hiddenArtists);
+
+        if (newSet.has(artistId)) {
+            newSet.delete(artistId);
+        }
+        else {
+            newSet.add(artistId);
+        }
+
+        this.localState.hiddenArtists = newSet;
     }
 }

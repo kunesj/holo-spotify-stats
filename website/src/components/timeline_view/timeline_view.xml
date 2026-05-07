@@ -15,7 +15,19 @@
                                 </button>
                             </t>
 
-                            <div class="mt-3 text-muted small">
+                            <div class="fw-semibold small text-muted text-uppercase mt-4 mb-2" style="letter-spacing: 0.04em;">Artists</div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <t t-foreach="visibleArtists" t-as="artistData" t-key="artistData._uid">
+                                    <div class="d-flex align-items-center" style="cursor: pointer; user-select: none; font-size: 0.85rem;"
+                                         t-on-click="_onClickLegendItem" t-att-data-artist-id="artistData.data.id"
+                                         t-att-style="localState.hiddenArtists.has(artistData.data.id) ? 'text-decoration: line-through; color: var(--color-text-muted);' : 'color: var(--color-text);'">
+                                         <div t-att-style="'width: 32px; height: 12px; margin-right: 6px; box-sizing: border-box; border: 3px solid ' + artistData.chartColor + ';' + (localState.hiddenArtists.has(artistData.data.id) ? 'background-color: transparent; opacity: 0.5;' : 'background-color: ' + artistData.chartColor + '33;')"></div>
+                                         <t t-esc="artistData.chartName"/>
+                                    </div>
+                                </t>
+                            </div>
+
+                            <div class="mt-4 text-muted small">
                                 <t t-esc="artistCount"/> artists
                                 <t t-if="artistCount > 30">
                                     <br/><span class="text-warning">Large selection — may be slow.</span>
