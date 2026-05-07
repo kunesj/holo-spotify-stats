@@ -75,14 +75,14 @@ export class ArtistDetailView extends owl.Component {
 
     getBranchColor(branch) {
         const colors = {
-            'Hololive JP': '#e74c3c',
-            'Hololive EN': '#3498db',
-            'Hololive ID': '#2ecc71',
-            'DEV_IS': '#9b59b6',
-            'Holostars JP': '#f39c12',
-            'Holostars EN': '#1abc9c',
-            'Independent': '#95a5a6',
-            'Other': '#7f8c8d'
+            'Hololive JP': '#0369A1',
+            'Hololive EN': '#4338CA',
+            'Hololive ID': '#BE123C',
+            'DEV_IS': '#27272A',
+            'Holostars JP': '#C2410C',
+            'Holostars EN': '#0F766E',
+            'Independent': '#475569',
+            'Other': '#A21CAF'
         };
 
         return colors[branch] || '#6c757d';

@@ -27,7 +27,7 @@
                     <a class="nav-link" t-att-class="{'active': state.page === 'listeners:rank'}" href="#rank/listeners" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:rank'">Listeners</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" t-att-class="{'active': state.page === 'listeners:timeline'}" href="#timeline/listeners" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:timeline'">Timeline</a>
+                    <a class="nav-link" t-att-class="{'active': state.page === 'listeners:timeline'}" href="#timeline/listeners" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:timeline'">Listeners (Timeline)</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" t-att-class="{'active': state.page === 'followers:rank'}" href="#rank/followers" t-on-click.prevent="_onPageClick" t-att-data-page="'followers:rank'">Followers</a>
