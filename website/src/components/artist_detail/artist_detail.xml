@@ -51,8 +51,9 @@
                         </div>
                     </div>
 
-                    <div class="holo-graph-container">
+                    <div class="holo-graph-container position-relative">
                         <canvas t-ref="canvas"/>
+                        <button type="button" class="btn btn-sm btn-outline-secondary position-absolute top-0 end-0 m-2" t-on-click="_onResetZoom" style="z-index: 10;">Reset Zoom</button>
                     </div>
                 </div>
             </div>

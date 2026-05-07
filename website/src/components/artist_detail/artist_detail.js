@@ -2,6 +2,9 @@ import * as owl from '@odoo/owl';
 
 import { Chart } from 'chart.js/auto';
 import 'chartjs-adapter-moment';
+import zoomPlugin from 'chartjs-plugin-zoom';
+
+Chart.register(zoomPlugin);
 
 import './artist_detail.xml?owl';
 
@@ -103,9 +106,25 @@ export class ArtistDetailView extends owl.Component {
                 options: {
                     responsive: true,
                     animation: false,
+                    parsing: false,
                     plugins: {
                         legend: {
                             display: false
+                        },
+                        zoom: {
+                            zoom: {
+                                wheel: {
+                                    enabled: true
+                                },
+                                pinch: {
+                                    enabled: true
+                                },
+                                mode: 'x'
+                            },
+                            pan: {
+                                enabled: true,
+                                mode: 'x'
+                            }
                         }
                     },
                     interaction: {
@@ -156,7 +175,8 @@ export class ArtistDetailView extends owl.Component {
             datasets: [
                 {
                     label: this.artist.chartName,
-                    data: this.artist.chartListenersData,
+                    data: this.artist.chartListenersData.map(p => ({ x: new Date(p.x).getTime(),
+                        y: p.y })),
                     borderColor: this.artist.chartColor,
                     backgroundColor: this.artist.chartColor + '20',
                     fill: true
@@ -167,5 +187,11 @@ export class ArtistDetailView extends owl.Component {
 
     _onClickBack() {
         window.history.back();
+    }
+
+    _onResetZoom() {
+        if (this.chart) {
+            this.chart.resetZoom();
+        }
     }
 }

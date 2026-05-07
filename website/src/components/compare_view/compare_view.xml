@@ -39,6 +39,10 @@
                                             t-on-click="_removeArtist" aria-label="Remove"/>
                                 </div>
                             </t>
+
+                            <div class="mt-3" t-if="state.selectedIds.length > 0">
+                                <button type="button" class="btn btn-sm btn-outline-secondary w-100" t-on-click="_onResetZoom">Reset Zoom</button>
+                            </div>
                         </div>
                     </div>
                 </div>

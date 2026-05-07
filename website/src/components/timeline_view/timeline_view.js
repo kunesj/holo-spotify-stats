@@ -2,6 +2,9 @@ import * as owl from '@odoo/owl';
 
 import { Chart } from 'chart.js/auto';
 import 'chartjs-adapter-moment';
+import zoomPlugin from 'chartjs-plugin-zoom';
+
+Chart.register(zoomPlugin);
 
 import { getAllBranches } from '~/artist';
 
@@ -81,6 +84,7 @@ export class TimelineView extends owl.Component {
                 options: {
                     responsive: true,
                     animation: false,
+                    parsing: false,
                     plugins: {
                         title: {
                             display: !!this.props.title,
@@ -96,8 +100,23 @@ export class TimelineView extends owl.Component {
                         decimation: {
                             enabled: true,
                             algorithm: 'lttb',
-                            samples: 200,
-                            threshold: 150
+                            samples: 100,
+                            threshold: 75
+                        },
+                        zoom: {
+                            zoom: {
+                                wheel: {
+                                    enabled: true
+                                },
+                                pinch: {
+                                    enabled: true
+                                },
+                                mode: 'x'
+                            },
+                            pan: {
+                                enabled: true,
+                                mode: 'x'
+                            }
                         }
                     },
                     interaction: {
@@ -145,7 +164,8 @@ export class TimelineView extends owl.Component {
 
             datasets.push({
                 label: artistData.chartName,
-                data: chartData,
+                data: chartData.map(p => ({ x: new Date(p.x).getTime(),
+                    y: p.y })),
                 borderColor: artistData.chartColor,
                 fill: false,
                 hidden: this.localState.hiddenArtists.has(artistData.data.id)
@@ -181,5 +201,11 @@ export class TimelineView extends owl.Component {
         }
 
         this.localState.hiddenArtists = newSet;
+    }
+
+    _onResetZoom() {
+        if (this.chart) {
+            this.chart.resetZoom();
+        }
     }
 }

@@ -2,6 +2,9 @@ import * as owl from '@odoo/owl';
 
 import { Chart } from 'chart.js/auto';
 import 'chartjs-adapter-moment';
+import zoomPlugin from 'chartjs-plugin-zoom';
+
+Chart.register(zoomPlugin);
 
 import './compare_view.xml?owl';
 
@@ -77,10 +80,26 @@ export class CompareView extends owl.Component {
                 options: {
                     responsive: true,
                     animation: false,
+                    parsing: false,
                     plugins: {
                         legend: {
                             display: true,
                             position: 'bottom'
+                        },
+                        zoom: {
+                            zoom: {
+                                wheel: {
+                                    enabled: true
+                                },
+                                pinch: {
+                                    enabled: true
+                                },
+                                mode: 'x'
+                            },
+                            pan: {
+                                enabled: true,
+                                mode: 'x'
+                            }
                         }
                     },
                     interaction: {
@@ -135,7 +154,8 @@ export class CompareView extends owl.Component {
         for (const artistData of this.selectedArtists) {
             datasets.push({
                 label: artistData.chartName,
-                data: artistData.chartListenersData,
+                data: artistData.chartListenersData.map(p => ({ x: new Date(p.x).getTime(),
+                    y: p.y })),
                 borderColor: artistData.chartColor,
                 fill: false
             });
@@ -208,6 +228,12 @@ export class CompareView extends owl.Component {
 
         if (idx >= 0) {
             this.state.selectedIds.splice(idx, 1);
+        }
+    }
+
+    _onResetZoom() {
+        if (this.chart) {
+            this.chart.resetZoom();
         }
     }
 }
