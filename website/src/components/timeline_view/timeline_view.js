@@ -121,7 +121,18 @@ export class TimelineView extends owl.Component {
     }
 
     _updateChart() {
-        this.chart.data = this._getChartData();
+        const oldDatasets = this.chart.data.datasets || [],
+            newData = this._getChartData();
+
+        for (const newDs of newData.datasets) {
+            const oldIndex = oldDatasets.findIndex(ds => ds.label === newDs.label);
+
+            if (oldIndex !== -1) {
+                newDs.hidden = !this.chart.isDatasetVisible(oldIndex);
+            }
+        }
+
+        this.chart.data = newData;
         this.chart.update('none');
         this.chart.resize();
     }
