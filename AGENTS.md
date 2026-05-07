@@ -148,7 +148,7 @@ Browser runtime:
 ### Component Tree
 ```
 WebClient (root)
-  ├─ Nav tabs: Listeners Rank | Listeners Timeline | Followers Rank | Followers Timeline | Compare
+  ├─ Nav tabs: Listeners | Timeline | Followers | Timeline | Compare
   ├─ RankView (t-if chartType === 'rank')
   │    ├─ Branch filter buttons (toggle visibility)
   │    └─ Chart.js horizontal bar chart (all visible artists, click bar → ArtistDetail)

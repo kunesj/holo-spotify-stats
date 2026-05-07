@@ -38,32 +38,37 @@ body {
     z-index: 1030;
     background: var(--color-surface);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-    padding: 0.75rem 0 0;
+    padding: 0;
 }
 
 // --- Nav tabs (underline style) ---
 
 .nav-tabs {
-    border-bottom: 2px solid var(--color-border);
-    padding: 0 1rem;
+    border-bottom: none;
+    gap: 0;
 
     .nav-link {
         border: none;
         color: var(--color-text-muted);
         font-weight: 500;
-        padding: 0.5rem 1rem;
-        margin-bottom: -2px;
+        font-size: 0.875rem;
+        padding: 0.4rem 0.75rem;
+        border-radius: 0;
+        border-right: 1px solid var(--color-border);
         transition: color 0.15s;
 
         &.active {
             color: var(--color-text);
-            border-bottom: 2px solid var(--color-text);
-            background: transparent;
+            background: rgba(52, 152, 219, 0.08);
         }
 
         &:hover:not(.active) {
             color: var(--color-text);
-            border-color: transparent;
+            background: var(--color-bg);
+        }
+
+        &:first-child {
+            border-radius: var(--radius-sm) 0 0 0;
         }
     }
 }

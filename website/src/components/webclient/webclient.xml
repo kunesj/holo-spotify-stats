@@ -3,9 +3,28 @@
 
     <t t-name="web.WebClient">
         <nav class="sticky-nav">
-            <div class="d-flex align-items-center justify-content-center px-3 mb-1">
-                <h1 class="mb-0 me-4 fs-5 fw-bold">Hololive Spotify Stats</h1>
-                <div class="position-relative" style="width: 260px;">
+            <div class="d-flex align-items-center justify-content-between px-3">
+                <div class="d-flex align-items-center flex-nowrap">
+                    <h1 class="mb-0 me-3 fs-6 fw-bold text-nowrap">Hololive Spotify Stats</h1>
+                    <ul class="nav nav-tabs flex-nowrap" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" t-att-class="{'active': state.page === 'listeners:rank'}" href="#rank/listeners" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:rank'">Listeners</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" t-att-class="{'active': state.page === 'listeners:timeline'}" href="#timeline/listeners" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:timeline'">Timeline</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" t-att-class="{'active': state.page === 'followers:rank'}" href="#rank/followers" t-on-click.prevent="_onPageClick" t-att-data-page="'followers:rank'">Followers</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" t-att-class="{'active': state.page === 'followers:timeline'}" href="#timeline/followers" t-on-click.prevent="_onPageClick" t-att-data-page="'followers:timeline'">Timeline</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" t-att-class="{'active': state.page === 'none:compare'}" href="#compare" t-on-click.prevent="_onPageClick" t-att-data-page="'compare'">Compare</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="position-relative flex-shrink-0" style="width: 260px;">
                     <input type="text" class="form-control search-input" placeholder="Search artists..."
                            t-on-input="_onSearchInput" t-on-blur="_onSearchBlur" t-on-keydown="_onSearchKeydown"
                            t-att-value="state.searchText"/>
@@ -21,24 +40,6 @@
                     </ul>
                 </div>
             </div>
-
-            <ul class="nav nav-tabs justify-content-center" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" t-att-class="{'active': state.page === 'listeners:rank'}" href="#rank/listeners" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:rank'">Listeners</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" t-att-class="{'active': state.page === 'listeners:timeline'}" href="#timeline/listeners" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:timeline'">Listeners (Timeline)</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" t-att-class="{'active': state.page === 'followers:rank'}" href="#rank/followers" t-on-click.prevent="_onPageClick" t-att-data-page="'followers:rank'">Followers</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" t-att-class="{'active': state.page === 'followers:timeline'}" href="#timeline/followers" t-on-click.prevent="_onPageClick" t-att-data-page="'followers:timeline'">Followers (Timeline)</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" t-att-class="{'active': state.page === 'none:compare'}" href="#compare" t-on-click.prevent="_onPageClick" t-att-data-page="'compare'">Compare</a>
-                </li>
-            </ul>
         </nav>
 
         <div class="tab-content">
