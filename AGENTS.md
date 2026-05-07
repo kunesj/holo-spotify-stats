@@ -42,7 +42,7 @@ Two-part system: (1) Python cron job scrapes monthly listener/follower counts fo
 │   ├── launch.sh                   # Container entrypoint
 │   └── pkglist                     # APT packages
 ├── spotify_stats/                  # DATA: per-artist JSON files
-│   ├── hololive_jp/                # 37 artists, one .json each
+│   ├── hololive_jp/
 │   ├── hololive_en/
 │   ├── hololive_id/
 │   ├── dev_is/
@@ -50,39 +50,39 @@ Two-part system: (1) Python cron job scrapes monthly listener/follower counts fo
 │   ├── holostars_en/
 │   ├── independent/
 │   └── other/
-        └── website/
-    ├── package.json
-    ├── package-lock.json
-    ├── vite.config.js
-    ├── plugins/
-    │   ├── vite-plugin-owl-xml-loader.js   # Loads .xml?owl as OWL templates
-    │   └── vite-plugin-build-stats.js      # Builds dist/stats.json from spotify_stats/
-    └── src/
-        ├── index.html                      # HTML entry
-        ├── main.js                         # JS entry: imports bootstrap, mounts app
-        ├── main.scss                       # SCSS: Bootstrap 5 + custom CSS theme (no Bootswatch)
-        ├── boot.js                         # OWL App bootstrap + env setup
-        ├── state.js                        # Global reactive state (OWL reactive)
-        ├── artist.js                       # ArtistData model + data loading + helpers
-        ├── assets.js                       # OWL template container
-        ├── utils/
-        │   └── string.js                   # sprintf utility
-        └── components/
-            ├── webclient/                  # Root component (tabs, view routing, search)
-            │   ├── webclient.js
-            │   └── webclient.xml
-            ├── rank_view/                  # Horizontal bar chart (all artists)
-            │   ├── rank_view.js
-            │   └── rank_view.xml
-            ├── timeline_view/              # Line chart (filtered artists)
-            │   ├── timeline_view.js
-            │   └── timeline_view.xml
-            ├── compare_view/               # Compare up to 5 artists
-            │   ├── compare_view.js
-            │   └── compare_view.xml
-            └── artist_detail/              # Single artist detail
-                ├── artist_detail.js
-                └── artist_detail.xml
+├── website/
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── vite.config.js
+│   ├── plugins/
+│   │   ├── vite-plugin-owl-xml-loader.js   # Loads .xml?owl as OWL templates
+│   │   └── vite-plugin-build-stats.js      # Builds dist/stats.json from spotify_stats/
+│   └── src/
+│       ├── index.html                      # HTML entry
+│       ├── main.js                         # JS entry: imports bootstrap, mounts app
+│       ├── main.scss                       # SCSS: Bootstrap 5 + custom CSS theme
+│       ├── boot.js                         # OWL App bootstrap + env setup
+│       ├── state.js                        # Global reactive state (OWL reactive)
+│       ├── artist.js                       # ArtistData model + data loading + helpers
+│       ├── assets.js                       # OWL template container
+│       ├── utils/
+│       │   └── string.js                   # sprintf utility
+│       └── components/
+│           ├── webclient/                  # Root component (tabs, view routing, search)
+│           │   ├── webclient.js
+│           │   └── webclient.xml
+│           ├── rank_view/                  # Horizontal bar chart (all artists)
+│           │   ├── rank_view.js
+│           │   └── rank_view.xml
+│           ├── timeline_view/              # Line chart (filtered artists)
+│           │   ├── timeline_view.js
+│           │   └── timeline_view.xml
+│           ├── compare_view/               # Compare up to 5 artists
+│           │   ├── compare_view.js
+│           │   └── compare_view.xml
+│           └── artist_detail/              # Single artist detail
+│               ├── artist_detail.js
+│               └── artist_detail.xml
 ```
 
 ---
