@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="web.CompareView">
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-auto pt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Compare Artists</h5>
+                            <p class="text-muted small">Select up to 5 artists to compare their monthly listeners over time.</p>
+
+                            <div class="mb-3 position-relative">
+                                <input type="text" class="form-control" placeholder="Search artists..."
+                                       t-on-input="_onSearchInput" t-on-blur="_onSearchBlur" t-on-keydown="_onSearchKeydown"
+                                       t-att-value="state.searchText"/>
+
+                                <ul class="list-group position-absolute w-100 mt-1" style="z-index: 1000;"
+                                    t-if="state.showDropdown and searchResults.length > 0">
+                                    <li class="list-group-item list-group-item-action py-1"
+                                        t-foreach="searchResults" t-as="result" t-key="result._uid"
+                                        t-on-mousedown="_onClickResult" t-att-data-artist-id="result.data.id"
+                                        t-att-class="{'active': result_index === state.focusedIndex}">
+                                        <span t-esc="result.chartName"/>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div t-if="state.selectedIds.length === 0" class="text-muted small">
+                                No artists selected.
+                            </div>
+
+                            <t t-foreach="selectedArtists" t-as="artist" t-key="artist._uid">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="badge me-2" t-att-style="'background-color: ' + artist.chartColor"
+                                          t-esc="artist_index + 1"/>
+                                    <span t-esc="artist.chartName" class="flex-grow-1"/>
+                                    <button type="button" class="btn-close btn-sm" t-att-data-artist-id="artist.data.id"
+                                            t-on-click="_removeArtist" aria-label="Remove"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="holo-graph-container">
+                        <canvas t-ref="canvas"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>

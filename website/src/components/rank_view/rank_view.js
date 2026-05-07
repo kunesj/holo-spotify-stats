@@ -96,6 +96,16 @@ export class RankView extends owl.Component {
                             min: 0
                         },
                         y: {}
+                    },
+                    onClick: (_event, elements) => {
+                        if (elements.length > 0) {
+                            const label = this.chart.data.labels[elements[0].index],
+                                artist = this.envState.artistIndex.find(a => a.chartName === label);
+
+                            if (artist) {
+                                window.location.hash = '#artist/' + artist.data.id;
+                            }
+                        }
                     }
                 }
             }

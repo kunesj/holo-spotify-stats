@@ -68,15 +68,21 @@ Two-part system: (1) Python cron job scrapes monthly listener/follower counts fo
         ├── utils/
         │   └── string.js                   # sprintf utility
         └── components/
-            ├── webclient/                  # Root component (tabs, view routing)
+            ├── webclient/                  # Root component (tabs, view routing, search)
             │   ├── webclient.js
             │   └── webclient.xml
             ├── rank_view/                  # Horizontal bar chart (all artists)
             │   ├── rank_view.js
             │   └── rank_view.xml
-            └── timeline_view/              # Line chart (filtered artists)
-                ├── timeline_view.js
-                └── timeline_view.xml
+            ├── timeline_view/              # Line chart (filtered artists)
+            │   ├── timeline_view.js
+            │   └── timeline_view.xml
+            ├── compare_view/               # Compare up to 5 artists
+            │   ├── compare_view.js
+            │   └── compare_view.xml
+            └── artist_detail/              # Single artist detail
+                ├── artist_detail.js
+                └── artist_detail.xml
 ```
 
 ---
@@ -131,19 +137,27 @@ Browser runtime:
 ### Component Tree
 ```
 WebClient (root)
-  ├─ Nav tabs: Listeners Rank | Listeners Timeline | Followers Rank | Followers Timeline
+  ├─ Nav tabs: Listeners Rank | Listeners Timeline | Followers Rank | Followers Timeline | Compare
   ├─ RankView (t-if chartType === 'rank')
   │    ├─ Branch filter buttons (toggle visibility)
-  │    └─ Chart.js horizontal bar chart (all visible artists)
-  └─ TimelineView (t-if chartType === 'timeline')
-       ├─ Branch filter buttons (toggle visibility)
-       ├─ Artist count display (with warning when >30)
-       └─ Chart.js line chart (visible artists only, with decimation)
+  │    └─ Chart.js horizontal bar chart (all visible artists, click bar → ArtistDetail)
+  ├─ TimelineView (t-if chartType === 'timeline')
+  │    ├─ Branch filter buttons (toggle visibility)
+  │    ├─ Artist count display (with warning when >30)
+  │    └─ Chart.js line chart (visible artists only, with decimation)
+  ├─ CompareView (t-if chartType === 'compare')
+  │    ├─ Typeahead search (select up to 5 artists)
+  │    └─ Chart.js line chart (selected artists only)
+  └─ ArtistDetailView (t-if chartType === 'artist-detail')
+       ├─ Back button, artist header, stat cards
+       └─ Chart.js single-artist line chart (filled)
 ```
 
-### Page Routing (internal state, no URL-based routing)
-- `state.page` values: `listeners:rank`, `listeners:timeline`, `followers:rank`, `followers:timeline`
-- Parsed into `chartDataType` (listeners/followers) and `chartChartType` (rank/timeline)
+### Page Routing (hash-based)
+- URL hash drives navigation: `#rank/listeners`, `#timeline/followers`, `#compare`, `#artist/<id>`
+- `state.page` values: `listeners:rank`, `listeners:timeline`, `followers:rank`, `followers:timeline`, `none:compare`, `none:artist-detail`
+- Parsed into `chartDataType` (listeners/followers) and `chartChartType` (rank/timeline/compare/artist-detail)
+- `window.location.hash` set on nav click; `hashchange` listener syncs state
 
 ---
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="web.ArtistDetailView">
+        <div class="container-fluid" t-if="artist">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-outline-secondary btn-sm mb-3" t-on-click="_onClickBack">
+                        ← Back
+                    </button>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle me-3" t-att-style="'width: 24px; height: 24px; background-color: ' + artist.chartColor">
+
+                        </div>
+                        <h3 t-esc="artist.chartName" class="mb-0"/>
+                    </div>
+
+                    <div t-if="generations.length > 0" class="mb-3">
+                        <t t-foreach="generations" t-as="gen" t-key="gen_index">
+                            <span class="badge bg-secondary me-1">
+                                <t t-esc="gen[0]"/> gen <t t-esc="gen[1]"/>
+                            </span>
+                        </t>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-4 mb-2">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <div class="h3 mb-0" t-esc="artist.getCurrentValue('listeners').toLocaleString()"/>
+                                    <div class="text-muted small">Monthly Listeners</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <div class="h3 mb-0" t-esc="artist.getCurrentValue('followers').toLocaleString()"/>
+                                    <div class="text-muted small">Followers</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <div class="h3 mb-0">#<t t-esc="listenerRank"/></div>
+                                    <div class="text-muted small">Listeners Rank (of <t t-esc="envState.artistIndex.length"/>)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="holo-graph-container">
+                        <canvas t-ref="canvas"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div t-else="">
+            <p class="text-muted text-center mt-5">Select an artist to view details.</p>
+        </div>
+    </t>
+
+</templates>

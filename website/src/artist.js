@@ -62,9 +62,12 @@ export function getAllBranches() {
 /**
  * Contains loaded artist data
  */
+let _uidCounter = 0;
+
 export class ArtistData {
     constructor(data) {
         this.data = data;
+        this._uid = _uidCounter++;
         this.error = false;
         this._chartListenersData = null;
         this._chartFollowersData = null;
@@ -131,6 +134,19 @@ export class ArtistData {
             return 0;
         }
         return data[data.length - 1].y;
+    }
+
+    /**
+     * Compute rank among all artists for a given data type (1 = highest).
+     */
+    getRank(dataType) {
+        const values = STATE.artistIndex.map(a => ({
+            id: a.data.id,
+            value: a.getCurrentValue(dataType)
+        }));
+
+        values.sort((a, b) => b.value - a.value);
+        return values.findIndex(v => v.id === this.data.id) + 1;
     }
 
     /**

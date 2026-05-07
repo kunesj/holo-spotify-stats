@@ -10,5 +10,6 @@ export const STATE = owl.reactive({
         'Other',
         // Don't show non-holo channels by default
         'Independent'
-    ])
+    ]),
+    selectedArtistId: null
 });
