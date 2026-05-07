@@ -1,12 +1,14 @@
 import * as owl from '@odoo/owl';
 
-import { StatsChart } from '../stats_chart/stats_chart';
+import { RankView } from '../rank_view/rank_view';
+import { TimelineView } from '../timeline_view/timeline_view';
 
 import './webclient.xml?owl';
-import {loadArtistData} from '~/artist.js';
+import { loadArtistData } from '~/artist';
 
 export class WebClient extends owl.Component {
-    static components = { StatsChart };
+    static components = { RankView,
+        TimelineView };
     static template = 'web.WebClient';
     static props = {};
     static defaultProps = {};
@@ -32,7 +34,7 @@ export class WebClient extends owl.Component {
      * @param {*} err
      */
     onError(err) {
-        console.error('Catching uncaught OWL error:', {err});
+        console.error('Catching uncaught OWL error:', { err });
     }
 
     /**
@@ -59,7 +61,7 @@ export class WebClient extends owl.Component {
     }
 
     get chartTitle() {
-        let titleLeft = '', 
+        let titleLeft = '',
             titleRight = '';
 
         if (this.chartDataType === 'listeners') {
@@ -86,6 +88,9 @@ export class WebClient extends owl.Component {
         return '';
     }
 
+    /**
+     * @param {MouseEvent} ev
+     */
     _onPageClick(ev) {
         this.state.page = ev.currentTarget.dataset.page;
     }

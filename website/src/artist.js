@@ -1,11 +1,7 @@
-import 'bootstrap';
-
 import { STATE } from './state';
 
-import './main.scss';
-
 /**
- * Loads artist data from index.json
+ * Loads artist data from stats.json
  * @returns {Promise<*[]>}
  */
 export async function loadArtistData() {
@@ -17,6 +13,50 @@ export async function loadArtistData() {
     }
 
     return STATE.artistIndex;
+}
+
+/**
+ * Get an artist by their Spotify ID
+ */
+export function getArtistById(id) {
+    return STATE.artistIndex.find(a => a.data.id === id);
+}
+
+/**
+ * Get all artists belonging to a branch
+ */
+export function getArtistsByBranch(branch) {
+    return STATE.artistIndex.filter(a => {
+        const gens = a.data.generations;
+
+        if (!gens || gens.length === 0) {
+            return branch === 'Other';
+        }
+        return gens.some(g => g[0] === branch);
+    });
+}
+
+/**
+ * Get all unique branch names from the artist index, sorted.
+ */
+export function getAllBranches() {
+    const branches = new Set();
+
+    for (const artistData of STATE.artistIndex) {
+        const gens = artistData.data.generations;
+
+        if (!gens || gens.length === 0) {
+            branches.add('Other');
+        }
+        else {
+            for (const gen of gens) {
+                branches.add(gen[0]);
+            }
+        }
+    }
+
+    branches.delete('INoNaKa Music');
+    return new Set([...branches].sort());
 }
 
 /**
@@ -79,5 +119,36 @@ export class ArtistData {
 
         this._chartFollowersData = data;
         return this._chartFollowersData;
+    }
+
+    /**
+     * Get current value for a data type (last data point).
+     */
+    getCurrentValue(dataType) {
+        const data = dataType === 'listeners' ? this.chartListenersData : this.chartFollowersData;
+
+        if (data.length === 0) {
+            return 0;
+        }
+        return data[data.length - 1].y;
+    }
+
+    /**
+     * Returns true if ALL the artist's generations are in the hidden set.
+     */
+    isHidden(hiddenBranches) {
+        const gens = this.data.generations;
+
+        if (!gens || gens.length === 0) {
+            return hiddenBranches.has('Other');
+        }
+
+        for (const gen of gens) {
+            if (!hiddenBranches.has(gen[0])) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

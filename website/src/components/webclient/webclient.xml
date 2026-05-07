@@ -5,14 +5,12 @@
         <h1 class="text-center">Hololive Spotify Stats</h1>
 
         <ul class="nav nav-tabs" role="tablist">
-            <!--  LISTENERS  -->
             <li class="nav-item" role="presentation">
                 <a class="nav-link" t-att-class="{'active': state.page === 'listeners:rank'}" href="#" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:rank'">Listeners</a>
             </li>
             <li class="nav-item" role="presentation">
                 <a class="nav-link" t-att-class="{'active': state.page === 'listeners:timeline'}" href="#" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:timeline'">Listeners (Timeline)</a>
             </li>
-            <!--  FOLLOWERS  -->
             <li class="nav-item" role="presentation">
                 <a class="nav-link" t-att-class="{'active': state.page === 'followers:rank'}" href="#" t-on-click.prevent="_onPageClick" t-att-data-page="'followers:rank'">Followers</a>
             </li>
@@ -23,7 +21,8 @@
 
         <div class="tab-content">
             <div class="tab-pane show active" role="tabpanel">
-                <StatsChart title="chartTitle" subtitle="chartSubtitle" dataType="chartDataType" chartType="chartChartType"/>
+                <RankView t-if="chartChartType === 'rank'" title="chartTitle" subtitle="chartSubtitle" dataType="chartDataType"/>
+                <TimelineView t-if="chartChartType === 'timeline'" title="chartTitle" subtitle="chartSubtitle" dataType="chartDataType"/>
             </div>
         </div>
     </t>

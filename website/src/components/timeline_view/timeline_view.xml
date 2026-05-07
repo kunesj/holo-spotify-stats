@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
 
-    <t t-name="web.StatsChart">
+    <t t-name="web.TimelineView">
         <div class="container-fluid">
             <div class="row justify-content-md-center">
                 <div class="col-auto pt-4">
@@ -14,7 +14,14 @@
                                 </button>
                             </t>
 
-                            <div class="mt-4">
+                            <div class="mt-3 text-muted small">
+                                <t t-esc="artistCount"/> artists shown
+                                <t t-if="artistCount > 30">
+                                    <br/><span class="text-warning">Large selection — consider filtering by branch.</span>
+                                </t>
+                            </div>
+
+                            <div class="mt-3">
                                 <a href="https://github.com/kunesj/holo-spotify-stats">Raw data</a>
                             </div>
                         </div>
