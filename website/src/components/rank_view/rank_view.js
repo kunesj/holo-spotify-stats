@@ -111,7 +111,10 @@ export class RankView extends owl.Component {
             }
         );
 
-        this.canvasRef.el.parentElement.style.minHeight = `${3 + 1.5 * Math.max(barCount, 1)}rem`;
+        const containerHeight = `${3 + 1.5 * Math.max(barCount, 1)}rem`;
+
+        this.canvasRef.el.parentElement.style.minHeight = containerHeight;
+        this.canvasRef.el.parentElement.style.maxHeight = containerHeight;
         this.chart.resize();
     }
 
@@ -121,7 +124,10 @@ export class RankView extends owl.Component {
 
         this.chart.data.labels = data.labels;
         this.chart.data.datasets = data.datasets;
-        this.canvasRef.el.parentElement.style.minHeight = `${3 + 1.5 * Math.max(barCount, 1)}rem`;
+        const containerHeight = `${3 + 1.5 * Math.max(barCount, 1)}rem`;
+
+        this.canvasRef.el.parentElement.style.minHeight = containerHeight;
+        this.canvasRef.el.parentElement.style.maxHeight = containerHeight;
         this.chart.update('none');
         this.chart.resize();
     }
