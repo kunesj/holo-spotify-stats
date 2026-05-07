@@ -13,11 +13,11 @@ Two-part system: (1) Python cron job scrapes monthly listener/follower counts fo
 | Layer | Technology | Version |
 |---|---|---|
 | Python runtime | CPython | >=3.11, <4.0 |
-| Python package mgr | uv | 0.9.13 |
+| Python package mgr | uv | 0.9.15 |
 | Python linter | ruff | 0.12.2 |
 | UI framework | @odoo/owl | 2.2.6 |
-| CSS framework | bootstrap (custom theme, no Bootswatch) | 5.0.2 |
-| Charts | chart.js + chartjs-adapter-moment | 4.4.1 |
+| CSS framework | bootstrap (custom theme) | 5.0.2 |
+| Charts | chart.js + chartjs-adapter-moment + moment | 4.4.1 + 1.0.1 + 2.10.2 |
 | Build | vite + sass + postcss | 4.3.9 |
 | Pre-commit | prek | 0.2.3 |
 | JS linter | eslint | 8.43.0 |
@@ -29,19 +29,28 @@ Two-part system: (1) Python cron job scrapes monthly listener/follower counts fo
 
 ```
 .
-├── cron.py                         # Scheduler: infinite loop, triggers fetch on schedule
-├── fetch_spotify_stats.py          # Core: Playwright -> Spotify GraphQL -> save JSON
-├── cron_logfile.sh                 # Shell wrapper: cron.py with log rotation
-├── config.default.json             # Template for config.json
-├── config.json                     # Actual config (gitignored)
-├── pyproject.toml                  # Python deps + exhaustive ruff config
-├── uv.lock                         # Locked Python deps
-├── docker-compose.yml              # Docker Compose service
+├── AGENTS.md                         # This file
+├── README.md                         # User-facing project readme
+├── cron.py                           # Scheduler: infinite loop, triggers fetch on schedule
+├── fetch_spotify_stats.py            # Core: Playwright -> Spotify GraphQL -> save JSON
+├── cron_logfile.sh                   # Shell wrapper: cron.py with log rotation
+├── config.default.json               # Template for config.json
+├── config.json                       # Actual config (gitignored)
+├── pyproject.toml                    # Python deps + exhaustive ruff config
+├── uv.lock                           # Locked Python deps
+├── docker-compose.yml                # Docker Compose service
+├── opencode.json                     # AI tool config (denies read access to spotify_stats/)
 ├── .docker/
-│   ├── Dockerfile                  # Python 3.11 + uv + Playwright
-│   ├── launch.sh                   # Container entrypoint
-│   └── pkglist                     # APT packages
-├── spotify_stats/                  # DATA: per-artist JSON files
+│   ├── Dockerfile                    # Python 3.11 + uv + Playwright
+│   ├── launch.sh                     # Container entrypoint
+│   └── pkglist                       # APT packages
+├── .pre-commit-config.yaml           # prek hooks: uv-lock, ruff, eslint
+├── .editorconfig                     # Editor config (indent, line length)
+├── .dockerignore                     # Docker build ignores
+├── .gitignore                        # Git ignores
+├── .eslintignore                     # ESLint ignores
+├── .eslintrc.json                    # ESLint config
+├── spotify_stats/                    # DATA: per-artist JSON files
 │   ├── hololive_jp/
 │   ├── hololive_en/
 │   ├── hololive_id/
@@ -54,6 +63,8 @@ Two-part system: (1) Python cron job scrapes monthly listener/follower counts fo
 │   ├── package.json
 │   ├── package-lock.json
 │   ├── vite.config.js
+│   ├── .gitignore
+│   ├── public/                       # Static assets (empty)
 │   ├── plugins/
 │   │   ├── vite-plugin-owl-xml-loader.js   # Loads .xml?owl as OWL templates
 │   │   └── vite-plugin-build-stats.js      # Builds dist/stats.json from spotify_stats/
@@ -188,7 +199,7 @@ WebClient (root)
 ### OWL Patterns
 - Two files per component: `name.js` (class extending `owl.Component`) + `name.xml` (template)
 - Templates loaded via `import './name.xml?owl'` → custom Vite plugin registers in `window.__OWL_TEMPLATES__`
-- Env object in `boot.js` carries `debug`, `state`, `bus`, `_t`, `_lt`
+- Env object in `boot.js` carries `debug`, `state`, `bus`, `services`, `_t`, `_lt`
 - `onError` handler in WebClient prevents OWL from destroying the whole app on unhandled errors
 
 ### Data Files

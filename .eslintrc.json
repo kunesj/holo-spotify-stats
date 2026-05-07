@@ -4,9 +4,7 @@
     },
     "env": {
         "es2022": true,
-        "browser": true,
-        "jquery": true,
-        "qunit": true
+        "browser": true
     },
     "extends": "eslint:recommended",
     "ignorePatterns": ["**/website/*/dist/*.js"],

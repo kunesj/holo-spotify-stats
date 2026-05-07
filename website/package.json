@@ -10,7 +10,6 @@
     "dependencies": {
         "@odoo/owl": "2.2.6",
         "bootstrap": "5.0.2",
-        "bootswatch": "5.0.2",
         "chart.js": "4.4.1",
         "chartjs-adapter-moment": "1.0.1",
         "moment": "2.10.2"
