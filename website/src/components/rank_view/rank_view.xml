@@ -2,20 +2,21 @@
 <templates xml:space="preserve">
 
     <t t-name="web.RankView">
-        <div class="container-fluid">
-            <div class="row justify-content-md-center">
-                <div class="col-auto pt-4">
-                    <div class="card">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="col-auto">
+                    <div class="card sidebar-card">
                         <div class="card-body">
+                            <div class="fw-semibold small text-muted text-uppercase mb-2" style="letter-spacing: 0.04em;">Branches</div>
                             <t t-foreach="branches" t-as="branch" t-key="branch">
-                                <button type="button" class="btn mt-2 d-block" t-on-click="_onClickFilterButton" t-att-data-branch="branch"
-                                        t-att-class="{'btn-primary': !hiddenBranches.has(branch), 'btn-secondary': hiddenBranches.has(branch)}">
+                                <button type="button" class="btn-branch mt-1" t-on-click="_onClickFilterButton" t-att-data-branch="branch"
+                                        t-att-class="{'branch-visible': !hiddenBranches.has(branch), 'branch-hidden': hiddenBranches.has(branch)}">
                                     <t t-esc="branch"/>
                                 </button>
                             </t>
 
-                            <div class="mt-4">
-                                <a href="https://github.com/kunesj/holo-spotify-stats">Raw data</a>
+                            <div class="mt-3">
+                                <a href="https://github.com/kunesj/holo-spotify-stats" class="raw-data-link">Raw data</a>
                             </div>
                         </div>
                     </div>

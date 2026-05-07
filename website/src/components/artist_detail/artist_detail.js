@@ -73,6 +73,21 @@ export class ArtistDetailView extends owl.Component {
         return this.artist.getRank('followers');
     }
 
+    getBranchColor(branch) {
+        const colors = {
+            'Hololive JP': '#e74c3c',
+            'Hololive EN': '#3498db',
+            'Hololive ID': '#2ecc71',
+            'DEV_IS': '#9b59b6',
+            'Holostars JP': '#f39c12',
+            'Holostars EN': '#1abc9c',
+            'Independent': '#95a5a6',
+            'Other': '#7f8c8d'
+        };
+
+        return colors[branch] || '#6c757d';
+    }
+
     _createChart() {
         this._destroyChart();
 

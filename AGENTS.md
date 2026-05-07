@@ -16,7 +16,7 @@ Two-part system: (1) Python cron job scrapes monthly listener/follower counts fo
 | Python package mgr | uv | 0.9.13 |
 | Python linter | ruff | 0.12.2 |
 | UI framework | @odoo/owl | 2.2.6 |
-| CSS framework | bootstrap + bootswatch (Flatly) | 5.0.2 |
+| CSS framework | bootstrap (custom theme, no Bootswatch) | 5.0.2 |
 | Charts | chart.js + chartjs-adapter-moment | 4.4.1 |
 | Build | vite + sass + postcss | 4.3.9 |
 | Pre-commit | prek | 0.2.3 |
@@ -60,7 +60,7 @@ Two-part system: (1) Python cron job scrapes monthly listener/follower counts fo
     └── src/
         ├── index.html                      # HTML entry
         ├── main.js                         # JS entry: imports bootstrap, mounts app
-        ├── main.scss                       # SCSS: Bootswatch Flatly theme
+        ├── main.scss                       # SCSS: Bootstrap 5 + custom CSS theme (no Bootswatch)
         ├── boot.js                         # OWL App bootstrap + env setup
         ├── state.js                        # Global reactive state (OWL reactive)
         ├── artist.js                       # ArtistData model + data loading + helpers
@@ -131,7 +131,7 @@ Vite build:
 
 Browser runtime:
   fetch('/stats.json') -> artist.js -> reactive STATE.artistIndex
-    └─ stats_chart.js -> Chart.js (bar=rank, line=timeline)
+    └─ RankView / TimelineView -> Chart.js (horizontal bar / line)
 ```
 
 ### Component Tree
@@ -162,6 +162,10 @@ WebClient (root)
 ---
 
 ## Key Conventions
+
+### General
+- **Never remove or modify existing human-written comments and docstrings.** The codebase relies on them for understanding intent.
+- **Every class, method, function, and module must have a JSDoc or docstring** describing its purpose, parameters, and return value.
 
 ### Python
 - **Python 3.11+** with full type annotations (`typing.Literal`, `X | None`)
@@ -217,3 +221,4 @@ WebClient (root)
 8. **Vite dev server won't work** for the stats plugin since it reads `spotify_stats/` from the repo root (outside `website/`). The build plugin uses relative path `../../spotify_stats/`. For dev, build and use `preview`.
 9. **OWL v2 error handling**: Without the `onError` boundary in WebClient, any component error destroys the entire app
 10. **`opencode.json`** explicitly denies reading `spotify_stats/` directory — be aware when using AI tools
+11. **Rank/Timeline flex grid**: Both views use `row > col-auto + col`. The `.col` (`flex: 1 0 0%`) has `flex-shrink: 0` + default `min-width: auto`, which prevents shrinking below content min-width (e.g., canvas default 300px). This causes `flex-wrap: wrap` to stack sidebar and chart vertically. Fix: `.tab-pane .row > .col { min-width: 0 }` in `main.scss`.

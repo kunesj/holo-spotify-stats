@@ -2,42 +2,44 @@
 <templates xml:space="preserve">
 
     <t t-name="web.WebClient">
-        <div class="d-flex align-items-center justify-content-center mt-3 mb-2">
-            <h1 class="mb-0 me-4">Hololive Spotify Stats</h1>
-            <div class="position-relative" style="width: 280px;">
-                <input type="text" class="form-control form-control-sm" placeholder="Search artists..."
-                       t-on-input="_onSearchInput" t-on-blur="_onSearchBlur" t-on-keydown="_onSearchKeydown"
-                       t-att-value="state.searchText"/>
+        <nav class="sticky-nav">
+            <div class="d-flex align-items-center justify-content-center px-3 mb-1">
+                <h1 class="mb-0 me-4 fs-5 fw-bold">Hololive Spotify Stats</h1>
+                <div class="position-relative" style="width: 260px;">
+                    <input type="text" class="form-control search-input" placeholder="Search artists..."
+                           t-on-input="_onSearchInput" t-on-blur="_onSearchBlur" t-on-keydown="_onSearchKeydown"
+                           t-att-value="state.searchText"/>
 
-                <ul class="list-group position-absolute w-100 mt-1" style="z-index: 1000;"
-                    t-if="state.showSearchDropdown and searchResults.length > 0">
-                    <li class="list-group-item list-group-item-action py-1"
-                        t-foreach="searchResults" t-as="result" t-key="result._uid"
-                        t-on-mousedown="_onClickSearchResult" t-att-data-artist-id="result.data.id"
-                        t-att-class="{'active': result_index === state.searchFocusedIndex}">
-                        <t t-esc="result.chartName"/>
-                    </li>
-                </ul>
+                    <ul class="list-group position-absolute w-100 mt-1 search-dropdown"
+                        t-if="state.showSearchDropdown and searchResults.length > 0">
+                        <li class="list-group-item list-group-item-action py-1"
+                            t-foreach="searchResults" t-as="result" t-key="result._uid"
+                            t-on-mousedown="_onClickSearchResult" t-att-data-artist-id="result.data.id"
+                            t-att-class="{'active': result_index === state.searchFocusedIndex}">
+                            <t t-esc="result.chartName"/>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <ul class="nav nav-tabs justify-content-center" role="tablist">
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" t-att-class="{'active': state.page === 'listeners:rank'}" href="#rank/listeners" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:rank'">Listeners</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" t-att-class="{'active': state.page === 'listeners:timeline'}" href="#timeline/listeners" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:timeline'">Listeners (Timeline)</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" t-att-class="{'active': state.page === 'followers:rank'}" href="#rank/followers" t-on-click.prevent="_onPageClick" t-att-data-page="'followers:rank'">Followers</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" t-att-class="{'active': state.page === 'followers:timeline'}" href="#timeline/followers" t-on-click.prevent="_onPageClick" t-att-data-page="'followers:timeline'">Followers (Timeline)</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" t-att-class="{'active': state.page === 'none:compare'}" href="#compare" t-on-click.prevent="_onPageClick" t-att-data-page="'compare'">Compare</a>
-            </li>
-        </ul>
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" t-att-class="{'active': state.page === 'listeners:rank'}" href="#rank/listeners" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:rank'">Listeners</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" t-att-class="{'active': state.page === 'listeners:timeline'}" href="#timeline/listeners" t-on-click.prevent="_onPageClick" t-att-data-page="'listeners:timeline'">Timeline</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" t-att-class="{'active': state.page === 'followers:rank'}" href="#rank/followers" t-on-click.prevent="_onPageClick" t-att-data-page="'followers:rank'">Followers</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" t-att-class="{'active': state.page === 'followers:timeline'}" href="#timeline/followers" t-on-click.prevent="_onPageClick" t-att-data-page="'followers:timeline'">Followers (Timeline)</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" t-att-class="{'active': state.page === 'none:compare'}" href="#compare" t-on-click.prevent="_onPageClick" t-att-data-page="'compare'">Compare</a>
+                </li>
+            </ul>
+        </nav>
 
         <div class="tab-content">
             <div class="tab-pane show active" role="tabpanel">

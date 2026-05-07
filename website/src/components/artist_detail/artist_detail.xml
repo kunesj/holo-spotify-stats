@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
 
     <t t-name="web.ArtistDetailView">
-        <div class="container-fluid" t-if="artist">
+        <div class="container-fluid py-3" t-if="artist">
             <div class="row">
                 <div class="col">
                     <button type="button" class="btn btn-outline-secondary btn-sm mb-3" t-on-click="_onClickBack">
@@ -10,42 +10,42 @@
                     </button>
 
                     <div class="d-flex align-items-center mb-3">
-                        <div class="rounded-circle me-3" t-att-style="'width: 24px; height: 24px; background-color: ' + artist.chartColor">
+                        <div class="rounded-circle me-3" t-att-style="'width: 28px; height: 28px; background-color: ' + artist.chartColor">
 
                         </div>
-                        <h3 t-esc="artist.chartName" class="mb-0"/>
+                        <h3 t-esc="artist.chartName" class="mb-0 fw-bold"/>
                     </div>
 
-                    <div t-if="generations.length > 0" class="mb-3">
+                    <div t-if="generations.length > 0" class="mb-4">
                         <t t-foreach="generations" t-as="gen" t-key="gen_index">
-                            <span class="badge bg-secondary me-1">
+                            <span class="generation-badge me-1" t-att-style="'background-color: ' + getBranchColor(gen[0])">
                                 <t t-esc="gen[0]"/> gen <t t-esc="gen[1]"/>
                             </span>
                         </t>
                     </div>
 
-                    <div class="row mb-4">
-                        <div class="col-md-4 mb-2">
-                            <div class="card text-center">
+                    <div class="row mb-4 g-2">
+                        <div class="col-md-4">
+                            <div class="card stat-card stat-card-listeners text-center h-100">
                                 <div class="card-body">
-                                    <div class="h3 mb-0" t-esc="artist.getCurrentValue('listeners').toLocaleString()"/>
-                                    <div class="text-muted small">Monthly Listeners</div>
+                                    <div class="stat-value" t-esc="artist.getCurrentValue('listeners').toLocaleString()"/>
+                                    <div class="stat-label mt-1">Monthly Listeners</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-2">
-                            <div class="card text-center">
+                        <div class="col-md-4">
+                            <div class="card stat-card stat-card-followers text-center h-100">
                                 <div class="card-body">
-                                    <div class="h3 mb-0" t-esc="artist.getCurrentValue('followers').toLocaleString()"/>
-                                    <div class="text-muted small">Followers</div>
+                                    <div class="stat-value" t-esc="artist.getCurrentValue('followers').toLocaleString()"/>
+                                    <div class="stat-label mt-1">Followers</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-2">
-                            <div class="card text-center">
+                        <div class="col-md-4">
+                            <div class="card stat-card stat-card-rank text-center h-100">
                                 <div class="card-body">
-                                    <div class="h3 mb-0">#<t t-esc="listenerRank"/></div>
-                                    <div class="text-muted small">Listeners Rank (of <t t-esc="envState.artistIndex.length"/>)</div>
+                                    <div class="stat-value">#<t t-esc="listenerRank"/></div>
+                                    <div class="stat-label mt-1">Listeners Rank (of <t t-esc="envState.artistIndex.length"/>)</div>
                                 </div>
                             </div>
                         </div>

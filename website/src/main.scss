@@ -1,8 +1,294 @@
-@import "bootswatch/dist/flatly/variables";
 @import "bootstrap/scss/bootstrap";
-@import "bootswatch/dist/flatly/bootswatch";
+
+:root {
+    --color-bg: #f4f6f8;
+    --color-surface: #ffffff;
+    --color-text: #2c3e50;
+    --color-text-muted: #7f8c8d;
+    --color-border: #ecf0f1;
+    --color-accent: #3498db;
+
+    --branch-jp: #e74c3c;
+    --branch-en: #3498db;
+    --branch-id: #2ecc71;
+    --branch-dev-is: #9b59b6;
+    --branch-stars-jp: #f39c12;
+    --branch-stars-en: #1abc9c;
+    --branch-independent: #95a5a6;
+    --branch-other: #7f8c8d;
+
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+// --- Sticky nav ---
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background: var(--color-surface);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    padding: 0.75rem 0 0;
+}
+
+// --- Nav tabs (underline style) ---
+
+.nav-tabs {
+    border-bottom: 2px solid var(--color-border);
+    padding: 0 1rem;
+
+    .nav-link {
+        border: none;
+        color: var(--color-text-muted);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        margin-bottom: -2px;
+        transition: color 0.15s;
+
+        &.active {
+            color: var(--color-text);
+            border-bottom: 2px solid var(--color-text);
+            background: transparent;
+        }
+
+        &:hover:not(.active) {
+            color: var(--color-text);
+            border-color: transparent;
+        }
+    }
+}
+
+// --- Cards ---
+
+.card {
+    border: none;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+// --- Branch filter buttons ---
+
+[data-branch] {
+    &.btn-branch {
+        border: none;
+        border-radius: var(--radius-sm);
+        text-align: left;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.875rem;
+        transition: all 0.15s;
+        border-left: 3px solid transparent;
+        width: 100%;
+
+        &.branch-visible {
+            background: var(--color-surface);
+            color: var(--color-text);
+            border-left-color: var(--branch-color, var(--color-accent));
+            box-shadow: var(--shadow-sm);
+
+            &:hover {
+                background: darken(#fff, 3%);
+            }
+        }
+
+        &.branch-hidden {
+            background: transparent;
+            color: var(--color-text-muted);
+            border-left-color: transparent;
+            opacity: 0.55;
+
+            &:hover {
+                opacity: 1;
+                background: var(--color-border);
+            }
+        }
+    }
+}
+
+[data-branch='Hololive JP'] { --branch-color: var(--branch-jp); }
+[data-branch='Hololive EN'] { --branch-color: var(--branch-en); }
+[data-branch='Hololive ID'] { --branch-color: var(--branch-id); }
+[data-branch='DEV_IS'] { --branch-color: var(--branch-dev-is); }
+[data-branch='Holostars JP'] { --branch-color: var(--branch-stars-jp); }
+[data-branch='Holostars EN'] { --branch-color: var(--branch-stars-en); }
+[data-branch='Independent'] { --branch-color: var(--branch-independent); }
+[data-branch='Other'] { --branch-color: var(--branch-other); }
+
+// --- Sidebar ---
+
+.sidebar-card {
+    width: 220px;
+
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+// --- Chart container ---
 
 .holo-graph-container {
-   width: 90%;
-   margin: auto
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem;
+    overflow: hidden;
+}
+
+// --- Fix grid layout: allow .col to shrink below content min-width ---
+
+.tab-pane .row > .col {
+    min-width: 0;
+}
+
+// --- Search ---
+
+.search-input {
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    font-size: 0.875rem;
+    padding: 0.375rem 1rem;
+    background: var(--color-bg);
+    transition: all 0.15s;
+
+    &:focus {
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.12);
+        border-color: var(--color-accent);
+        background: var(--color-surface);
+    }
+}
+
+// --- Artist detail stat cards ---
+
+.stat-card {
+    .card-body {
+        padding: 1rem 0.75rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+        color: var(--color-text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        font-weight: 600;
+    }
+}
+
+.stat-card-listeners { border-top: 3px solid var(--branch-en); }
+.stat-card-followers { border-top: 3px solid var(--branch-stars-en); }
+.stat-card-rank { border-top: 3px solid var(--branch-jp); }
+
+// --- Generation badges ---
+
+.generation-badge {
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.25em 0.65em;
+    border-radius: 4px;
+    color: #fff;
+}
+
+// --- View transition ---
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-pane > * {
+    animation: fadeInUp 0.2s ease-out;
+}
+
+// --- Button tweaks ---
+
+.btn-outline-secondary {
+    border-color: var(--color-border);
+
+    &:hover {
+        background: var(--color-bg);
+        border-color: var(--color-text-muted);
+    }
+}
+
+// --- Search dropdown ---
+
+.search-dropdown {
+    z-index: 1000;
+    border: none;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+
+    .list-group-item {
+        border: none;
+        padding: 0.4rem 0.75rem;
+        font-size: 0.875rem;
+        cursor: pointer;
+
+        &:hover,
+        &.active {
+            background: var(--color-bg);
+            color: var(--color-text);
+        }
+    }
+}
+
+// --- Chart legend tweaks ---
+
+.chartjs-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+}
+
+// --- Compare view selected artists ---
+
+.selected-artist-badge {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+// --- Raw data link ---
+
+.raw-data-link {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+
+    &:hover {
+        color: var(--color-text);
+    }
 }
