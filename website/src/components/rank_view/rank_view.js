@@ -6,6 +6,10 @@ import { getAllBranches } from '~/artist';
 
 import './rank_view.xml?owl';
 
+/**
+ * Rank view component for displaying horizontal bar charts of artists' stats.
+ * @extends owl.Component
+ */
 export class RankView extends owl.Component {
     static props = {
         title: {type: String,
@@ -16,6 +20,9 @@ export class RankView extends owl.Component {
     };
     static template = 'web.RankView';
 
+    /**
+     * Setup component state and lifecycle hooks.
+     */
     setup() {
         super.setup();
 
@@ -29,12 +36,21 @@ export class RankView extends owl.Component {
         owl.onWillUnmount(this.onWillUnmount.bind(this));
     }
 
+    /**
+     * Called when the component is mounted to the DOM.
+     */
     onMounted() {
         this._createChart();
     }
 
+    /**
+     * Called before component props are updated.
+     */
     onWillUpdateProps() {}
 
+    /**
+     * Called after the component has been patched (updated).
+     */
     onPatched() {
         if (!this.chart) {
             this._createChart();
@@ -44,18 +60,33 @@ export class RankView extends owl.Component {
         }
     }
 
+    /**
+     * Called before the component is unmounted from the DOM.
+     */
     onWillUnmount() {
         this._destroyChart();
     }
 
+    /**
+     * Get all unique branch names.
+     * @returns {Set<string>}
+     */
     get branches() {
         return getAllBranches();
     }
 
+    /**
+     * Get currently hidden branches from the environment state.
+     * @returns {Set<string>}
+     */
     get hiddenBranches() {
         return this.envState.hiddenBranches;
     }
 
+    /**
+     * Create the Chart.js instance for the rank view.
+     * @private
+     */
     _createChart() {
         this._destroyChart();
 
@@ -118,6 +149,10 @@ export class RankView extends owl.Component {
         this.chart.resize();
     }
 
+    /**
+     * Update existing chart with new data.
+     * @private
+     */
     _updateChart() {
         const data = this._getChartData(),
             barCount = data.datasets[0].data.length;
@@ -132,6 +167,10 @@ export class RankView extends owl.Component {
         this.chart.resize();
     }
 
+    /**
+     * Destroy the current chart instance if it exists.
+     * @private
+     */
     _destroyChart() {
         if (this.chart) {
             this.chart.destroy();
@@ -139,6 +178,11 @@ export class RankView extends owl.Component {
         }
     }
 
+    /**
+     * Generate data structure required by Chart.js.
+     * @private
+     * @returns {Object} Chart.js data object
+     */
     _getChartData() {
         const values = [];
         let datasetLabel;
@@ -185,6 +229,11 @@ export class RankView extends owl.Component {
         };
     }
 
+    /**
+     * Handle click on a branch filter button.
+     * @param {Event} ev
+     * @private
+     */
     _onClickFilterButton(ev) {
         const branch = ev.currentTarget.dataset.branch,
             newSet = new Set(this.hiddenBranches);

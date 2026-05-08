@@ -24,18 +24,25 @@ SECRETS_EXPIRY: float = 0
 
 
 class NoIndent(object):
+    """Wrapper class to instruct the JSONEncoder to not indent a specific value."""
+
     def __init__(self, value: Any) -> None:
+        """Initialize the NoIndent wrapper."""
         self.value = value
 
 
 class NoIndentEncoder(json.JSONEncoder):
+    """Custom JSON encoder that respects the NoIndent wrapper to produce compact array formatting."""
+
     def __init__(self, *args: Any, **kwargs: Any) -> None:
+        """Initialize the custom JSON encoder."""
         super(NoIndentEncoder, self).__init__(*args, **kwargs)
         self.kwargs = dict(kwargs)
         del self.kwargs["indent"]
-        self._replacement_map = {}
+        self._replacement_map: dict[str, str] = {}
 
     def default(self, o: Any) -> Any:
+        """Process objects during JSON encoding, handling NoIndent instances."""
         if isinstance(o, NoIndent):
             key = uuid.uuid4().hex
             self._replacement_map[key] = json.dumps(o.value, **self.kwargs)
@@ -43,6 +50,7 @@ class NoIndentEncoder(json.JSONEncoder):
         return super(NoIndentEncoder, self).default(o)
 
     def encode(self, o: Any) -> str:
+        """Encode the object to JSON and replace placeholders with unindented strings."""
         result = super(NoIndentEncoder, self).encode(o)
         for k, v in iter(self._replacement_map.items()):
             result = result.replace('"@@%s@@"' % (k,), v)
@@ -52,6 +60,7 @@ class NoIndentEncoder(json.JSONEncoder):
 def request_retry(
     *args: Any, retry_max_count: int = 3, retry_delay: int = 10, timeout: int = 60, **kwargs: Any
 ) -> requests.Response:
+    """Execute a request with multiple retries on failure."""
     retry_count = 0
 
     while True:
@@ -76,6 +85,7 @@ def request_retry(
 
 
 def get_auth_token() -> str:
+    """Fetch an authentication token via headless browser to access the internal Spotify API."""
     global AUTH_TOKEN, AUTH_TOKEN_EXPIRY  # noqa: PLW0603
 
     if not AUTH_TOKEN or time.time() < AUTH_TOKEN_EXPIRY:
@@ -99,7 +109,8 @@ def get_auth_token() -> str:
     return AUTH_TOKEN
 
 
-def fetch_stats(*, artist_id: str) -> dict:
+def fetch_stats(*, artist_id: str) -> dict[str, Any]:
+    """Fetch overview stats for an artist from Spotify's internal GraphQL endpoint."""
     auth_token = get_auth_token()
     response = request_retry(
         method="POST",
@@ -155,7 +166,8 @@ def fetch_stats(*, artist_id: str) -> dict:
         raise
 
 
-def decode_response(response: requests.Response) -> dict:
+def decode_response(response: requests.Response) -> dict[str, Any]:
+    """Decode a potentially zstd-compressed JSON response."""
     try:
         return response.json()
     except requests.exceptions.JSONDecodeError:
@@ -165,7 +177,8 @@ def decode_response(response: requests.Response) -> dict:
     return json.loads(response_bytes)
 
 
-def parse_stats_response(response: requests.Response) -> dict:
+def parse_stats_response(response: requests.Response) -> dict[str, Any]:
+    """Parse the raw GraphQL response to extract monthly listeners and followers."""
     response_json = decode_response(response)
     data = response_json["data"]["artistUnion"]
     stats = data["stats"].copy()
@@ -183,6 +196,7 @@ def parse_stats_response(response: requests.Response) -> dict:
 
 
 def update_stats_file(*, file_path: pathlib.Path, force: bool = False) -> None:
+    """Update a local artist JSON file with the newly fetched stats."""
     date_key = datetime.date.today().isoformat()
 
     # read old data
@@ -221,6 +235,7 @@ def update_stats_file(*, file_path: pathlib.Path, force: bool = False) -> None:
 
 
 def main() -> None:
+    """Main CLI entrypoint to iterate through local files and fetch artist stats."""
     parser = argparse.ArgumentParser()
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()

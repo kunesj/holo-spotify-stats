@@ -10,6 +10,10 @@ import { getAllBranches } from '~/artist';
 
 import './timeline_view.xml?owl';
 
+/**
+ * Timeline view component for displaying line charts of artists' stats over time.
+ * @extends owl.Component
+ */
 export class TimelineView extends owl.Component {
     static props = {
         title: {type: String,
@@ -20,6 +24,9 @@ export class TimelineView extends owl.Component {
     };
     static template = 'web.TimelineView';
 
+    /**
+     * Setup component state and lifecycle hooks.
+     */
     setup() {
         super.setup();
 
@@ -36,12 +43,21 @@ export class TimelineView extends owl.Component {
         owl.onWillUnmount(this.onWillUnmount.bind(this));
     }
 
+    /**
+     * Called when the component is mounted to the DOM.
+     */
     onMounted() {
         this._createChart();
     }
 
+    /**
+     * Called before component props are updated.
+     */
     onWillUpdateProps() {}
 
+    /**
+     * Called after the component has been patched (updated).
+     */
     onPatched() {
         if (!this.chart) {
             this._createChart();
@@ -51,28 +67,51 @@ export class TimelineView extends owl.Component {
         }
     }
 
+    /**
+     * Called before the component is unmounted from the DOM.
+     */
     onWillUnmount() {
         this._destroyChart();
     }
 
+    /**
+     * Get all unique branch names.
+     * @returns {Set<string>}
+     */
     get branches() {
         return getAllBranches();
     }
 
+    /**
+     * Get currently hidden branches from the environment state.
+     * @returns {Set<string>}
+     */
     get hiddenBranches() {
         return this.envState.hiddenBranches;
     }
 
+    /**
+     * Get list of artists that are currently visible based on branch filters.
+     * @returns {ArtistData[]}
+     */
     get visibleArtists() {
         return this.envState.artistIndex.filter(
             artistData => !artistData.isHidden(this.hiddenBranches)
         );
     }
 
+    /**
+     * Get the count of visible artists.
+     * @returns {number}
+     */
     get artistCount() {
         return this.visibleArtists.length;
     }
 
+    /**
+     * Create the Chart.js instance for the timeline.
+     * @private
+     */
     _createChart() {
         this._destroyChart();
 
@@ -141,12 +180,20 @@ export class TimelineView extends owl.Component {
         this.chart.resize();
     }
 
+    /**
+     * Update existing chart with new data.
+     * @private
+     */
     _updateChart() {
         this.chart.data = this._getChartData();
         this.chart.update('none');
         this.chart.resize();
     }
 
+    /**
+     * Destroy the current chart instance if it exists.
+     * @private
+     */
     _destroyChart() {
         if (this.chart) {
             this.chart.destroy();
@@ -154,6 +201,11 @@ export class TimelineView extends owl.Component {
         }
     }
 
+    /**
+     * Generate data structure required by Chart.js.
+     * @private
+     * @returns {Object} Chart.js data object
+     */
     _getChartData() {
         const datasets = [];
 
@@ -175,6 +227,11 @@ export class TimelineView extends owl.Component {
         return { datasets };
     }
 
+    /**
+     * Handle click on a branch filter button.
+     * @param {Event} ev
+     * @private
+     */
     _onClickFilterButton(ev) {
         const branch = ev.currentTarget.dataset.branch,
             newSet = new Set(this.hiddenBranches);
@@ -189,6 +246,11 @@ export class TimelineView extends owl.Component {
         this.envState.hiddenBranches = newSet;
     }
 
+    /**
+     * Handle click on an artist in the custom legend to toggle visibility.
+     * @param {Event} ev
+     * @private
+     */
     _onClickLegendItem(ev) {
         const artistId = ev.currentTarget.dataset.artistId,
             newSet = new Set(this.localState.hiddenArtists);
@@ -203,6 +265,10 @@ export class TimelineView extends owl.Component {
         this.localState.hiddenArtists = newSet;
     }
 
+    /**
+     * Reset zoom level of the chart.
+     * @private
+     */
     _onResetZoom() {
         if (this.chart) {
             this.chart.resetZoom();

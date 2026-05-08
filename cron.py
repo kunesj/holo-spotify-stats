@@ -24,6 +24,8 @@ RAW_CONFIG = json.loads(DEFAULT_CONFIG_PATH.read_text()) | json.loads(CONFIG_PAT
 
 @dataclasses.dataclass
 class Config:
+    """Application configuration container."""
+
     notify_types: set[Literal["desktop", "email"]]
     notify_email: str | None
     fetch_interval: int  # Fetch will be run every N days
@@ -33,6 +35,7 @@ class Config:
 
     @functools.cached_property
     def fetch_tz(self) -> datetime.timezone | None:
+        """Resolve the fetch timezone string into a datetime.timezone object."""
         return zoneinfo.ZoneInfo(CONFIG.fetch_tzname) if CONFIG.fetch_tzname else None
 
 
@@ -47,10 +50,12 @@ CONFIG = Config(
 
 
 def _notify_user__log(level: int, message: str, exc_info: bool = False) -> None:
+    """Log a notification message."""
     _logger.log(level, "Notify: %s", message, exc_info=exc_info)
 
 
 def _notify_user__desktop(level: int, message: str) -> None:
+    """Send a desktop notification."""
     try:
         match level:
             case logging.CRITICAL | logging.ERROR:
@@ -78,6 +83,7 @@ def _notify_user__desktop(level: int, message: str) -> None:
 
 
 def _notify_user__email(level: int, message: str, exc_info: bool = False) -> None:
+    """Send an email notification via the local mail command."""
     try:
         level_name = logging.getLevelName(level)
         subject = f"Hololive Spotify Stats: {level_name}"
@@ -92,6 +98,7 @@ def _notify_user__email(level: int, message: str, exc_info: bool = False) -> Non
 
 
 def notify_user(level: int, message: str, exc_info: bool = False) -> None:
+    """Send a notification to all configured channels (log, desktop, email)."""
     _notify_user__log(level=level, message=message, exc_info=exc_info)
 
     if "desktop" in CONFIG.notify_types:

@@ -176,10 +176,10 @@ WebClient (root)
 
 ### General
 - **Never remove or modify existing human-written comments and docstrings.** The codebase relies on them for understanding intent.
-- **Every class, method, function, and module must have a JSDoc or docstring** describing its purpose, parameters, and return value.
+- **Every class, method, function, and module must have a docstring** describing its purpose, parameters, and return value. Use **JSDoc** for JavaScript code and **reStructuredText (reSt)** for Python code.
 
 ### Python
-- **Python 3.11+** with full type annotations (`typing.Literal`, `X | None`)
+- **Python 3.11+** with full type annotations (`typing.Literal`, `X | None`). All methods and functions must be strictly typed.
 - **snake_case** for functions/vars, **UPPER_CASE** for constants, **CamelCase** for classes
 - Double quotes, 120-char line length, 4-space indent
 - Imports: stdlib first, then third-party (sorted by isort/ruff)

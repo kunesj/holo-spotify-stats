@@ -3,6 +3,9 @@ import { defineConfig } from 'vite';
 import OwlXmlLoader from './plugins/vite-plugin-owl-xml-loader';
 import BuildStats from './plugins/vite-plugin-build-stats';
 
+/**
+ * Vite configuration for the website.
+ */
 export default defineConfig({
     root: 'src',
     publicDir: '../public',  // Relative to the root

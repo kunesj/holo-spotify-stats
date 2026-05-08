@@ -2,6 +2,13 @@ import { readFile, writeFile, mkdir } from 'fs/promises';
 import globby from 'globby';
 import path from 'path';
 
+/**
+ * Vite plugin to build the consolidated stats.json file from individual artist JSONs.
+ * @param {Object} options Plugin options
+ * @param {string} options.srcDir Source directory containing JSON files
+ * @param {string} options.destFile Destination file path for stats.json
+ * @returns {import('vite').Plugin}
+ */
 export default function BuildStats(options = {}) {
     const {
         srcDir,

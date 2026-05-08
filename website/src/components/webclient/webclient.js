@@ -8,6 +8,10 @@ import { ArtistDetailView } from '../artist_detail/artist_detail';
 import './webclient.xml?owl';
 import { loadArtistData } from '~/artist';
 
+/**
+ * Main WebClient component that acts as the root of the application.
+ * @extends owl.Component
+ */
 export class WebClient extends owl.Component {
     static components = { RankView,
         TimelineView,
@@ -17,6 +21,9 @@ export class WebClient extends owl.Component {
     static props = {};
     static defaultProps = {};
 
+    /**
+     * Setup component state and lifecycle hooks.
+     */
     setup() {
         super.setup();
         this.envState = owl.useState(this.env.state);
@@ -33,6 +40,9 @@ export class WebClient extends owl.Component {
         owl.onError(this.onError.bind(this));
     }
 
+    /**
+     * Called before the component starts (before first render).
+     */
     async onWillStart() {
         await loadArtistData();
         this._applyHash();
@@ -63,6 +73,10 @@ export class WebClient extends owl.Component {
 
     // --- URL Routing ---
 
+    /**
+     * Apply the current window hash to the application state.
+     * @private
+     */
     _applyHash() {
         const hash = window.location.hash.slice(1);
 
@@ -91,24 +105,40 @@ export class WebClient extends owl.Component {
         }
     }
 
+    /**
+     * Handle hashchange event on the window.
+     * @private
+     */
     _onHashChange() {
         this._applyHash();
     }
 
     // --- Computed ---
 
+    /**
+     * Get the current chart data type from the active page state.
+     * @returns {string}
+     */
     get chartDataType() {
         const parts = this.state.page.split(':');
 
         return parts.length > 1 ? parts[0] : '';
     }
 
+    /**
+     * Get the current chart type from the active page state.
+     * @returns {string}
+     */
     get chartChartType() {
         const parts = this.state.page.split(':');
 
         return parts.length > 1 ? parts[1] : parts[0];
     }
 
+    /**
+     * Get the computed title for the current chart view.
+     * @returns {string}
+     */
     get chartTitle() {
         let titleLeft = '',
             titleRight = '';
@@ -134,6 +164,10 @@ export class WebClient extends owl.Component {
         return `${titleLeft} - ${titleRight}`;
     }
 
+    /**
+     * Get the computed subtitle for the current chart view.
+     * @returns {string}
+     */
     get chartSubtitle() {
         if (this.chartDataType === 'listeners') {
             return 'Count of unique users that have listened to at least one song within 28-day window.';
@@ -141,6 +175,10 @@ export class WebClient extends owl.Component {
         return '';
     }
 
+    /**
+     * Get search results based on the current search text.
+     * @returns {ArtistData[]}
+     */
     get searchResults() {
         if (!this.state.searchText) {
             return [];
@@ -174,18 +212,32 @@ export class WebClient extends owl.Component {
 
     // --- Search ---
 
+    /**
+     * Handle input in the global search field.
+     * @param {Event} ev
+     * @private
+     */
     _onSearchInput(ev) {
         this.state.searchText = ev.currentTarget.value;
         this.state.showSearchDropdown = true;
         this.state.searchFocusedIndex = -1;
     }
 
+    /**
+     * Handle blur event on the global search field.
+     * @private
+     */
     _onSearchBlur() {
         setTimeout(() => {
             this.state.showSearchDropdown = false;
         }, 200);
     }
 
+    /**
+     * Handle keydown events in the global search field for dropdown navigation.
+     * @param {KeyboardEvent} ev
+     * @private
+     */
     _onSearchKeydown(ev) {
         const results = this.searchResults;
 
@@ -206,6 +258,11 @@ export class WebClient extends owl.Component {
         }
     }
 
+    /**
+     * Handle click on a search result item.
+     * @param {Event} ev
+     * @private
+     */
     _onClickSearchResult(ev) {
         const id = ev.currentTarget.dataset.artistId,
             artist = this.envState.artistIndex.find(a => a.data.id === id);
@@ -213,6 +270,11 @@ export class WebClient extends owl.Component {
         this._navigateToArtist(artist);
     }
 
+    /**
+     * Navigate to the artist detail page for the given artist.
+     * @param {ArtistData} artistData
+     * @private
+     */
     _navigateToArtist(artistData) {
         if (!artistData) {
             return;

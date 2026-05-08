@@ -8,6 +8,9 @@ import './main.scss';
 
 import { startWebClient } from '~/boot';
 
+/**
+ * Initialize the application on window load.
+ */
 window.addEventListener('load', async() => {
     const debug = Boolean((new URLSearchParams(window.location.search)).get('debug'));
 

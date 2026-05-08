@@ -38,6 +38,11 @@ function registerTemplates(value) {
 }
 `;
 
+/**
+ * Compiles XML template string to JS code that registers the templates.
+ * @param {string} xml XML content string
+ * @returns {string} Compiled JS code
+ */
 function compileXmlToJS(xml) {
     const xmlJson = JSON.stringify(xml)
         // escape line separator
@@ -55,6 +60,10 @@ function compileXmlToJS(xml) {
     `.trim();
 }
 
+/**
+ * Vite plugin to load and compile OWL XML templates.
+ * @returns {import('vite').Plugin}
+ */
 export default function OwlXmlLoader() {
     return {
         name: 'owl-xml-loader',

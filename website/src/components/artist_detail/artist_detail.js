@@ -8,10 +8,18 @@ Chart.register(zoomPlugin);
 
 import './artist_detail.xml?owl';
 
+/**
+ * View component displaying details for a single artist, including a line chart
+ * of their monthly listeners over time and their statistics.
+ * @extends owl.Component
+ */
 export class ArtistDetailView extends owl.Component {
     static props = {};
     static template = 'web.ArtistDetailView';
 
+    /**
+     * Initializes the component, sets up reactive state, references, and lifecycle hooks.
+     */
     setup() {
         super.setup();
 
@@ -25,12 +33,23 @@ export class ArtistDetailView extends owl.Component {
         owl.onWillUnmount(this.onWillUnmount.bind(this));
     }
 
+    /**
+     * Called when the component is mounted to the DOM.
+     * Creates the initial Chart.js instance.
+     */
     onMounted() {
         this._createChart();
     }
 
+    /**
+     * Called before the component's props are updated.
+     */
     onWillUpdateProps() {}
 
+    /**
+     * Called after the component's DOM has been updated (patched).
+     * Updates the chart data or creates it if it does not exist.
+     */
     onPatched() {
         if (!this.chart) {
             this._createChart();
@@ -40,10 +59,18 @@ export class ArtistDetailView extends owl.Component {
         }
     }
 
+    /**
+     * Called before the component is removed from the DOM.
+     * Cleans up the chart instance to prevent memory leaks.
+     */
     onWillUnmount() {
         this._destroyChart();
     }
 
+    /**
+     * Retrieves the currently selected artist from the global state.
+     * @returns {Object|null} The selected artist's data wrapper, or null if no artist is selected.
+     */
     get artist() {
         if (!this.envState.selectedArtistId) {
             return null;
@@ -53,6 +80,10 @@ export class ArtistDetailView extends owl.Component {
         );
     }
 
+    /**
+     * Retrieves the branch and generation affiliations of the selected artist.
+     * @returns {Array<Array<string>>} An array of [branch, generation] tuples.
+     */
     get generations() {
         if (!this.artist) {
             return [];
@@ -62,6 +93,10 @@ export class ArtistDetailView extends owl.Component {
         return gens || [];
     }
 
+    /**
+     * Retrieves the global rank of the selected artist based on monthly listeners.
+     * @returns {number} The artist's rank by listeners.
+     */
     get listenerRank() {
         if (!this.artist) {
             return 0;
@@ -69,6 +104,10 @@ export class ArtistDetailView extends owl.Component {
         return this.artist.getRank('listeners');
     }
 
+    /**
+     * Retrieves the global rank of the selected artist based on followers.
+     * @returns {number} The artist's rank by followers.
+     */
     get followerRank() {
         if (!this.artist) {
             return 0;
@@ -76,6 +115,11 @@ export class ArtistDetailView extends owl.Component {
         return this.artist.getRank('followers');
     }
 
+    /**
+     * Returns a specific color code for a given branch name.
+     * @param {string} branch - The name of the branch (e.g., 'Hololive JP').
+     * @returns {string} The hex color code associated with the branch.
+     */
     getBranchColor(branch) {
         const colors = {
             'Hololive JP': '#0369A1',
@@ -91,6 +135,11 @@ export class ArtistDetailView extends owl.Component {
         return colors[branch] || '#6c757d';
     }
 
+    /**
+     * Creates and initializes the Chart.js line chart instance on the canvas.
+     * Destroy any existing chart before creating a new one.
+     * @private
+     */
     _createChart() {
         this._destroyChart();
 
@@ -149,6 +198,10 @@ export class ArtistDetailView extends owl.Component {
         this.chart.resize();
     }
 
+    /**
+     * Updates the data of the existing chart instance without recreating it.
+     * @private
+     */
     _updateChart() {
         if (!this.artist) {
             return;
@@ -159,6 +212,10 @@ export class ArtistDetailView extends owl.Component {
         this.chart.resize();
     }
 
+    /**
+     * Destroys the existing chart instance to clean up resources.
+     * @private
+     */
     _destroyChart() {
         if (this.chart) {
             this.chart.destroy();
@@ -166,6 +223,11 @@ export class ArtistDetailView extends owl.Component {
         }
     }
 
+    /**
+     * Formats and returns the data structure required by Chart.js.
+     * @returns {Object} Chart.js data object containing the dataset.
+     * @private
+     */
     _getChartData() {
         if (!this.artist) {
             return { datasets: [] };
@@ -185,10 +247,18 @@ export class ArtistDetailView extends owl.Component {
         };
     }
 
+    /**
+     * Handles the click event for the back button, navigating to the previous page.
+     * @private
+     */
     _onClickBack() {
         window.history.back();
     }
 
+    /**
+     * Resets the zoom level of the chart to its initial state.
+     * @private
+     */
     _onResetZoom() {
         if (this.chart) {
             this.chart.resetZoom();

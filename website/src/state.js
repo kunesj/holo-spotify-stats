@@ -1,5 +1,8 @@
 import * as owl from '@odoo/owl';
 
+/**
+ * Global reactive state for the application.
+ */
 export const STATE = owl.reactive({
     artistIndex: [],
     hiddenBranches: new Set([

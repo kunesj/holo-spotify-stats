@@ -8,10 +8,17 @@ Chart.register(zoomPlugin);
 
 import './compare_view.xml?owl';
 
+/**
+ * Compare view component for comparing selected artists' stats.
+ * @extends owl.Component
+ */
 export class CompareView extends owl.Component {
     static props = {};
     static template = 'web.CompareView';
 
+    /**
+     * Setup component state and lifecycle hooks.
+     */
     setup() {
         super.setup();
 
@@ -30,10 +37,16 @@ export class CompareView extends owl.Component {
         owl.onWillUnmount(this.onWillUnmount.bind(this));
     }
 
+    /**
+     * Called when the component is mounted to the DOM.
+     */
     onMounted() {
         this._createChart();
     }
 
+    /**
+     * Called after the component has been patched (updated).
+     */
     onPatched() {
         if (!this.chart) {
             this._createChart();
@@ -43,10 +56,17 @@ export class CompareView extends owl.Component {
         }
     }
 
+    /**
+     * Called before the component is unmounted from the DOM.
+     */
     onWillUnmount() {
         this._destroyChart();
     }
 
+    /**
+     * Get search results based on the current search text.
+     * @returns {ArtistData[]}
+     */
     get searchResults() {
         if (!this.state.searchText) {
             return [];
@@ -59,16 +79,28 @@ export class CompareView extends owl.Component {
             .slice(0, 20);
     }
 
+    /**
+     * Get the currently selected artists for comparison.
+     * @returns {ArtistData[]}
+     */
     get selectedArtists() {
         return this.state.selectedIds
             .map(id => this.envState.artistIndex.find(a => a.data.id === id))
             .filter(Boolean);
     }
 
+    /**
+     * Get the chart data type to display (e.g. 'listeners').
+     * @returns {string}
+     */
     get chartDataType() {
         return 'listeners';
     }
 
+    /**
+     * Create the Chart.js instance for comparison.
+     * @private
+     */
     _createChart() {
         this._destroyChart();
 
@@ -124,6 +156,10 @@ export class CompareView extends owl.Component {
         this.chart.resize();
     }
 
+    /**
+     * Update existing chart with new data.
+     * @private
+     */
     _updateChart() {
         const oldDatasets = this.chart.data.datasets || [],
             newData = this._getChartData();
@@ -141,6 +177,10 @@ export class CompareView extends owl.Component {
         this.chart.resize();
     }
 
+    /**
+     * Destroy the current chart instance if it exists.
+     * @private
+     */
     _destroyChart() {
         if (this.chart) {
             this.chart.destroy();
@@ -148,6 +188,11 @@ export class CompareView extends owl.Component {
         }
     }
 
+    /**
+     * Generate data structure required by Chart.js.
+     * @private
+     * @returns {Object} Chart.js data object
+     */
     _getChartData() {
         const datasets = [];
 
@@ -164,12 +209,21 @@ export class CompareView extends owl.Component {
         return { datasets };
     }
 
+    /**
+     * Handle input in the search field.
+     * @param {Event} ev
+     * @private
+     */
     _onSearchInput(ev) {
         this.state.searchText = ev.currentTarget.value;
         this.state.showDropdown = true;
         this.state.focusedIndex = -1;
     }
 
+    /**
+     * Handle blur event on the search field.
+     * @private
+     */
     _onSearchBlur() {
         // Delay so click on dropdown item fires first
         setTimeout(() => {
@@ -177,6 +231,11 @@ export class CompareView extends owl.Component {
         }, 200);
     }
 
+    /**
+     * Handle keydown events in the search field for dropdown navigation.
+     * @param {KeyboardEvent} ev
+     * @private
+     */
     _onSearchKeydown(ev) {
         const results = this.searchResults;
 
@@ -197,6 +256,11 @@ export class CompareView extends owl.Component {
         }
     }
 
+    /**
+     * Add an artist to the selected artists list.
+     * @param {ArtistData} artistData
+     * @private
+     */
     _selectArtist(artistData) {
         if (!artistData) {
             return;
@@ -215,6 +279,11 @@ export class CompareView extends owl.Component {
         this.state.showDropdown = false;
     }
 
+    /**
+     * Handle click on a search result item.
+     * @param {Event} ev
+     * @private
+     */
     _onClickResult(ev) {
         const id = ev.currentTarget.dataset.artistId,
             artistData = this.envState.artistIndex.find(a => a.data.id === id);
@@ -222,6 +291,11 @@ export class CompareView extends owl.Component {
         this._selectArtist(artistData);
     }
 
+    /**
+     * Remove an artist from the selected artists list.
+     * @param {Event} ev
+     * @private
+     */
     _removeArtist(ev) {
         const id = ev.currentTarget.dataset.artistId,
             idx = this.state.selectedIds.indexOf(id);
@@ -231,6 +305,10 @@ export class CompareView extends owl.Component {
         }
     }
 
+    /**
+     * Reset zoom level of the chart.
+     * @private
+     */
     _onResetZoom() {
         if (this.chart) {
             this.chart.resetZoom();
