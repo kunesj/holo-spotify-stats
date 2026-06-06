@@ -11,7 +11,7 @@ RUN mkdir -p /home/host/
 
 # install uv
 
-COPY --from=ghcr.io/astral-sh/uv:0.9.13 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.11.19 /uv /uvx /bin/
 RUN echo 'eval "$(uv generate-shell-completion bash)"' >> ~/.bashrc
 RUN echo 'eval "$(uvx --generate-shell-completion bash)"' >> ~/.bashrc
 

@@ -28,8 +28,8 @@ Alternatively, you can also run the script from docker.
 ### Install Node.js
 
 ```bash
-nvm install 16.20
-nvm use 16.20
+nvm install 25
+nvm use 25
 ```
 
 If you are running this with Pycharm, the NVM ENV variables must be copied from `~/.bashrc` to `~/.profile`. These ones:
